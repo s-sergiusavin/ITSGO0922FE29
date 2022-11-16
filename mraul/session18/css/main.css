@@ -1,0 +1,157 @@
+* {
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 10;
+}
+
+.mainSearch {
+  display: flex;
+  align-items: center;
+}
+.navigation,
+.links {
+  display: flex;
+}
+.mainSearch .logo {
+  padding: 10px;
+  font-size: 35px;
+  color: blue;
+}
+.mainSearch .logo:hover {
+  color: darkblue;
+}
+
+.mainSearch .searchInput {
+  display: block;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+.mainSearch .searchInput:focus {
+  border: 3px solid teal;
+}
+.navigation > li > a {
+  border-radius: 50%;
+  background-color: aquamarine;
+  display: flex;
+  margin: 0 5px;
+}
+.navigation > li > a:hover {
+  border: 1px solid darkblue;
+  background-color: teal;
+}
+.navigation .navIcons,
+.links {
+  font-size: 35px;
+  color: blue;
+  margin: 0 10px;
+}
+ul {
+  padding: 0px;
+  list-style: none;
+}
+.navigation .navIcons:hover {
+  color: darkblue;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.leftContent,
+.rightContent {
+  background-color: grey;
+  width: 200px;
+  height: 900px;
+}
+.mainContent {
+  width: 600px;
+  border: 1px solid grey;
+}
+
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 20px 0;
+}
+
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+}
+.mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 50px;
+  border-radius: 50%;
+}
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .postHeader .profieOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+.mainContent .post .postHeader .profileOptions:hover {
+  background-color: lightgray;
+}
+.content .imgWrapper {
+  position: relative;
+}
+.content .imgWrapper .imgContent {
+  max-width: 100%;
+}
+.content .imgWrapper .infoIcon {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-size: 28px;
+}
+.postTitle {
+  margin-top: 5px;
+  padding-left: 15px;
+  display: block;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: grey;
+  font-style: 20px;
+  
+
+}
+
+.postDescription {
+  padding: 5px;
+}
