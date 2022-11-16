@@ -29,25 +29,83 @@
   <body>
     <header>
       <div class="mainSearch">
-        <a href=""><i class="bi bi-balloon"></i></a>
-        <input type="search" class="searchInput" placeholder="Search..."
+        <a href=""><i class="bi bi-balloon logo"></i></a>
+        <input type="search" class="searchInput" placeholder="Search..." />
       </div>
-      <nav class="mainNavication">
+      <nav class="mainNavigation">
         <ul class="navigation">
           <li>
-            <a href=""><i class="bi bi-house"></i></a>
+            <a href=""><i class="navIcons bi bi-house"></i></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-person"></i></a>
+            <a href=""><i class="navIcons bi bi-person"></i></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-chat-right-text"></i></a>
+            <a href=""><i class="navIcons bi bi-chat-right-text"></i></a>
           </li>
           <li>
-            <a href=""><i class="bi bi-camera-video"></i></a>
+            <a href=""><i class="navIcons bi bi-camera-video"></i></a>
           </li>
         </ul>
       </nav>
+      <ul class="links">
+        <li>
+          <a href=""><i class="navIcons bi bi-plus-circle"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-bell"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-gear"></i></a>
+        </li>
+      </ul>
     </header>
+    <main>
+      <aside class="leftContent"></aside>
+      <div class="mainContent">
+        <article class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href=""
+                ><img
+                  src="assets/images/profile.jpg"
+                  alt="profile"
+                  class="profileImage"
+              /></a>
+              <div class="profileName">
+                <span>Username 1</span>
+                <span class="PostInfoDate">16 NOV 2022</span>
+              </div>
+            </div>
+            <a href="" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="assets/images/post.jfif"
+                alt="post 1"
+                class="imgContent"
+              />
+              <i class="bi bi-info infoIcon"></i>
+            </div>
+            <strong class="postTitle">Titlul postarii</strong>
+            <p class="postDescription">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              soluta maiores velit doloremque, harum corporis qui quasi odio?
+              Quis et quia molestias nemo. Quia vel voluptatem, repellat neque
+              necessitatibus delectus?
+            </p>
+          </div>
+
+          <div class="reacts"></div>
+          <hr />
+          <div class="reactsActions"></div>
+        </article>
+      </div>
+      <aside class="rightContent"></aside>
+    </main>
   </body>
 </html>
