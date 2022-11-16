@@ -1,0 +1,178 @@
+* {
+  font-family: "Noto Serif", serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  background-color: whitesmoke;
+  z-index: 10;
+}
+
+.mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+}
+
+.mainSearch .logo {
+  padding: 10px;
+  font-size: 35px;
+  color: rgb(203, 17, 17);
+}
+
+.mainSearch .logo:hover {
+  color: darkred;
+}
+
+.mainSearch .searchInput {
+  display: block;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+
+.mainSearch .searchInput:focus {
+  border: 4px solid darkmagenta;
+}
+
+.navigation > li > a {
+  font-size: 35px;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  margin: 0 5px;
+}
+
+.navigation > li > a:hover {
+  background-color: grey;
+  border-color: grey;
+  margin: 0 5px;
+}
+
+.navigation,
+.links {
+  display: flex;
+}
+
+.navIcon {
+  font-size: 35px;
+  color: rgb(203, 17, 17);
+  margin: 0 10px;
+}
+
+.navIcon:hover {
+  color: darkred;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.leftContent,
+.rightContent {
+  background-color: grey;
+  width: 200px;
+  height: 900px;
+}
+
+.mainContent {
+  width: 600px;
+  border: 1px solid red;
+}
+
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 20px 0;
+}
+
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+}
+
+.mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .postHeader .profileOptions {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+   border-radius: 50%;
+}
+
+.mainContent .post .postHeader .profileOptions:hover {
+   background-color: lightgray;
+}
+
+.content .imgWrapper {
+   position: relative;
+}
+
+.content .imgWrapper .imgContent {
+   width: 100%;
+}
+
+.content .imgWrapper .infoIcon {
+   position: absolute;
+   bottom: -15px;
+   right: 20px;
+   font-size: 25px;
+   border-radius: 50%;
+   border: 2px solid whitesmoke;
+   background-color: grey;
+   color:white;
+   width: 28px;
+   height: 28px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.postTitle {
+   margin-top: 5px;
+   padding-left: 15px;
+   display: block;
+}
+
+.postDescription {
+   padding: 15px;
+}
