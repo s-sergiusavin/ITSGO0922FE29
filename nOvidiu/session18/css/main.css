@@ -1,6 +1,7 @@
 * {
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
+  font-size: 1.8vw;
 }
 
 ul {
@@ -17,7 +18,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
@@ -70,7 +71,7 @@ header {
   border-radius: 50%;
   background-color: aquamarine;
   display: flex;
-  margin: 0.5px;
+  margin: 5px;
 }
 .navigation > li > a:hover {
   border: 1px solid darkblue;
@@ -79,8 +80,8 @@ header {
 
 main {
   display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
+  /* justify-content: space-between; */
+  margin-top: 100px;
 }
 /* margin-top 60 este pentru a nu se suprapune cu headerul care are height 60px; */
 
@@ -88,7 +89,6 @@ main {
 .rightContent {
   background-color: grey;
   width: 200px;
-  height: 900px;
 }
 
 .mainContent {
@@ -100,7 +100,7 @@ main {
 */
 
 .mainContent .post {
-  box-shadow: 5px 5px 5px 5px, #888;
+  box-shadow: 5px 5px 5px 5px #888;
   margin: 20px 0;
 }
 
@@ -169,4 +169,86 @@ main {
 
 .postDescription {
   padding: 15px;
+}
+/* TEMA */
+
+h3 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.leftContent > h3:first-child,
+.rightContent > h3 {
+  margin-top: 1rem;
+}
+
+.menu > li,
+.groups > li,
+.shortcuts > li {
+  padding: 5px;
+}
+
+.rightContent::-webkit-scrollbar,
+.leftContent::-webkit-scrollbar {
+  display: none;
+}
+.leftContent,
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 900px;
+  width: 20vw;
+  position: fixed;
+  z-index: 9;
+  padding-bottom: 5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.mainContent {
+  width: 60vw;
+}
+
+main {
+  justify-content: center;
+}
+
+.responsiveFont {
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+.rightContent {
+  right: 0;
+}
+.leftContent {
+  left: 0;
+}
+
+.leftContent > ul > li,
+.rightContent > ul > li {
+  display: flex;
+  white-space: nowrap;
+  cursor: pointer;
+  justify-content: center;
+}
+.leftContent > ul > li:hover,
+.rightContent > ul > li:hover {
+  background-color: rgb(105, 105, 105);
+}
+
+.rightContent > ul > li {
+  padding: 1rem;
+}
+
+.leftContent > ul,
+.rightContent > ul {
+  width: 100%;
+}
+
+.leftContent > h3:hover {
+  background-color: rgb(105, 105, 105);
 }
