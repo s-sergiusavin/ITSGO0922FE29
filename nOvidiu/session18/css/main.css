@@ -252,3 +252,78 @@ main {
 .leftContent > h3:hover {
   background-color: rgb(105, 105, 105);
 }
+
+.reacts {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  /* padding reset */
+  margin: 15px 0;
+}
+
+.reaction:hover {
+  background-color: lightgrey;
+}
+
+.reaction {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.reactionIcon {
+  color: aqua;
+  font-size: 20px;
+}
+
+.reactionIcon:hover {
+  color: blue;
+}
+
+/* .reaction span {
+  color: black;
+}
+.reaction:hover span {
+  color: black;
+} */
+.commentSection .profileImage {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.newCommentField {
+  width: 70%;
+  border-radius: 10px;
+  /* opacity: 0.3; */
+  background-color: #f0f2f5;
+  margin-bottom: 10px;
+}
+
+.newCommentField::placeholder {
+  color: blue;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+button {
+  border: none;
+  background: none;
+}
+/* 
+input {
+  background-color: bisque; }*/
+
+input[type="text"] {
+  background-color: azure;
+}
