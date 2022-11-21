@@ -23,6 +23,7 @@ header {
   left: 0;
   width: 100%;
   background-color: whitesmoke;
+  z-index: 10;
 }
 
 .mainSearch {
@@ -89,6 +90,12 @@ main {
   background-color: grey;
   width: 200px;
   height: 900px;
+}
+.leftContent {
+  background-image: url("../assets/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  height: 685px;
+  background-size: 750px;
 }
 
 .mainContent {
@@ -168,4 +175,60 @@ main {
 
 .postDescription {
   padding: 15px;
+}
+.reacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  padding-left: 0;
+}
+.reaction {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: aqua;
+}
+.reaction:hover {
+  background-color: lightgray;
+  color: blue;
+}
+.reaction span {
+  color: black;
+}
+.reaction:hover span {
+  color: black;
+}
+.reactionIcon {
+  font-size: 20px;
+}
+.commentsSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.commentsSection .profileImage {
+  width: 30px;
+  border-radius: 50%;
+}
+.newContentField {
+  background-color: #f0f2f5;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+}
+input[type="text"] {
+  background-color: aliceblue;
+}
+.newContentField::placeholder {
+  color: darkblue;
+}
+.animation{
+  
 }
