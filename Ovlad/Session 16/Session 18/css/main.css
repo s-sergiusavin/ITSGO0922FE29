@@ -246,3 +246,9 @@ display: block;
   }
 }
 
+
+.reacts {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+}
