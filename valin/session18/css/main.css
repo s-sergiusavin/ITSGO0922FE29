@@ -4,7 +4,7 @@
 }
 
 ul {
-  list-style: none;  /* sa dispara bulinele */
+  list-style: none; /* sa dispara bulinele */
   padding: 0;
 }
 
@@ -58,9 +58,8 @@ header {
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
-
 
 .navigation > li > a {
   display: flex;
@@ -68,12 +67,13 @@ header {
   margin: 0 8px;
 }
 
-.navigation > li > a:hover { /* > inseamna copil direct */
+.navigation > li > a:hover {
+  /* > inseamna copil direct */
   margin: 0 8px;
 }
 
 .links {
- margin-top: 12px;
+  margin-top: 12px;
 }
 
 .navigation,
@@ -104,13 +104,30 @@ main {
   height: 100rem;
   max-width: 400px;
   position: sticky;
-  top: 30px,
+  top: 30px;
+  overflow-y: scroll;
+}
+
+.leftContent {
+  background-image: url('../assets/images/wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  opacity: 0.8;
+}
+
+.leftContent:hover {
+  opacity: 1;
+}
+
+.rightContent {
+  background-image: linear-gradient(red, yellow, green, blue);
+
 }
 
 .mainContent {
   flex: 8;
   margin: 0 40px;
-
 }
 
 .mainContent .post {
@@ -191,24 +208,148 @@ main {
   padding: 15px;
 }
 
+.reacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  padding-left: 0;
+}
+
+.reaction:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+  color: darkred;
+}
+
+.reaction {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: rgb(32, 124, 211);
+}
+
+.reactionIcon {
+  font-size: 20px;
+}
+
+.reaction span {
+  color: rgb(73, 196, 200);
+}
+
+.reaction span:hover {
+  color: black;
+}
+
+.commentSection .profileImage {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 12px;
+  align-items: center;
+}
+
+.newCommentField {
+ width: 80%;
+ height: 35px !important;
+ border: none;
+ background-color: #F0F2F5;
+ border-radius: 7px;
+}
+
+input[type="text"] {
+  background-color: lightblue;
+  transition: width 1s;
+  transition: width 1s, heigth 2s, transform 3s;
+}
+
+input[type="text"]:hover {
+  width: 60%;
+  height: 20%;
+}
+
+.newCommentField::placeholder {
+  color: rgb(32, 124, 211);
+}
+
+.commentSection .sendBtn:hover {
+  color: rgb(32, 124, 211);
+}
+
+.commentSection .sendBtn {
+  transform: rotate(270deg);
+}
+
+/* ANIMATIONS */
+
+
+.animation {
+  width: 600px;
+  height: 100px;
+  background-color: royalblue;
+  animation-name: example-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  position: relative;
+  border: 5px dotted black;
+}
+
+@keyframes example-animation {
+  0% {
+    background-color: royalblue;
+    left: 0;
+    bottom: 0;
+  }
+
+  25% {
+    background-color: yellowgreen;
+    left: 200px;
+    bottom: 0%;
+
+  }
+  50% {
+    background-color: palevioletred;
+    left: 200px;
+    bottom: 200px;
+  }
+  71% {
+    background-color: aqua;
+    left: 0px;
+    bottom: 200px;
+  }
+  100% {
+    background-color: indigo;
+    left: 0;
+    bottom: 0;
+  }
+}
 
 
 
 
 
 @media screen and (max-width: 700px) {
-
   .leftContent,
-  .rightContent, .links {
+  .rightContent,
+  .links {
     display: none;
-  } 
-  
+  }
 }
 
 @media screen and (max-width: 790px) {
-
   .mainSearch .searchInput {
     display: none;
-  } 
-  
+  }
 }
