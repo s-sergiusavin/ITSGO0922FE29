@@ -79,7 +79,7 @@ font-size: 35px;
 
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     margin-top: 60px;
 }
 
@@ -173,9 +173,8 @@ display: block;
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-around;
-    width:fit-content;
-    padding-right: 400px;
+    background-color: white;
+
   }
   .abutton {
     border: 1px solid red;
@@ -200,8 +199,7 @@ display: block;
     padding: 4px;
   }
   .card {
-    margin-right: 250px;
-    margin-left: 50px;
+width:auto;
   }
   .scdImage {
     margin-top: 40px;
@@ -251,4 +249,11 @@ display: block;
   display: flex;
   padding: 15px;
   justify-content: space-between;
+}
+
+.listFriends {
+  margin-top: 50px;
+}
+.rock {
+  height: 50px;
 }
