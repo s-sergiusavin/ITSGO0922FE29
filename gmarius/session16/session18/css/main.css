@@ -100,6 +100,17 @@ main {
   opacity: 0.9;
 }
 
+.impLinks {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  margin: 0 10px;
+  color: black;
+  
+}
+
 .rightContent {
   background-image: linear-gradient(red,yellow,green,blue);
   
@@ -274,7 +285,7 @@ input[type="text"]:hover {
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
   animation-delay: 1;
-  position: relative;
+  
 }
 
 @keyframes example-animation {
