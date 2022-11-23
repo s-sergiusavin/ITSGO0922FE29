@@ -1,6 +1,6 @@
 // Primitives: string, number, boolean, undefined, symbol, bigInt
 // References: Objects: Array, functions, null
-
+logSomething();
 // Numbers
 
 let myNumber = 5;
@@ -20,7 +20,7 @@ let mystring = "Acesta este un mesaj";
 myString = "O'heary";
 myString = "";
 // Template literals
-myString = "Rezultatul este ${result}";
+myString = `Rezultatul este ${result}`;
 
 // Boolean
 
@@ -48,7 +48,7 @@ const myObj = {
 
 console.log(myObj["french-fries"]);
 
-// Loops - Structuri iterative
+// Loops (Bucle) - Structuri iterative
 
 let marksOf10lei = 0;
 
@@ -79,12 +79,12 @@ while (roomTemperature < desiredTemperature) {
 
 let isAcOn = false;
 
-while (!isAcOn) {
-  roomTemperature += 1;
-  if (roomTemperature === 24) {
-    isAcOn = true;
-  }
-}
+// while (!isAcOn) {
+//   roomTemperature += 1;
+//   if (roomTemperature === 24) {
+//     isAcOn = true;
+//   }
+// }
 
 //    // Do while loop
 
@@ -103,27 +103,147 @@ for (let index = 0; index < totalOf5lei; index++) {
   marksOf5lei += 1;
 }
 
-let countries = ['Romania', 'Bulgaria', 'Ucraina', 'Turcia'];
+let countries = ["Romania", "Bulgaria", "Ucraina", "Turcia"];
 
 console.log(countries[0]);
 console.log(countries[1]);
 console.log(countries[2]);
 console.log(countries[3]);
 
-for ( let i = 0; i < countries.length; i++) {
-    console.log(countries[i])
+for (let i = 0; i < countries.length; i++) {
+  console.log(countries[i]);
 }
 
 // If else -- conditional structures - blocks
 
 let val1 = 5;
-let val2 = '5';
+let val2 = "5";
 
-if (val1 = val2) {
-    console.log('Variabilele sunt egale');
+// == verifica valoarea
+// === verifica valoarea si tipul variabilei
+
+if (val1 === val2) {
+  console.log("Variabilele sunt egale");
 } else {
-    console.log('Variabilele nu sunt egale');
+  console.log("Variabilele nu sunt egale");
 }
 
 // Truthy vs Falsy values
-// 
+// Falsy: 0, '', false, undefined, null
+
+if (val1 !==val2) {
+  console.log("Variabilele nu sunt egale");
+} else {
+  console.log("Variabilele sunt egale");
+}
+
+let temperature = 6;
+let optimalTemperature = 25;
+
+if (temperature >= optimalTemperature) {
+  console.log("Este placut afara");
+} else {
+  console.log("Este urat afara");
+}
+
+// Logical operators
+
+// && - daca cel putin o conditie este falsa, totul este fals
+// || - daca cel putin o conditie este adevarata, totul este adevarat
+
+if (temperature >= optimalTemperature && temperature <= 35) {
+  console.log("Este placut afara");
+} else {
+  console.log("Este urat afara");
+}
+
+let pizzaPrice = 40;
+let hasGorgonzola = true;
+
+if (pizzaPrice <= 30 || hasGorgonzola === true) {
+  // if (pizzaPrice <= 30 || hasGorgonzola) {
+  console.log("Pizza isi merita banii");
+} else {
+  console.log("Pizza nu isi merita banii");
+}
+
+
+if (pizzaPrice <= 30 && hasGorgonzola === true) {
+  // if (pizzaPrice <= 30 || hasGorgonzola) {
+  console.log("Pizza isi merita banii");
+} else {
+  console.log("Pizza nu isi merita banii");
+}
+
+// Ternary operator - sunt 3 parti
+// conditie ? valoare de adevar : valoare in caz de fals
+
+// let val1 = 5;
+// let val2 ="5";
+
+val1 === val2 ? 'Egale' : 'False';
+
+
+// Functions
+
+// Function declaration: function term + function name
+function logSomething() {
+  console.log('Functia logSomething() a fost invocata/apelata (called)');
+}
+
+logSomething();
+
+
+// Function expression
+const doSomething = function() {
+  console.log('Do arrow something');
+}
+
+doArrowFunction();
+
+// Function with params
+
+let number = 8;
+
+function addToSum(number) {
+  let sum = 0;
+  sum += number; // sum = sum + number;
+  console.log(`Rezultatul este ${sum}`)
+}
+
+addToSum(3);
+addToSum(5);
+
+const removeFrom100 = (number) => {
+  console.log(`Rezultatul este ${100 - number}`);
+}
+
+removeFrom100(20);
+removeFrom100('Marcel');
+removeFrom100('5');
+
+function sendEmail(firstName, lastName, proffesion, result, exam) {
+  let person;
+
+  if (proffesion) {
+    person = proffesion + lastName + firstName;
+  } else {
+    person = lastName + firstName;
+  }
+
+  console.log(`Salutare ${person}!
+  Ai obtinut nota ${result} la examenul ${exam}.
+  Mult succes mai departe ${firstName}!`);
+}
+
+// parametrii sunt pozitionali
+sendEmail('Marius', 'Golimba', 'student', 10, 'bacalaureat');
+sendEmail('Marius', 'Golimba', '', 10, 'bacalaureat');
+sendEmail('Marius', 'Golimba', null, '', 'bacalaureat');
+
+
+
+
+
+
+
