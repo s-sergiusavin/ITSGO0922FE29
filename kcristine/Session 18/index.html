@@ -31,6 +31,11 @@
       <div class="mainSearch">
         <a href=""><i class="logo bi bi-facebook"></i></a>
         <input type="search" class="searchInput" placeholder="Search..." />
+        <div class="textlogin">
+          <p>Login in</p>
+        </div>
+        <input type="text" class="email" placeholder="Email or phone number">
+        <input type="password" class="password" placeholder="Enter your password">
       </div>
 
       <nav class="mainNavigation">
@@ -65,16 +70,29 @@
         </li>
       </ul>
     </header>
-
     <main>
-      <aside class="leftContent"></aside>
+      <aside class="leftContent">
+        <ul class="LContent">
+          <li>
+            <a href=""><i class="Lefticons bi bi-stopwatch-fill"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="Lefticons bi bi-shop"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="Lefticons bi bi-joystick"></i></a>
+          </li>
+        </ul>
+      </aside>
+  
+
       <div class="mainContent">
         <article class="post">
           <div class="postHeader">
             <div class="profileUserInfo">
               <a href=""
                 ><img
-                  src="css/asset/images/profile.jpg.jpg"
+                  src="css/asset/images/userprofilephoto.jpg"
                   alt="profile"
                   class="profileImage"
               /></a>
@@ -93,28 +111,171 @@
           <div class="content">
             <div class="imgWrapper">
               <img
-                src="css/asset/images/post.jpg.jpg"
+                src="css/asset/images/photo3.jpg"
                 alt="post 1"
                 class="imgContent"
               />
               <i class="bi bi-info-circle infoIcon"></i>
             </div>
 
-            <strong class="postTitle">Titlu postarii</strong>
+            <strong class="postTitle">The Title</strong>
             <p class="postDescription">
-              "This is my first post made by social media created by me durring
+              "This is my first post made by social media created by me during
               the course from Front-End Development"
             </p>
           </div>
 
+          <!-- Comments sections -->
+
+          <div class="reacts">
+
+
+            <div class="likesNumber">
+              <i class="bi bi-hand-thumbs-up"></i>
+              <span class="reactsCount">
+                10 likes
+              </span>
+            </div>
+            <div class="commentsNumber">
+              <i class="bi bi-card-text"></i>
+              <span class="reactsCount">
+                15 Comments
+              </span>
+            </div>
+          </div>
+          <hr />
+          <div class="reactsActions">
+           
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
+               <span>
+                Like
+               </span>>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-card-text reactionIcon"></i>
+                <span>Coment</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-share reactionIcon"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div class="commentSection">
+            <a href=""
+            ><img
+              src="css/asset/images/userprofilephoto.jpg"
+              alt="profile"
+              class="profileImage"
+          /></a>
+          <input type="text" placeholder="Add a comment" class="newCommentField">
+          <button class="sendButton">
+            <i class="bi bi-send-fill"></i>
+
+          </button>
+
+          </div>
+
+          <!-- my code -->
+
+          
+        </article>
+        <article class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href=""
+                ><img
+                  src="css/asset/images/profileuser3.jpg.png"
+                  alt="profile2"
+                  class="profileImage"
+              /></a>
+
+              <div class="profileName">
+                <span>Username 2</span>
+                <span class="postInfoDate">20 Nov 2022</span>
+              </div>
+            </div>
+
+            <a href="" class="profileOptions"
+              ><i class="bi bi-three-dots"></i
+            ></a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="css/asset/images/secondphoto.jpg"
+                alt="post 2"
+                class="imgContent"
+              />
+              <i class="bi bi-info-circle infoIcon"></i>
+            </div>
+
+            <strong class="postTitle">Something</strong>
+            <p class="postDescription">"Anything"</p>
+          </div>
+
           <div class="reacts"></div>
           <hr />
-
+ 
+     
           <div class="reactsActions"></div>
         </article>
+      </article>
+      <article class="post">
+        <div class="postHeader">
+          <div class="profileUserInfo">
+            <a href=""
+              ><img
+                src="css/asset/images/profileuser4.png"
+                alt="profile3"
+                class="profileImage"
+            /></a>
+
+            <div class="profileName">
+              <span>Username 3</span>
+              <span class="postInfoDate">21 Nov 2022</span>
+            </div>
+          </div>
+
+          <a href="" class="profileOptions"
+            ><i class="bi bi-three-dots"></i
+          ></a>
+        </div>
+
+        <div class="content">
+          <div class="imgWrapper">
+            <img
+              src="css/asset/images/photo4.jpg"
+              alt="post 3"
+              class="imgContent"
+            />
+            <i class="bi bi-info-circle infoIcon"></i>
+          </div>
+
+          <strong class="postTitle">Something</strong>
+          <p class="postDescription">"Anything"</p>
+        </div>
+
+        <div class="reacts"></div>
+        <hr />
+
+        <div class="reactsActions"></div>
+      </article>
       </div>
-      <aside class="rightContent"></aside>
+      <aside class="rightContent">
+        
+      </aside>
     </main>
-    <footer></footer>
+    <footer>
+     
+      
+      <div class="card text-center">
+        <p class="copyright">Copyright © 2022</p>
+      </div>
+    </footer>
   </body>
 </html>

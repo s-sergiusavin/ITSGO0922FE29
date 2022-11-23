@@ -20,7 +20,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: burlywood;
   z-index: 10;
 }
 .mainSearch {
@@ -29,8 +29,8 @@ header {
 }
 
 .mainSearch .logo {
-  padding: 10px;
-  font-size: 35px;
+  padding: 18px;
+  font-size: 30px;
   color: blue;
 }
 .mainSearch .logo:hover {
@@ -39,6 +39,7 @@ header {
 .mainSearch .searchInput {
   display: block;
   height: 35px;
+  border-color: brown;
   border-radius: 20px;
   padding: 0 15px;
 }
@@ -46,48 +47,78 @@ header {
 .mainSearch .searchInput:focus {
   border: 3px solid teal;
 }
+.textlogin {
+  font-size: 20px;
+  padding: 10px;
+}
+.email {
+  border-radius: 20px;
+  margin: 2px;
+}
 
 .navigation > li > a {
-  border-radius: 50%;
-  background-color: aquamarine;
-  display: flex;
+  border-radius: 30%;
+  background-color: chocolate;
+  display: block;
   margin: 0 5px;
+  padding: 0 5px;
+  margin-top: 10px;
+  width: 50px;
+  flex-direction: column;
 }
 
 .navigation > li > a:hover {
-  border: 1px solid darkblue;
+  border: 1px solid thistle;
   background-color: teal;
 }
 .navigation,
 .links {
   display: flex;
 }
+
 .navigation .navIcons {
-  font-size: 35px;
-  color: blue;
+  font-size: 20px;
+  color: burlywood;
   margin: 0 10px;
+  margin-top: 0px;
+  border: 30px;
+  justify-content: space-between;
+  height: 30px;
 }
 .navigation .navIcons:hover {
   color: darkblue;
 }
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 60px;
 }
 .leftContent,
 .rightContent {
-  background-color: grey;
+  background-color: burlywood;
   width: 200px;
-  height: 900px;
+  height: 3000px;
+  flex-direction: column;
+  background-image: url("asset/images/coverwallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+.leftContent {
+  position: fixed;
+  left: 0;
+}
+.rightContent {
+  position: fixed;
+  right: 0;
+}
+
 .mainContent {
   width: 600px;
-  border: 1px solid red;
+  border: 1px solid burlywood;
 }
 
 .mainContent .post {
-  box-shadow: 5px 5px 5px 5px #888;
+  box-shadow: 5px 5px 5px 5px gray;
   margin: 20px 0;
 }
 
@@ -107,6 +138,10 @@ main {
   display: flex;
   flex-direction: column;
 }
+.mainContent .post .postHeader .profileUserInfo .imgContent {
+  width: 50px;
+  border-radius: 50%;
+}
 .mainContent .post .postHeader .profileOptions {
   display: flex;
   justify-content: center;
@@ -117,7 +152,7 @@ main {
   border-radius: 50%;
 }
 .mainContent .post .postHeader .profileOptions:hover {
-  background-color: lightgray;
+  background-color: burlywood;
 }
 .content .imgWrapper {
   position: relative;
@@ -141,11 +176,138 @@ main {
   font-size: 28px;
   border-radius: 50%;
   border: 1px solid black;
-  background-color: grey;
-  color: white;
+  background-color: whitesmoke;
+  color: burlywood;
   width: 28px;
   height: 28px;
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+
+/* Left */
+
+.LContent .Lefticons {
+  font-size: 20px;
+  color: bisque;
+  margin: 0 10px;
+  margin-top: 5px;
+  border: 0px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.LContent > li a:hover {
+  border: 1px solid thistle;
+  background-color: teal;
+}
+.LContent .Lefticons:hover {
+  color: blueviolet;
+}
+.LContent > li > a {
+  border-radius: 10%;
+  background-color: chocolate;
+  display: block;
+  margin: 0 5px;
+  padding: 0 5px;
+  margin-top: 10px;
+  width: 50px;
+  flex-direction: column;
+}
+
+.links > li > a {
+  border-radius: 10%;
+  background-color: chocolate;
+  display: block;
+  margin: 0 5px;
+  padding: 0 5px;
+  margin-top: 10px;
+  width: 50px;
+  flex-direction: column;
+}
+
+.links .navIcons {
+  font-size: 20px;
+  color: bisque;
+  margin: 0 10px;
+  margin-top: 0px;
+  border: 30px;
+  align-items: center;
+}
+
+.links > li > a:hover {
+  border: 1px solid thistle;
+  background-color: teal;
+}
+
+.links .navIcons:hover {
+  color: blueviolet;
+}
+
+/* Session 18 */
+.reacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  padding-left: 0;
+}
+.reaction:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+.reaction {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: aqua;
+}
+
+.reactionIcon {
+  color: aqua;
+  font-size: 20px;
+}
+.reactionIcon:hover {
+  color: blue;
+}
+.reaction span {
+  color: black;
+}
+.reaction:hover span {
+  color: black;
+}
+
+.commentSection .profileImage {
+  margin-left: 20px;
+  width: 70px;
+  border-radius: 50%;
+}
+.newCommentField {
+  background-color: none;
+  margin-left: 20px;
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+}
+.newCommentField::placeholder {
+  color: orangered;
+}
+.sendButton {
+  border: none;
+  background-color: none;
+}
+.footer {
+  display: block;
+  box-sizing: inherit;
+  background-color: burlywood;
+  width: 100px;
+}
+.footer .Login {
+  border: 10px;
 }
