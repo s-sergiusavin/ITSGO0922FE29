@@ -328,9 +328,7 @@ input[type="text"]:hover {
 .upperLeft > li:hover {
   background-color: #b9bbbd;
   width: 90%;
-
   border-radius: 10px;
-  color: black;
 }
 
 /* ANIMATIONS 
