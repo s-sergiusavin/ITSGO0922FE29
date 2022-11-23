@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    
   </head>
   <body>
     <header>
@@ -58,7 +59,68 @@
       </ul>
     </header>
     <main>
-      <aside class="leftContent"></aside>
+      
+      <aside class="leftContent">
+        <ul class="options">
+          <li>
+            <a href=""><i class="optionsIcon bi bi-person-circle"></i><a href="">User Name</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-people"></i>Find Friends</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-person-workspace"></i>Groups</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-shop-window"></i>Marketplace</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-film"></i>Watch</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-hourglass-split"></i>Memories</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-bookmarks"></i>Saved</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-book"></i>Pages</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-calendar3"></i>Events</a>
+          </li>
+          <li>
+            <a href=""><i class="optionsIcon bi bi-star"></i>Most recent</a>
+          </li>
+          <li>
+            <button onclick="showAndHide()" class="seeMore"><i class="optionsIcon bi bi-arrow-down"></i>See more</button>
+          </li>
+          <div id="SectionName"style="display:none;" class="collapseOptions" >
+           <ul>
+            <li><a href=""><i class="optionsIcon bi bi-megaphone"></i>Ad Center</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-kanban"></i>Ads Manager</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-wallet"></i>Donations</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-tree"></i>Climate Center</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-telephone"></i>Comunity Help</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-virus2"></i>COVID-19</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-heart-pulse"></i>Mental Health</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-credit-card"></i>Payment</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-cash-coin"></i> Fundraisers</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-controller"></i>Gaming</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-webcam"></i>Lives</a></li>
+           </ul>
+          </div>
+          <hr>
+          <div class="shortcut"><h4>Your Shortcuts</h4>
+            <button class="editBtn">Edit</button>
+           </div>
+           <ul class="options">
+            <li><a href=""><i class="optionsIcon bi bi-dice-6-fill"></i>Your Games</a></li>
+            <li><a href=""><i class="optionsIcon bi bi-eyeglasses"></i>Your Books</a></li>
+          </ul>
+        </ul>
+
+      </aside>
       <div class="mainContent">
         <article class="post">
           <div class="postHeader">
@@ -85,13 +147,86 @@
             <strong class="postTitle">Titlu Postare</strong>
             <p class="postDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quasi quibusdam molestiae facere est velit magnam recusandae laborum nam enim cupiditate dicta inventore accusamus, voluptatum natus exercitationem veniam dolorum earum.</p>
           </div>
-          <div class="reacts"></div>
-          <div class="reactsActions"></div>
+          <div class="reacts">
+            <div class="likesNumber">
+              <i class="bi bi-hand-thumbs-up "></i>
+              <span class="reactsCount">10 likes</span>
+            </div>
+            <div class="commentsNumber">
+              <i class="bi bi-card-text "></i>
+              <span class="reactsCount">15 comments</span>
+            </div>
+          </div>
+          <div class="reactsActions">
+            <hr>
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
+                <span>likes</span>
+                
+              </li>
+              <li class="reaction">
+                <i class="bi bi-card-text reactionIcon"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-reply reactionIcon"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
           <hr>
+          <div class="commentsSection">
+            <img src="assets/images/profile.jpg" alt="pfp" class="profileImage">
+            <input type="text" placeholder="  add comm" class="newCommField">
+            <i class="bi bi-send"></i>
+          </div>
         </article>
       </div>
-      <aside class="rightContent"></aside>
+      <aside class="rightContent">
+        <div class="sponsoredContent">
+          <h4 class="sponsoredTitle">Sponsored</h4>
+          <div class="sponMain">
+            <img src="assets/images/book.jpg" alt="book" class="sponImg">
+            <p class="sponText">Reminders of Him by Colleen Hoover
+              Images may be subject to copyright.</p>
+          </div>
+
+        </div>
+        <hr>
+        <div class="contactsMain">
+          <div class="contactsHeader">
+            <h4 class="cText">Contacts</h4>
+            <ul class="conIcon">
+              <li><i class=" cIcon bi bi-camera-video-off"></i></li>
+              <li><i class=" cIcon bi bi-search"></i></li>
+              <li><i class=" cIcon bi bi-three-dots"></i></li>
+
+            </ul>
+          </div>
+         <ul class="contactNames">
+          <li><a href=""><img src="assets/images/ana.jfif" alt="Ana" class="contactImg">Ana Smith</a></li>
+          <li><a href=""><img src="assets/images/maria.jfif" alt="Maria" class="contactImg">Maria Carlos</a></li>
+          <li><a href=""><img src="assets/images/andrei.jpg" alt="Andrei" class="contactImg">Andrei Sorin</a></li>
+          <li><a href=""><img src="assets/images/cosmin.jpg" alt="Cosmin" class="contactImg">Cosmin Norin</a></li>
+          <li><a href=""><img src="assets/images/daria.jpeg" alt="Daria" class="contactImg">Daria Jhonson</a></li>
+          <li><a href=""><img src="assets/images/alina.jpg" alt="Alina" class="contactImg">Alina Nadia</a></li>
+         </ul>
+        </div>
+        <hr>
+        <div>
+          <h4 class="groupc">Group Conversations</h4>
+          <ul class="groups">
+            <li><a href=""><i class="groupsicon bi bi-people"></i>Ana and Andreea</a></li>
+            <li><a href=""><i class="groupsicon bi bi-people"></i>Maria and Cosmin</a></li>
+            <li><a href=""><i class="groupsicon bi bi-people"></i>Work</a></li>
+            <li><a href=""><i class="groupsicon create bi bi-person-plus"></i>Create New Group</a></li>
+          </ul>
+        </div>
+        
+      </aside>
     </main>
     <footer></footer>
   </body>
-</html>
+  <script src="javascript/index.js"></script>
+  </html>

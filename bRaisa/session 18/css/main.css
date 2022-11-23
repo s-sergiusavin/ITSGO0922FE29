@@ -11,7 +11,7 @@ a {
   color: inherit;
 }
 header {
-    z-index: 10;
+  z-index: 10;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,17 +19,16 @@ header {
   position: fixed;
   top: 0;
   left: 0;
- background-color: white;
+  background-color: white;
   width: 100%;
 }
 .mainSearch {
   display: flex;
   align-items: center;
-  
 }
 .mainSearch .logo {
   padding: 10px;
-  color:  rgb(76, 0, 142);
+  color: rgb(76, 0, 142);
   font-size: 35px;
 }
 .mainSearch .logo:hover {
@@ -44,100 +43,286 @@ header {
 .mainSearch .searchInput:focus {
   border: 3px solid rgb(96, 4, 96);
 }
-.navigation > li > a{
-    border-radius: 50%;
-    background-color: rgb(235, 207, 255);
-    display: flex;
-    margin: 0 5px;
+.navigation > li > a {
+  border-radius: 50%;
+  background-color: rgb(235, 207, 255);
+  display: flex;
+  margin: 0 5px;
 }
-.navigation > li > a:hover{
-    border: 1px solid rgb(52, 89, 107);
-    background-color:rgb(192, 236, 255);
+.navigation > li > a:hover {
+  border: 1px solid rgb(52, 89, 107);
+  background-color: rgb(192, 236, 255);
 }
-.navigation, .links {
+.navigation,
+.links {
   display: flex;
 }
 .links .navIcons:hover {
-    color: darkblue;
-  }
-.navIcons{
-    font-size: 35px;
-    color:  rgb(76, 0, 142);
-    margin: 0 10px;
+  color: darkblue;
 }
-.navigation .navIcons:hover{
-    color: darkblue;
+.navIcons {
+  font-size: 35px;
+  color: rgb(76, 0, 142);
+  margin: 0 10px;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+.navigation .navIcons:hover {
+  color: darkblue;
 }
-.leftContent, .rightContent{
-    background-color: gray;
-    width: 200px;
-    height: 900px;
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
 }
-.mainContent{
+
+.mainContent {
   width: 600px;
+}
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 20px 0;
+}
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding-top: 5px;
+
+  align-items: center;
+}
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+}
+.mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 50px;
+  border-radius: 50%;
+}
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+.mainContent .post .postHeader .profileOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+.mainContent .post .postHeader .profileOptions:hover {
+  background-color: #888;
+}
+.content .imgWrapper .imgContent {
+  max-width: 100%;
+}
+.postTitle {
+  margin-top: 5px;
+  padding-left: 15px;
+  display: block;
+}
+.postDescription {
+  padding: 15px;
+}
+.imgWrapper {
+  position: relative;
+}
+.content .imgWrapper .infoIcon {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-style: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: gray;
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.postTitle {
+  margin-top: 5px;
+  padding-left: 15px;
+  display: block;
+}
+.postDescription {
+  padding: 15px;
+}
+.leftContent,
+.rightContent {
+  background-color: whitesmoke;
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+ 
+}
+.leftContent{
+  background-image: url('../assets/images/city.jfif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
   
+}
+.options,.collapseOptions {
+  flex-direction: column;
+  justify-content: flex-start;
+ 
+}
+.options > li {
+  font-size: 20px;
+  margin-top: 2px;
+}
+.options > li:hover {
+  background-color: rgb(210, 208, 208);
+}
+.options > li > a {
+  color: rgb(0, 0, 0);
+}
+
+.options .optionsIcon {
+  font-size: 30px;
+  padding: 5px;
+  color: rgb(30, 0, 40);
+  margin-right: 2px;
+}
+.seeMore {
+  font-size: 20px;
+  color: rgb(154, 151, 151);
+  border: none;
+  padding-right: 145px;
+  background-image: url('../assets/images/city.jfif');
+ 
+}
+.seeMore:hover{
+  background-color: rgb(182, 182, 182);
+}
+.collapseOptions > ul > li > a{
+  color: rgb(74, 73, 73);
+}
+.collapseOptions > ul > li:hover{
+  background-color: rgb(210, 208, 208);
+}
+.leftContent:hover ,.rightContent:hover{
+  overflow-y: scroll;
+ 
+}
+.shortcut{
+  color: rgb(64, 63, 63);
+  display: flex;
   
 }
-.mainContent .post{
-    box-shadow: 5px 5px 5px 5px #888;
-    margin: 20px 0;
+.editBtn{
+  margin-left: 50px;
+  border: none;
+  color: rgb(0, 103, 228);
+  display: none;
 }
-.mainContent .post .postHeader{
-    display: flex;
-    justify-content: space-between;
-    margin: 5px;
-    padding-top: 5px;
-    
-align-items: center;
+.shortcut:hover .editBtn{
+  display: inline-block;
 }
-.mainContent .post .postHeader .profileUserInfo{
-    display: flex;
+.rightContent{
+
 }
-.mainContent .post .postHeader .profileUserInfo .profileImage{
-    width: 50px;
-    border-radius: 50%;
+.sponImg{
+  width: 90px;
+  padding: 10px;
 }
-.mainContent .post .postHeader .profileUserInfo .profileName{
-    display: flex;
-    flex-direction: column;
+.sponText{
+  margin-top: 20px;
 }
-.mainContent .post .postHeader .profileOptions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
+.sponMain{
+  display: flex;
 }
-.mainContent .post .postHeader .profileOptions:hover{
-    background-color: #888;
+.sponsoredTitle{
+  padding-left: 20px;
+  margin-top: 5px;
+  color: rgb(64, 63, 63);
 }
-.content .imgWrapper .imgContent{
-    max-width: 100%;
-   
+.contactsHeader{
+  display: flex;
+  justify-content: space-around;
+  color: rgb(64, 63, 63);
 }
-.postTitle{
-    margin-top: 5px;
-    padding-left: 15px;
-    display: block;
+.conIcon{
+  display: flex;
 }
-.postDescription{
-    padding: 15px;
+.cIcon{
+  padding: 5px;
 }
-.imgWrapper{
-    position: relative;
+.contactImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px;
 }
-.content .imgWrapper .infoIcon{
-    position: absolute;
-    bottom: -15px;
-    right: 20px;
-    font-style: 20px;
-    border-radius: 50%;
-    border: 1px solid black;
+.contactNames>li>a{
+  color: rgb(67, 67, 67);
+}
+.groupc{
+  padding-left: 20px;
+  margin-top: 5px;
+  color: rgb(64, 63, 63);
+}
+.groupsicon{
+  color: black;
+  font-size: 25px;
+  padding: 5px;
+}
+.groups>li>a{
+ color: darkblue;
+}
+.create{
+  
+  border-radius: 50%;
+  
+  background-color: #888;
+}
+.create:hover{
+  background-color: gray;
+}
+.reacts{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.actions{
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0
+}
+.reaction{
+  padding: 5px 15px;
+  margin: 5px 0;
+  border-radius: 10px;
+  color: rgb(101, 101, 250);
+}
+.reactionIcon{
+  
+  font-size: 20px;
+}
+.reaction:hover{
+  background-color: lightgray;
+  color: rgb(17, 2, 92);
+}
+.reaction span{
+  color: black;
+}
+.reaction:hover span{
+  color: black;
+}
+.commentsSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+.commentsSection .profileImage{
+  width: 30px;
+  border-radius: 50%;
+}
+.newCommField{
+  width: 80%;
+  border-radius: 10px;
+  
 }
