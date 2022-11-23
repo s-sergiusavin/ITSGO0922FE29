@@ -27,68 +27,143 @@
   </head>
   <body>
     <header>
-        <div class="mainSearch">
-            <a href=""><i class="logo bi bi-signal"></i></a>
-            <input type="search" class="searchInput" placeholder="Search...">
-        </div>
-        <nav class="mainNavigation">
-            <ul class="navigation">
-                <li><a href=""><i class="navIcons bi bi-house"></i></a></li>
-                <li><a href=""><i class="navIcons bi bi-person"></i></a></li>
-                <li><a href=""><i class="navIcons bi bi-messenger"></i></a></li>
-                <li><a href=""><i class="navIcons bi bi-camera-video"></i></a></li>
-            </ul>
-        </nav>
-
-        <ul class="links">
-            <li><a href=""><i class="navIcons bi bi-plus-circle"></i></a></li>
-            <li><a href=""><i class="navIcons bi bi-bell"></i></a></li>
-            <li><a href=""><i class="navIcons bi bi-gear"></i></a></li>
+      <div class="mainSearch">
+        <a href=""><i class="logo bi bi-signal"></i></a>
+        <input type="search" class="searchInput" placeholder="Search..." />
+      </div>
+      <nav class="mainNavigation">
+        <ul class="navigation">
+          <li>
+            <a href=""><i class="navIcons bi bi-house"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-person"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-messenger"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-camera-video"></i></a>
+          </li>
         </ul>
+      </nav>
+
+      <ul class="links">
+        <li>
+          <a href=""><i class="navIcons bi bi-plus-circle"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-bell"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-gear"></i></a>
+        </li>
+      </ul>
     </header>
 
-
     <main>
-        <aside class="leftContent"></aside>
-            <div class="mainContent">
-                <article class="post">
+      <aside class="leftContent">
+        <div class="impLinks">
+          <a href=""><i class="bi bi-newspaper">Latest News</i></a>
+          <a href=""><i class="bi bi-people-fill"></i>Friends</a>
+          <a href=""><i class="bi bi-cart4"></i>Marketplace</a>
+          <a href=""><i class="bi bi-collection-play"></i>Watch</a>
+        </div>
+      </aside>
 
+      <div class="mainContent">
+        <article class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href=""
+                ><img
+                  src="assets/images/profile picture.jpg"
+                  alt="profile"
+                  class="profileImage"
+              /></a>
 
-                    <div class="postHeader">
-                        <div class="profileUserInfo">
-                            <a href=""><img src="assets/images/profile picture.jpg" alt="profile" class="profileImage"></a>
-                            <div class="profileName">
-                                <span>Username 1</span>
-                                <span class="postInfoDate">16 Nov 2022</span>
-                            </div>
-                        </div>
-                        <a href="" class="profileOptions">
-                            <i class="bi bi-three-dots"></i>
-                        </a>
-                    </div>
-
-                    <div class="content">
-                        <div class="imgWrapper">
-                            <img src="assets/images/post picture.jpg" alt="post 1" class="imgContent">
-                            <i class="bi bi-info-circle"></i>
-                             
-                        </div>
-                        <strong class="postTitle">Titlu postarii</strong>
-                    </div>
-
-                    <div class="reacts"></div>
-
-                    <hr/>
-
-                    <div class="reactsActions"></div>
-                </article>
+              <div class="profileName">
+                <span>Username 1</span>
+                <span class="postInfoDate">16 Nov 2022</span>
+              </div>
             </div>
-            <aside class="rightContent"></aside>
-        
+
+            <a href="" class="profileOptions">
+              <i class="bi bi-three-dots"></i>
+            </a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="assets/images/post picture.jpg"
+                alt="post 1"
+                class="imgContent"
+              />
+              <i class="bi bi-info-circle infoIcon"></i>
+            </div>
+
+            <strong class="postTitle">Titlu postarii</strong>
+
+            <p class="postDescription">
+              Aceasta este prima mea postare facuta pe reteaua de socializare
+              creata de mine in timpul cursurilor de Front End Development
+            </p>
+          </div>
+
+          <div class="reacts">
+            <div class="likesNumber">
+              <i class="bi bi-hand-thumbs-up"></i>
+              <span class="reactsCount">10 likes</span>
+            </div>
+            <div class="commentsNumber">
+              <i class="bi bi-card-text"></i>
+              <span class="reactsCount">15 comments</span>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
+                <span>Like</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-card-text reactionIcon"></i>
+                <span>Comment</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-share reactionIcon"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
 
 
+          <hr />
+
+
+          <div class="commentSection">
+            <a href=""
+            ><img
+              src="assets/images/profile picture.jpg"
+              alt="profile"
+              class="profileImage"
+          /></a>
+          <input type="text" placeholder="Add a comment" class="newCommentField">
+          <button><i class="bi bi-send sendButton"></i></button>
+          
+          </div>
+
+
+        </article>
+
+        <div class="animation"></div>
+      </div>
+      <aside class="rightContent"></aside>
     </main>
-
 
     <footer></footer>
   </body>
