@@ -81,13 +81,26 @@ main {
 
 .leftContent,
 .rightContent {
-  background-color: grey;
-  width: 200px;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  width: 450px;
   height: 900px;
+  flex-direction: column;
+  padding: 10px;
+  overflow: auto;
+}
+
+.leftContent {
+  /* background-image: url("../assets/images/photo-1519501025264-65ba15a82390.jfif"); */
+  /* height: 500px;
+  background-repeat: no-repeat;
+  overflow: auto; */
+  /* opacity: 0.8; */
 }
 .mainContent {
   width: 600px;
   border: 1px solid red;
+  display: flex;
 }
 
 .mainContent .post {
@@ -140,7 +153,7 @@ main {
   border-radius: 50%;
   border: 1px solid black;
   background-color: white;
-  color: white;
+  color: rgb(43, 9, 9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,4 +167,238 @@ main {
 
 .postDescription {
   padding: 15px;
+}
+
+.leftContent .homeText,
+.menuText,
+.textProfile,
+.marketText,
+.gamingText,
+.grupText,
+.shortcutText,
+.eventText,
+.saveText {
+  font-size: 20px;
+  color: black;
+}
+.leftContent .textProfile {
+  padding-right: 15px;
+}
+.leftContent .menuList .profilePicture {
+  width: 20px;
+  border-radius: 50%;
+  padding-top: 30px;
+}
+.leftContent .menuList .menuIcon,
+.homeIcon,
+.marketIcon,
+.gamingIcon,
+.grupIcon,
+.lastIcon,
+.eventIcon,
+.saveIcon,
+.giftI {
+  padding-top: 30px;
+  color: cornflowerblue;
+}
+.menuIcon,
+.homeIcon,
+.profilePicture,
+.homeText,
+.textProfile,
+.marketIcon,
+.saveIcon,
+.gamingIcon,
+.grupIcon,
+.lastIcon,
+.eventIcon {
+  cursor: pointer;
+}
+.reacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  margin: 15px 0;
+}
+.reaction {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: aqua;
+}
+.reaction:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+  color: blue;
+}
+.reactionIcon {
+  font-size: 18px;
+}
+.reaction span {
+  color: black;
+}
+.reaction:hover span {
+  color: black;
+}
+.commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.commentSection .profileImage {
+  width: 30px;
+  border-radius: 10px;
+}
+.newCommentField::placeholder {
+  color: black;
+}
+.buttonClass {
+  color: darkblue;
+}
+.buttonClass:hover {
+  color: cornflowerblue;
+}
+input [type="text"] {
+  background-color: lightblue;
+}
+.newCommentField {
+  background-color: lightgrey;
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 20px;
+}
+.dropdownButton {
+  margin-top: 20px;
+}
+.commentProfile {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.previousComment {
+  cursor: pointer;
+}
+.commentButton,
+.previousComment {
+  padding: 15px;
+}
+.commentPhoto {
+  height: 50px;
+  border-radius: 50%;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  cursor: pointer;
+}
+.someAdvertisement {
+  font-size: 20px;
+  padding-left: 30px;
+  color: grey;
+}
+.advertisementStyle {
+  height: 120px;
+  width: 170px;
+  padding-left: 30px;
+  box-shadow: 5px 5px 5px 5px #888;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.advertisementPhoto {
+  color: blue;
+  cursor: pointer;
+  margin-left: 20px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.commentText {
+  border-radius: 15%;
+  border: 2px;
+  background-color: lightgray;
+  display: inline-block;
+  /* margin-bottom: 20px; */
+  align-self: center;
+  padding: 10px;
+}
+.commentC {
+  padding-left: 90px;
+  justify-content: space-between;
+  cursor: pointer;
+  color: black;
+}
+.commentC:hover {
+  color: cornflowerblue;
+}
+.actionS {
+  padding-left: 20px;
+}
+.friendRequest {
+  padding-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: grey;
+}
+.friendR {
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.seeSection {
+  margin-left: 90px;
+  color: blue;
+  cursor: pointer;
+}
+.buttonStyle {
+  margin-left: 20px;
+  margin-right: 43px;
+}
+.birthday {
+  margin-top: 40px;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: grey;
+}
+.textDecoration {
+  text-decoration: solid;
+  color: black;
+  font-style: italic;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+.giftI {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.constactStyle {
+  margin-top: 30px;
+  padding-left: 32px;
+  font-size: 20px;
+  display: flex;
+  color: grey;
+}
+.cameraIcon {
+  margin-left: 150px;
+  margin-right: 20px;
+}
+.cameraIcon:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.dotsStyle {
+  margin-left: 20px;
+}
+.dotsStyle:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.searchIcon:hover {
+  color: cornflowerblue;
+  cursor: pointer;
 }

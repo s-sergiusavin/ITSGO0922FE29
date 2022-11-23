@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Social Media App</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -25,6 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -62,7 +62,53 @@
     </header>
 
     <main>
-      <aside class="leftContent"></aside>
+      <aside class="leftContent">
+          <ul class="menuList">
+            <i class="bi bi-house-door-fill homeIcon "></i>
+            <span class="homeText">Acasa</span><br>
+            <span class="textProfile">
+              <img
+                src="assets/images/profile.png"
+                alt="Profile name"
+                class="profilePicture"
+      
+              />Profile picture</span>
+              
+            </li>
+            <li class="bi bi-menu-app menuIcon">
+            <span class="menuText">Meniu</span></li>
+            <li class="bi bi-shop-window marketIcon">
+            <span class="marketText">Marketplace</span></li>
+            <li class="bi bi-controller gamingIcon">
+              <span class="gamingText">Gaming</span>
+            </li>
+            <li class="bi bi-people-fill grupIcon">
+              <span class="grupText">Grupuri</span>
+            </li>
+            <li class="bi bi-link-45deg lastIcon">
+              <span class="shortcutText">Publicitate</span>
+            </li>
+            <li class="bi bi-calendar-event eventIcon">
+              <span class="eventText">Evenimente</span>
+            </li>
+            <li class="bi bi-download saveIcon">
+              <span class="saveText">Salvate</span>
+            </li>
+            
+         
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle dropdownButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Vezi mai multe
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active bi bi-credit-card" href="#">Comenzi si plati</a></li>
+    <li><a class="dropdown-item bi bi-star" href="#">Favorite</a></li>
+    <li><a class="dropdown-item bi bi-clipboard-heart" href="#">Centru de informare COVID</a></li>
+    <li><a class="dropdown-item bi bi-bar-chart-line" href="#">Administrare reclame</a></li>
+  </ul>
+</div>
+</ul>
+      </aside>
       <div class="mainContent">
         <article class="post">
           <div class="postHeader">
@@ -91,7 +137,7 @@
                 alt="post 1"
                 class="imgContent"
               />
-              <i class="bi bi-info-circle" infoIcon></i>
+              <i class="bi bi-info-circle infoIcon"></i>
             </div>
             <strong class="postTitle">Titlul postarii</strong>
           </div>
@@ -100,12 +146,111 @@
             Aceasta este prima mea postare facuta pe reteaua de socializare
             creata de mine in timpul cursurilor de Front End Development
           </p>
-          <div class="reacts"></div>
+          <div class="reacts">
+            <div class="likesNumber">
+              <i class="bi bi-hand-thumbs-up"></i>
+              <span class="reactsCount">10 likes</span>
+            </div>
+            <div class="commentsNumber">
+              <i class="bi bi-chat-left-dots"></i>
+              <span class="reactsCount">15 comments</span>
+            </div>
+          </div>
+          
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
+                <span>Likes</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-left-dots reactionIcon"></i>
+                <span>Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-reply reactionIcon"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+
           <hr />
-          <div class="reactsActions"></div>
+<div class="commentProfile">
+  <span class="previousComment">Vezi 3 comentarii anterioare</span>
+  <div class="btn-group dropstart commentButton">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      Cele mai relevante
+    </button>
+    <ul class="dropdown-menu">
+      <i class="bi bi-chat-text">Beautiful picture</i>
+      
+    </ul>
+  </div>
+</div>
+
+
+<img src="assets/images/comment picture.jpg" alt="comment" class="commentPhoto">
+<div class="commentText">
+  <p>Iuliana Anton<br>
+    Beautiful picture
+    </p> 
+</div>
+<div class="commentC">
+  <span>Like</span>
+  <span class="actionS">Raspunde</span>
+</div>
+
+
+
+
+          <div class="commentSection">
+            <a href=""
+            ><img
+              src="assets/images/profile.png"
+              alt="profile"
+              class="profileImage"
+          /></a>
+          <input type="text" placeholder="Add a comment" class="newCommentField">
+          <button>
+          <i class="bi bi-send buttonClass"></i></button>
+          </div>
         </article>
       </div>
-      <aside class="rightContent"></aside>
+
+
+
+      <aside class="rightContent">
+        <p class="someAdvertisement">Sponsorizat</p>
+        <img src="assets/images/eMAG-showroom-e1553169631759.jpg" alt="advertisement" class="advertisementStyle">
+        <span class="advertisementPhoto">
+      
+        
+      eMAG.ro</span>  
+      <img src="assets/images/Curs-Intro-in-IT.jpg" alt="IT" class="advertisementStyle">
+      <span class="advertisementPhoto">
+        ITSCHOOL.ro
+
+      </span>
+
+      <div class="friendRequest">
+        <span>Cereri de prietenie</span>
+        <span class="seeSection">Vezi tot</span><br>
+        <img src="assets/images/comment picture.jpg" alt="friendRequest" class="friendR">
+        <button type="button" class="btn btn-primary buttonStyle">Confirma</button>
+        <button type="button" class="btn btn-light buttonS">Sterge</button>
+      </div>
+    
+      <div class="birthday">Zile de nastere</div>
+        <i class="bi bi-gift giftI"></i>
+        <span class="textDecoration">Astazi este ziua de nastere a lui <b>Alex M </b>si a altor <b>3</b>.</span>
+
+
+    <span class="constactStyle">Contacte
+    <i class="bi bi-camera-reels cameraIcon"></i>
+    <i class="bi bi-search searchIcon"></i>
+    <i class="bi bi-three-dots dotsStyle"></i></span>
+      </aside>
     </main>
 
     <footer></footer>
