@@ -21,8 +21,8 @@ header {
   position: fixed;
   left: 0;
   width: 100%;
-  background-color: whitesmoke;
   z-index: 10;
+  background-color: bisque;
 }
 
 .mainSearch {
@@ -33,7 +33,7 @@ header {
 .mainSearch .logo {
   padding: 10px;
   font-size: 35px;
-  color: blue;
+  color:blue;
 }
 
 .mainSearch .logo:hover {
@@ -46,18 +46,18 @@ header {
   padding: 0 15px;
 }
 .mainSearch .searchInput:focus {
-  border: 3px solid teal;
+  border: 3px solid black;
 }
 
 .navigation > li > a {
   border-radius: 50%;
-  background-color: aquamarine;
+  background-color: floralwhite;
   display: flex;
   margin: 0 5px;
 }
 .navigation > li > a:hover {
-  border: 1px solid darkblue;
-  background-color: teal;
+  border: 1px solid darkred;
+  background-color:darksalmon;
 }
 
 .navigation,
@@ -66,7 +66,7 @@ header {
 }
 .navIcons {
   font-size: 35px;
-  color: blue;
+  color: darkred;
   margin: 0 10px;
 }
 .navigation .navIcons:hover {
@@ -77,12 +77,13 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+  /* background-color: lavender; */
 }
 
 .leftContent,
 .rightContent {
   margin-top: 20px;
-  background-color: whitesmoke;
+  background-color:mistyrose;
   width: 450px;
   height: 900px;
   flex-direction: column;
@@ -287,13 +288,13 @@ input [type="text"] {
 }
 .commentButton,
 .previousComment {
-  padding: 15px;
+  padding: 10px;
 }
 .commentPhoto {
   height: 50px;
   border-radius: 50%;
   padding-bottom: 20px;
-  padding-left: 50px;
+  margin-left: 50px;
   cursor: pointer;
 }
 .someAdvertisement {
@@ -317,9 +318,9 @@ input [type="text"] {
   text-decoration: underline;
 }
 .commentText {
-  border-radius: 15%;
+  border-radius: 25%;
   border: 2px;
-  background-color: lightgray;
+  background-color:bisque;
   display: inline-block;
   /* margin-bottom: 20px; */
   align-self: center;
@@ -344,6 +345,7 @@ input [type="text"] {
   font-size: 20px;
   color: grey;
 }
+
 .friendR {
   height: 60px;
   border-radius: 50%;
@@ -382,6 +384,7 @@ input [type="text"] {
   font-size: 20px;
   display: flex;
   color: grey;
+  margin-bottom: 5px;
 }
 .cameraIcon {
   margin-left: 150px;
@@ -401,4 +404,25 @@ input [type="text"] {
 .searchIcon:hover {
   color: cornflowerblue;
   cursor: pointer;
+}
+.contactSection {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: fixed;
+}
+.contactSection:hover {
+  background-color: bisque;
+}
+.firstContact {
+  border-radius: 50%;
+  width: 30px;
+  flex-direction: row;
+  flex-shrink: 1;
+  padding-top: 0;
+  position: relative;
+  flex-grow: 1;
+  margin-left: 25px;
+  margin: 15px;
+  border: 1px solid black;
+  
 }
