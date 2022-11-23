@@ -23,6 +23,7 @@ header {
     left: 0;
     width: 100%; 
     background-color: whitesmoke;
+    z-index: 10;
 }
 
 .mainSearch {
@@ -87,6 +88,23 @@ main {
     background-color: grey;
     width: 200px;
     height: 900px;
+}
+
+.leftContent {
+    background-image: url('../assets/images/wallpaper.jpg');
+    background-repeat: no-repeat;
+    height: 685px;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.rightContent {
+    background-image: linear-gradient(red, yellow, green, blue);
+    background-image: radial-gradient(red, yellow, green, blue);
+}
+
+.leftContent:hover {
+    opacity: 1;
 }
 
 .mainContent {
@@ -166,4 +184,126 @@ main {
 
 .postDescription {
     padding: 15px;
+}
+
+.reacts {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    padding-left: 0;
+}
+
+.reaction {
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 10px 0;
+    color: aqua;
+}
+
+.reaction:hover {
+    background-color: lightgray;
+    color: blue;
+}
+
+.reaction span {
+    color: black;
+}
+
+.reaction:hover span {
+    color: black;
+}
+
+.reactionIcon {
+    font-size: 20px;
+}
+
+.commentSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+.commentSection .profileImage {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.newCommentField {
+    background-color: #F0F2F5;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+input[type="text"] {
+    background-color: aliceblue;
+    transform: rotate(-3deg);
+    transition: width 1s;
+    transition: width 1s, height 2s, transform 3s;
+}
+
+input[type="text"]:hover {
+    width: 60%;
+    height: 25px;
+    transform: rotate(0deg);
+}
+
+.newCommentField::placeholder {
+    color: blue;
+}
+
+/* Animations */
+
+.animation {
+    width: 600px;
+    height: 100px;
+    background-color: royalblue;
+    animation-name: example-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-delay: -2s;
+    position: relative;
+    border: 5px dashed black;
+}
+
+@keyframes example-animation {
+    0% {
+        background-color: royalblue;
+        left: 0;
+        bottom: 0;
+    }
+
+    25% {
+        background-color: yellowgreen;
+        left: 200px;
+        bottom: 0;
+    }
+
+    50% {
+        background-color: palevioletred;
+        left: 200px;
+        bottom: 200px;
+    }
+
+    71% {
+        background-color: aqua;
+        left: 0;
+        bottom: 200px;
+    }
+
+    100% {
+        background-color: indigo;
+        left: 0;
+        bottom: 0;
+    }
 }
