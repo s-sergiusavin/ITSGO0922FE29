@@ -1,309 +1,321 @@
 * {
-    font-family: 'Mitr', sans-serif;
-    box-sizing: border-box;
+  font-family: "Mitr", sans-serif;
+  box-sizing: border-box;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    background-color: whitesmoke;
-    z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 10;
 }
 
 .mainSearch {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .mainSearch .logo {
-    padding: 10px;
-    font-size: 35px;
-    color: blue;
+  padding: 10px;
+  font-size: 35px;
+  color: blue;
 }
 
 .mainSearch .logo:hover {
-    color: darkblue;
+  color: darkblue;
 }
 
 .mainSearch .searchInput {
-    display: block;
-    height: 35px;
-    border-radius: 20px;
-    padding: 0 15px;
+  display: block;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 15px;
 }
 
 .mainSearch .searchInput:focus {
-    border: 3px solid teal;
+  border: 3px solid teal;
 }
 
 .navigation > li > a {
-    border-radius: 50%;
-    background-color: aquamarine;
-    display: flex;
-    margin: 0 5px;
+  border-radius: 50%;
+  background-color: aquamarine;
+  display: flex;
+  margin: 0 5px;
 }
 
 .navigation > li > a:hover {
-    border: 1px solid darkblue;
-    background-color: teal;
+  border: 1px solid darkblue;
+  background-color: teal;
 }
 
-.navigation, .links {
-    display: flex;
+.navigation,
+.links {
+  display: flex;
 }
 
- .navIcons {
-    font-size: 35px;
-    color: blue;
-    margin: 0 10px;
+.navIcons {
+  font-size: 35px;
+  color: blue;
+  margin: 0 10px;
 }
 
- .navIcons:hover {
-    color: darkblue;
+.navIcons:hover {
+  color: darkblue;
 }
 
 main {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
 }
 
-.leftContent, .rightContent {
-    background-color: grey;
-    width: 200px;
-    height: 900px;
-}
-
-.leftContent {
-    background-image: url('../assets/images/wallpaper.jpg');
-    background-repeat: no-repeat;
-    height: 685px;
-    background-size: cover;
-    opacity: 0.8;
-}
-
+/* .leftContent,
 .rightContent {
-    background-image: linear-gradient(red, yellow, green, blue);
-    background-image: radial-gradient(red, yellow, green, blue);
-}
+  background-color: grey;
+  width: 200px;
+  height: 900px;
+} */
 
-.leftContent:hover {
-    opacity: 1;
-}
+/* .leftContent {
+  background-image: url("../assets/images/wallpaper.jpg");
+  background-repeat: no-repeat;
+  height: 685px;
+  background-size: cover;
+  opacity: 0.8;
+} */
+
+/* .rightContent {
+  background-image: linear-gradient(red, yellow, green, blue);
+  background-image: radial-gradient(red, yellow, green, blue);
+} */
+
+/* .leftContent:hover {
+  opacity: 1;
+} */
 
 .mainContent {
-    width: 600px;
-    border: 1px solid red;
+  width: 600px;
+  border: 1px solid red;
 }
 
 .mainContent .post {
-    box-shadow: 5px 5px 5px 5px #888;
-    margin: 20px 0;
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 20px 0;
 }
 
 .mainContent .post .postHeader {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .mainContent .post .postHeader .profileUserInfo {
-    display: flex;
+  display: flex;
 }
 
 .mainContent .post .postHeader .profileUserInfo .profileImage {
-    width: 50px;
-    border-radius: 50%;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .mainContent .post .postHeader .profileUserInfo .profileName {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainContent .post .postHeader .profileOptions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
 }
 
 .mainContent .post .postHeader .profileOptions:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .content .imgWrapper {
-    position: relative;
+  position: relative;
 }
 
 .content .imgWrapper .imgContent {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .content .imgWrapper .infoIcon {
-    position: absolute;
-    bottom: -15px;
-    right: 20px;
-    font-size: 28px;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-color: grey;
-    color: white;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .postTitle {
-    margin-top: 5px;
-    padding-left: 15px;
-    display: block;
+  margin-top: 5px;
+  padding-left: 15px;
+  display: block;
 }
 
 .postDescription {
-    padding: 15px;
+  padding: 15px;
 }
 
 .reacts {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .actions {
-    display: flex;
-    justify-content: space-around;
-    margin: 15px 0;
-    padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+  padding-left: 0;
 }
 
 .reaction {
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 5px 15px;
-    margin: 10px 0;
-    color: aqua;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: aqua;
 }
 
 .reaction:hover {
-    background-color: lightgray;
-    color: blue;
+  background-color: lightgray;
+  color: blue;
 }
 
 .reaction span {
-    color: black;
+  color: black;
 }
 
 .reaction:hover span {
-    color: black;
+  color: black;
 }
 
 .reactionIcon {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .commentSection {
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+  align-items: center;
 }
 
 .commentSection .profileImage {
-    width: 30px;
-    border-radius: 50%;
+  width: 30px;
+  border-radius: 50%;
 }
 
 .newCommentField {
-    background-color: #F0F2F5;
-    padding: 10px;
-    border-radius: 10px;
-    width: 80%;
+  background-color: #f0f2f5;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
 }
 
 input[type="text"] {
-    background-color: aliceblue;
-    transform: rotate(-3deg);
-    transition: width 1s;
-    transition: width 1s, height 2s, transform 3s;
+  background-color: aliceblue;
+  transform: rotate(-3deg);
+  transition: width 1s;
+  transition: width 1s, height 2s, transform 3s;
 }
 
 input[type="text"]:hover {
-    width: 60%;
-    height: 25px;
-    transform: rotate(0deg);
+  width: 60%;
+  height: 25px;
+  transform: rotate(0deg);
 }
 
 .newCommentField::placeholder {
-    color: blue;
+  color: blue;
 }
 
 /* Animations */
 
 .animation {
-    width: 600px;
-    height: 100px;
-    background-color: royalblue;
-    animation-name: example-animation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-    animation-delay: -2s;
-    position: relative;
-    border: 5px dashed black;
+  width: 600px;
+  height: 100px;
+  background-color: royalblue;
+  animation-name: example-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-delay: -2s;
+  position: relative;
+  border: 5px dashed black;
 }
 
 @keyframes example-animation {
-    0% {
-        background-color: royalblue;
-        left: 0;
-        bottom: 0;
-    }
+  0% {
+    background-color: royalblue;
+    left: 0;
+    bottom: 0;
+  }
 
-    25% {
-        background-color: yellowgreen;
-        left: 200px;
-        bottom: 0;
-    }
+  25% {
+    background-color: yellowgreen;
+    left: 200px;
+    bottom: 0;
+  }
 
-    50% {
-        background-color: palevioletred;
-        left: 200px;
-        bottom: 200px;
-    }
+  50% {
+    background-color: palevioletred;
+    left: 200px;
+    bottom: 200px;
+  }
 
-    71% {
-        background-color: aqua;
-        left: 0;
-        bottom: 200px;
-    }
+  71% {
+    background-color: aqua;
+    left: 0;
+    bottom: 200px;
+  }
 
-    100% {
-        background-color: indigo;
-        left: 0;
-        bottom: 0;
-    }
+  100% {
+    background-color: indigo;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.profilePictureList2 {
+  width: 50px;
+  border-radius: 50%;
+  padding: 10px;
+}
+.myIcons {
+  font-size: 35px;
+  padding: 10px;
 }
