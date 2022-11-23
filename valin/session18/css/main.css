@@ -5,11 +5,11 @@
 
 ul {
   list-style: none; /* sa dispara bulinele */
-  padding: 0;
+  padding-left: 5px !important;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit; /* inherit mosteneste de la parinte*/
 }
 
@@ -22,7 +22,7 @@ header {
   left: 0;
   width: 100%;
   position: fixed;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(0, 0, 0);
   z-index: 10;
 }
 
@@ -39,11 +39,11 @@ header {
 .mainSearch .logo {
   padding: 10px;
   font-size: 35px;
-  color: rgb(32, 124, 211);
+  color: rgb(32, 147, 255);
 }
 
 .mainSearch .logo:hover {
-  color: darkblue;
+  color: aqua;
 }
 
 .mainSearch .searchInput {
@@ -57,7 +57,6 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-right: -50%;
   transform: translate(-50%, -50%);
 }
 
@@ -83,56 +82,31 @@ header {
 
 .navIcon {
   font-size: 35px;
-  color: rgb(32, 124, 211);
+  color: rgb(32, 147, 255);
   margin: 0 10px;
 }
 
 .navIcon:hover {
-  color: darkblue;
+  color: aqua;
 }
 
 main {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
-}
-
-.leftContent,
-.rightContent {
-  background-color: grey;
-  flex: 4;
-  height: 100rem;
-  max-width: 400px;
-  position: sticky;
-  top: 30px;
-  overflow-y: scroll;
-}
-
-.leftContent {
-  background-image: url('../assets/images/wallpaper.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 900px;
-  opacity: 0.8;
-}
-
-.leftContent:hover {
-  opacity: 1;
-}
-
-.rightContent {
-  background-image: linear-gradient(red, yellow, green, blue);
-
+  background-color: rgb(211, 209, 209);
 }
 
 .mainContent {
   flex: 8;
-  margin: 0 40px;
+  margin: 0 30%;
+  max-width: 700px;
 }
 
 .mainContent .post {
   box-shadow: 5px 5px 5px 5px #888;
   margin: 20px 0;
+  background-color: white;
 }
 
 .mainContent .post .postHeader {
@@ -260,11 +234,11 @@ main {
 }
 
 .newCommentField {
- width: 80%;
- height: 35px !important;
- border: none;
- background-color: #F0F2F5;
- border-radius: 7px;
+  width: 80%;
+  height: 35px !important;
+  border: none;
+  background-color: #f0f2f5;
+  border-radius: 7px;
 }
 
 input[type="text"] {
@@ -290,8 +264,76 @@ input[type="text"]:hover {
   transform: rotate(270deg);
 }
 
-/* ANIMATIONS */
+.leftContent,
+.rightContent {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: rgb(86, 84, 84);
+  width: 30vw;
+  max-width: 320px;
+  top: 30px;
+  padding-top: 30px;
+  overflow: scroll;
+}
 
+.leftContent {
+  left:0 ;
+
+}
+
+.rightContent {
+  background-color: red;
+  right: 0;
+  height: 300px;
+}
+
+/* .leftContent {
+  background-image: url('../assets/images/wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  opacity: 0.8;
+} 
+
+.leftContent:hover {
+  opacity: 1;
+}
+
+.rightContent {
+  background-image: linear-gradient(red, yellow, green, blue);
+} */
+
+.upperLeft .leftPic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.leftIcon {
+  font-size: 35px;
+}
+
+.upperLeft > li > a {
+  color: rgb(32, 147, 255);
+  margin: 0 10px;
+}
+
+.upperLeft > li {
+  margin: 10px 0;
+  height: 50px;
+}
+
+.upperLeft > li:hover {
+  background-color: #b9bbbd;
+  width: 90%;
+
+  border-radius: 10px;
+  color: black;
+}
+
+/* ANIMATIONS 
 
 .animation {
   width: 600px;
@@ -336,9 +378,7 @@ input[type="text"]:hover {
   }
 }
 
-
-
-
+*/
 
 @media screen and (max-width: 700px) {
   .leftContent,
