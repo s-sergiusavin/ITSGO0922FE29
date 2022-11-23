@@ -1,7 +1,6 @@
 * {
   font-family: "Ubuntu", sans-serif;
   box-sizing: border-box;
-  font-size: 1.8vw;
 }
 
 ul {
@@ -94,6 +93,7 @@ main {
 .mainContent {
   width: 600px;
   border: 1px solid red;
+  font-size: 1rem;
 }
 
 /* am de facut continutul leftright content 
@@ -174,17 +174,18 @@ main {
 
 h3 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   margin: 1rem;
   white-space: nowrap;
   cursor: pointer;
-}
-.leftContent > h3:first-child,
-.rightContent > h3 {
-  margin-top: 1rem;
+  padding-left: 1rem;
+  font-size: 1.8em;
 }
 
+.rightContent h3 {
+  padding-left: 1.5rem;
+}
 .menu > li,
 .groups > li,
 .shortcuts > li {
@@ -200,8 +201,8 @@ h3 {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  height: 900px;
-  width: 20vw;
+  height: 100%;
+
   position: fixed;
   z-index: 9;
   padding-bottom: 5rem;
@@ -209,17 +210,14 @@ h3 {
   align-items: center;
 }
 
-.mainContent {
-  width: 60vw;
-}
-
 main {
+  white-space: normal;
   justify-content: center;
 }
 
-.responsiveFont {
+.responsiveIcons {
   margin-right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1em;
 }
 .rightContent {
   right: 0;
@@ -233,15 +231,22 @@ main {
   display: flex;
   white-space: nowrap;
   cursor: pointer;
-  justify-content: center;
-}
-.leftContent > ul > li:hover,
-.rightContent > ul > li:hover {
-  background-color: rgb(105, 105, 105);
+  justify-content: flex-start;
+  padding-left: 3.5rem;
+  font-size: 1rem;
 }
 
 .rightContent > ul > li {
-  padding: 1rem;
+  padding: 1rem 3.5rem;
+}
+
+.leftContent > ul > li:hover,
+.rightContent > ul > li:hover {
+  background-color: rgb(105, 105, 105);
+  margin: 0 0.3rem;
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
+  border-radius: 0.5rem;
 }
 
 .leftContent > ul,
@@ -287,12 +292,6 @@ main {
   color: blue;
 }
 
-/* .reaction span {
-  color: black;
-}
-.reaction:hover span {
-  color: black;
-} */
 .commentSection .profileImage {
   width: 30px;
   border-radius: 50%;
@@ -327,3 +326,44 @@ input {
 input[type="text"] {
   background-color: azure;
 }
+.mainContent {
+  min-width: min-content;
+  margin-left: 13rem;
+  margin-right: 13rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .rightContent {
+    display: none;
+
+    /* visibility: hidden; */
+  }
+
+  .leftContent {
+    width: 10%;
+  }
+  ul {
+    display: none;
+  }
+
+  .hideText {
+    display: none;
+  }
+
+  h3 {
+    padding: 0.5rem;
+    justify-content: center;
+
+    max-width: max-content;
+    border-radius: 10px;
+  }
+  .responsiveIcons {
+    margin: 0;
+  }
+  .mainContent {
+    margin-right: 0;
+    margin-left: 10%;
+  }
+}
+
+/* de verificat main content ca e retardat */
