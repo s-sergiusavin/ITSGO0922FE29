@@ -33,7 +33,7 @@ header {
 .mainSearch .logo {
   padding: 10px;
   font-size: 35px;
-  color:blue;
+  color: blue;
 }
 
 .mainSearch .logo:hover {
@@ -57,7 +57,7 @@ header {
 }
 .navigation > li > a:hover {
   border: 1px solid darkred;
-  background-color:darksalmon;
+  background-color: darksalmon;
 }
 
 .navigation,
@@ -75,20 +75,22 @@ header {
 
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 60px;
   /* background-color: lavender; */
+  align-items: flex-start;
 }
 
 .leftContent,
 .rightContent {
   margin-top: 20px;
-  background-color:mistyrose;
+  background-color: mistyrose;
   width: 450px;
-  height: 900px;
+  height: 700px;
   flex-direction: column;
   padding: 10px;
   overflow: auto;
+  position: fixed;
 }
 
 .leftContent {
@@ -97,6 +99,11 @@ main {
   background-repeat: no-repeat;
   overflow: auto; */
   /* opacity: 0.8; */
+  /* position: fixed; */
+  left: 0;
+}
+.rightContent {
+  right: 0;
 }
 .mainContent {
   width: 600px;
@@ -169,52 +176,29 @@ main {
 .postDescription {
   padding: 15px;
 }
-
-.leftContent .homeText,
-.menuText,
-.textProfile,
-.marketText,
-.gamingText,
-.grupText,
-.shortcutText,
-.eventText,
-.saveText {
-  font-size: 20px;
+.menuList {
+  margin-right: 30px;
+}
+.leftContent .textStyle {
+  font-size: 18px;
   color: black;
 }
-.leftContent .textProfile {
-  padding-right: 15px;
+.iconStyle:hover {
+  background-color: bisque;
 }
+
 .leftContent .menuList .profilePicture {
-  width: 20px;
+  width: 25px;
   border-radius: 50%;
   padding-top: 30px;
 }
-.leftContent .menuList .menuIcon,
-.homeIcon,
-.marketIcon,
-.gamingIcon,
-.grupIcon,
-.lastIcon,
-.eventIcon,
-.saveIcon,
-.giftI {
+
+.leftContent .iconStyle {
   padding-top: 30px;
   color: cornflowerblue;
-}
-.menuIcon,
-.homeIcon,
-.profilePicture,
-.homeText,
-.textProfile,
-.marketIcon,
-.saveIcon,
-.gamingIcon,
-.grupIcon,
-.lastIcon,
-.eventIcon {
   cursor: pointer;
 }
+
 .reacts {
   display: flex;
   justify-content: space-between;
@@ -320,7 +304,7 @@ input [type="text"] {
 .commentText {
   border-radius: 25%;
   border: 2px;
-  background-color:bisque;
+  background-color: bisque;
   display: inline-block;
   /* margin-bottom: 20px; */
   align-self: center;
@@ -405,24 +389,29 @@ input [type="text"] {
   color: cornflowerblue;
   cursor: pointer;
 }
-.contactSection {
+/* .contactSection {
   padding-top: 8px;
   padding-bottom: 8px;
-  display: fixed;
+
 }
 .contactSection:hover {
   background-color: bisque;
-}
+} */
 .firstContact {
   border-radius: 50%;
   width: 30px;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-shrink: 1;
   padding-top: 0;
-  position: relative;
-  flex-grow: 1;
+  /* position: relative; */
+  /* flex-grow: 1; */
   margin-left: 25px;
   margin: 15px;
   border: 1px solid black;
-  
+}
+.contactPictures:hover {
+  background-color: bisque;
+}
+.someAdvertisement:hover {
+  background-color: bisque;
 }

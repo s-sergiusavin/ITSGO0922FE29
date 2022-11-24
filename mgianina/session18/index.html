@@ -24,7 +24,11 @@
       href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -63,51 +67,75 @@
 
     <main>
       <aside class="leftContent">
-          <ul class="menuList">
-            <i class="bi bi-house-door-fill homeIcon "></i>
-            <span class="homeText">Acasa</span><br>
-            <span class="textProfile">
-              <img
-                src="assets/images/profile.png"
-                alt="Profile name"
-                class="profilePicture"
-      
-              />Profile picture</span>
-              
-            </li>
-            <li class="bi bi-menu-app menuIcon">
-            <span class="menuText">Meniu</span></li>
-            <li class="bi bi-shop-window marketIcon">
-            <span class="marketText">Marketplace</span></li>
-            <li class="bi bi-controller gamingIcon">
-              <span class="gamingText">Gaming</span>
-            </li>
-            <li class="bi bi-people-fill grupIcon">
-              <span class="grupText">Grupuri</span>
-            </li>
-            <li class="bi bi-link-45deg lastIcon">
-              <span class="shortcutText">Publicitate</span>
-            </li>
-            <li class="bi bi-calendar-event eventIcon">
-              <span class="eventText">Evenimente</span>
-            </li>
-            <li class="bi bi-download saveIcon">
-              <span class="saveText">Salvate</span>
-            </li>
-            <hr>
-         
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle dropdownButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Vezi mai multe
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark">
-    <li><a class="dropdown-item active bi bi-credit-card" href="#">Comenzi si plati</a></li>
-    <li><a class="dropdown-item bi bi-star" href="#">Favorite</a></li>
-    <li><a class="dropdown-item bi bi-clipboard-heart" href="#">Centru de informare COVID</a></li>
-    <li><a class="dropdown-item bi bi-bar-chart-line" href="#">Administrare reclame</a></li>
-  </ul>
-</div>
-</ul>
+        <ul class="menuList">
+          <li class="bi bi-house-door-fill iconStyle">
+            <span class="textStyle">Home</span>
+          </li>
+
+          <span class="textStyle">
+            <img
+              src="assets/images/profile.png"
+              alt="Profile name"
+              class="profilePicture"
+            />Profile picture</span
+          >
+
+          <li class="bi bi-menu-app iconStyle">
+            <span class="textStyle">Menu</span>
+          </li>
+          <li class="bi bi-shop-window iconStyle">
+            <span class="textStyle">Marketplace</span>
+          </li>
+          <li class="bi bi-controller iconStyle">
+            <span class="textStyle">Gaming</span>
+          </li>
+          <li class="bi bi-people-fill iconStyle">
+            <span class="textStyle">Groups</span>
+          </li>
+          <li class="bi bi-link-45deg iconStyle">
+            <span class="textStyle">Advertisement</span>
+          </li>
+          <li class="bi bi-calendar-event iconStyle">
+            <span class="textStyle">Events</span>
+          </li>
+          <li class="bi bi-download iconStyle">
+            <span class="textStyle">Saved</span>
+          </li>
+          <hr />
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle dropdownButton"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              See more
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a
+                  class="dropdown-item active bi bi-credit-card seeMore"
+                  href="#"
+                  >Orders and payments
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-star" href="#">Favorites</a>
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-clipboard-heart" href="#"
+                  >COVID Information Center</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-bar-chart-line" href="#"
+                  >Ad management
+                </a>
+              </li>
+            </ul>
+          </div>
+        </ul>
       </aside>
       <div class="mainContent">
         <article class="post">
@@ -120,7 +148,7 @@
                   class="profileImage"
               /></a>
               <div class="profileName">
-                <span>Username 1</span>
+                <span>Alma</span>
                 <span class="postInfoDate">16 Nov 2022</span>
               </div>
             </div>
@@ -139,12 +167,12 @@
               />
               <i class="bi bi-info-circle infoIcon"></i>
             </div>
-            <strong class="postTitle">Titlul postarii</strong>
+            <strong class="postTitle">Be yourself!</strong>
           </div>
 
           <p class="postDescription">
-            Aceasta este prima mea postare facuta pe reteaua de socializare
-            creata de mine in timpul cursurilor de Front End Development
+            Being stylish is about enjoying your life and expressing yourself
+            and your inner light.
           </p>
           <div class="reacts">
             <div class="likesNumber">
@@ -156,7 +184,7 @@
               <span class="reactsCount">15 comments</span>
             </div>
           </div>
-          
+
           <div class="reactsActions">
             <ul class="actions">
               <li class="reaction">
@@ -174,112 +202,145 @@
             </ul>
           </div>
 
-
           <hr />
-<div class="commentProfile">
-  <span class="previousComment">Vezi 3 comentarii anterioare</span>
-  <div class="btn-group dropstart commentButton">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Cele mai relevante
-    </button>
-    <ul class="dropdown-menu">
-      <i class="bi bi-chat-text">Beautiful picture</i>
-      
-    </ul>
-  </div>
-</div>
+          <div class="commentProfile">
+            <span class="previousComment"> See 3 previous comments</span>
+            <div class="btn-group dropstart commentButton">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                The most relevant
+              </button>
+              <ul class="dropdown-menu">
+                <i class="bi bi-chat-text">Beautiful picture</i>
+              </ul>
+            </div>
+          </div>
 
-
-<img src="assets/images/comment picture.jpg" alt="comment" class="commentPhoto">
-<div class="commentText">
-  <p>Iuliana Anton<br>
-    Beautiful picture,good way to show art!!
-    </p> 
-</div>
-<div class="commentC">
-  <span>Like</span>
-  <span class="actionS">Raspunde</span>
-</div>
-
-
-
+          <img
+            src="assets/images/comment picture.jpg"
+            alt="comment"
+            class="commentPhoto"
+          />
+          <div class="commentText">
+            <p>
+              Iuliana Anton<br />
+              Nice picture, good way to show the art!!
+            </p>
+          </div>
+          <div class="commentC">
+            <span>Like</span>
+            <span class="actionS">Raspunde</span>
+          </div>
 
           <div class="commentSection">
             <a href=""
-            ><img
-              src="assets/images/profile.png"
-              alt="profile"
-              class="profileImage"
-          /></a>
-          <input type="text" placeholder="Add a comment" class="newCommentField">
-          <button>
-          <i class="bi bi-send buttonClass"></i></button>
+              ><img
+                src="assets/images/profile.png"
+                alt="profile"
+                class="profileImage"
+            /></a>
+            <input
+              type="text"
+              placeholder="Add a comment"
+              class="newCommentField"
+            />
+            <button>
+              <i class="bi bi-send buttonClass"></i>
+            </button>
           </div>
         </article>
       </div>
 
-
-
       <aside class="rightContent">
         <div class="contactSection">
-        <p class="someAdvertisement">Sponsorizat</p>
-        <img src="assets/images/eMAG-showroom-e1553169631759.jpg" alt="advertisement" class="advertisementStyle">
-        <span class="advertisementPhoto">
-      
-        
-      eMAG.ro</span>  
-      <img src="assets/images/Curs-Intro-in-IT.jpg" alt="IT" class="advertisementStyle">
-      <span class="advertisementPhoto">
-        ITSCHOOL.ro
+          <p class="someAdvertisement">Sponsored</p>
+          <img
+            src="assets/images/eMAG-showroom-e1553169631759.jpg"
+            alt="advertisement"
+            class="advertisementStyle"
+          />
+          <span class="advertisementPhoto"> eMAG.ro</span>
+          <img
+            src="assets/images/Curs-Intro-in-IT.jpg"
+            alt="IT"
+            class="advertisementStyle"
+          />
+          <span class="advertisementPhoto"> ITSCHOOL.ro </span>
+        </div>
+        <hr />
+        <div class="contactPictures">
+          <div class="friendRequest">
+            <span>Friend requests </span>
+            <span class="seeSection">See all</span><br />
+            <img
+              src="assets/images/comment picture.jpg"
+              alt="friendRequest"
+              class="friendR"
+            />
+            <button type="button" class="btn btn-primary buttonStyle">
+              Confirm
+            </button>
+            <button type="button" class="btn btn-light buttonS">Remove</button>
+          </div>
+        </div>
+        <hr />
+        <div class="contactPictures">
+          <div class="birthday">Birthdays</div>
+          <i class="bi bi-gift giftI"></i>
+          <span class="textDecoration"
+            >Today is the birthday of <b>Alex M </b> and <b>3</b> others.</span
+          >
+        </div>
 
-      </span>
-    </div>
-<hr>
-<div class="contactSection">
-      <div class="friendRequest">
-        <span>Cereri de prietenie</span>
-        <span class="seeSection">Vezi tot</span><br>
-        <img src="assets/images/comment picture.jpg" alt="friendRequest" class="friendR">
-        <button type="button" class="btn btn-primary buttonStyle">Confirma</button>
-        <button type="button" class="btn btn-light buttonS">Sterge</button>
-      </div>
-    </div>
-    <hr>
-    <div class="contactSection">
-      <div class="birthday">Zile de nastere</div>
-        <i class="bi bi-gift giftI"></i>
-        <span class="textDecoration">Astazi este ziua de nastere a lui <b>Alex M </b>si a altor <b>3</b>.</span>
-      </div>
+        <hr />
+        <div class="contactPictures">
+          <span class="constactStyle"
+            >Contacts
+            <i class="bi bi-camera-reels cameraIcon"></i>
+            <i class="bi bi-search searchIcon"></i>
+            <i class="bi bi-three-dots dotsStyle"></i
+          ></span>
+        </div>
 
-<hr>
-<div  class="contactSection">
-    <span class="constactStyle">Contacte
-    <i class="bi bi-camera-reels cameraIcon"></i>
-    <i class="bi bi-search searchIcon"></i>
-    <i class="bi bi-three-dots dotsStyle"></i></span>
-  </div>
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon1.jfif"
+            alt="First contact"
+            class="firstContact"
+          />
 
+          Contact 1
+        </div>
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon2.jfif"
+            alt="Second contact"
+            class="firstContact"
+          />
+          Contact 2
+        </div>
 
-    <div class="contactSection">
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon3.png"
+            alt="third contact"
+            class="firstContact"
+          />
+          Contact 3
+        </div>
 
-
-      <div class="contactPictures">
-
-      <img src="assets/images/icon1.jfif" alt="First contact" class="firstContact">
-
-   Contact 1</div>
-   <div>
-  <img src="assets/images/icon2.jfif" alt="Second contact" class="firstContact"> 
-   Contact 2</div>
-
-   <div>
-    <img src="assets/images/icon3.png" alt="third contact" class="firstContact">
-   Contact 3</div>
-
-   <div>
-    <img src="assets/images/icon4.png" alt="fourth contact" class="firstContact">
-   Contact 4</div>
-    </div>
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon4.png"
+            alt="fourth contact"
+            class="firstContact"
+          />
+          Contact 4
+        </div>
       </aside>
     </main>
 
