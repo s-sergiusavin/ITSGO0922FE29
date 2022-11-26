@@ -9,7 +9,7 @@ let marksOf10lei = 0;
 
 marksOf10lei += 1;
 marksOf10lei++;
-marksOf10lei += 3; // se adauga 3 la valoarea precedenta
+marksOf10lei += 3;
 
 let total = 10;
 
