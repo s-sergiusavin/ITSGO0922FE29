@@ -30,7 +30,7 @@ let isAcOn = false;
 
 while (!isAcOn) {
   roomTemperature += 1;
-  if (roomTemperature === 24) {
+  if (roomTemperature === 26) {
     isAcOn = true;
   }
 }
