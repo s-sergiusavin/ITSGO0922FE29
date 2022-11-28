@@ -179,8 +179,8 @@ const rateMovie = (movie) => {
             console.log("Filmul nu are nota de trecere"); 
     }
 }
-
-rateMovie("Harry POtter"); //5
+ 
+rateMovie("Harry POtter"); //5,
 rateMovie("Avatar"); //8
 rateMovie("Titanic"); //7
 rateMovie("HObbit"); //9
