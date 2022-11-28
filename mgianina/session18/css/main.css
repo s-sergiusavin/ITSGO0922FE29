@@ -185,6 +185,7 @@ main {
 .leftContent .textStyle {
   font-size: 18px;
   color: black;
+  padding-top: 30px;
 }
 .iconStyle:hover {
   background-color: bisque;
@@ -193,7 +194,6 @@ main {
 .leftContent .menuList .profilePicture {
   width: 25px;
   border-radius: 50%;
-  padding-top: 30px;
 }
 
 .leftContent .iconStyle {
