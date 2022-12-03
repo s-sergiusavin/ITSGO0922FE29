@@ -52,7 +52,7 @@ needMoney = false;
 if (needMoney === true) {
   const newNumber = addTwo(3);
 }
-// console.log(globalLetVariable);
+console.log(globalLetVariable);
 
 let scopeTest = "La nivel de fisier";
 
@@ -237,7 +237,7 @@ const valoareMoneda = ["cap", "stema"];
 //Make a pizza
 
 const orderPizza = (i1, i2, i3) => {
-    console.log('Pizza cu ingredientele ' + i1 ', ' + i2 + ' si ' + i3 + ' in preparare...');
+    console.log("Pizza cu ingredientele " + i1 + i2 + " si " + i3 +  " in preparare...");
     console.log(`Pizza cu ingredientele ${i1}, ${i2} si ${i3} in preparare...`);
 }
 
