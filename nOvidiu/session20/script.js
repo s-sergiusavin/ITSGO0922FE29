@@ -265,3 +265,26 @@ const orderPizza = (ingredient1, ingredient2, ingredient3) => {
 };
 
 orderPizza("mozzarella", "ciuperci", "prosciuto");
+
+//TEMA
+
+const randomArray = [1, 5, 12, 33, 6, 11, 77, 34, 115];
+
+const mapOfArray = randomArray.map((element) => element - 1);
+console.log(mapOfArray);
+
+const filterOfArray = randomArray.filter((element) => element > 50);
+console.log(filterOfArray); // return result of filter
+
+const spliceFunction = function (array, pos, itemsToRemove, message) {
+  array.splice(pos, itemsToRemove, message);
+  console.log(array);
+};
+//spliceFunction(randomArray, 3, 0, "Something");
+
+//how do I store my newly spliced array in a new variable?
+// variabila in care stochez operatia splice imi va afisa elementele scoase
+function compareNumbers(a, b) {
+  return a - b;
+}
+console.log(randomArray.sort(compareNumbers));
