@@ -247,5 +247,18 @@ sendEmail('Sergiu', 'Savin', 'student', 10, 'bacalauerat');
 sendEmail('Sergiu', 'Savin', '', 10, 'bacalauerat');
 sendEmail('Sergiu', 'Savin', null, '', 'bacalauerat');
 
+/**
+ * git status
+ * git add .
+ * git status
+ * git commit -m 'Mesaj'
+ * git status
+ * git push
+ * git checkout main
+ * git pull
+ * git checkout branchPropriu
+ * git merge main
+ */
+
 
 
