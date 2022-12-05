@@ -210,39 +210,136 @@ const complexObject = {
 
 complexObject.watchMovie(complexObject.favouriteMovies[2]);
 
-
-
 for (let i = 0; i < complexObject.hobbies.length; i++) {
   console.log(complexObject.favouriteMovies[i]);
 }
 
 for (let i = 0; i < complexObject.hobbies.length; i++) {
-    const movie = complexObject.favouriteMovies[i];
-    complexObject.watchMovie(movie);
-  }
+  const movie = complexObject.favouriteMovies[i];
+  complexObject.watchMovie(movie);
+}
 
-  //Flip a coin
+//Flip a coin
 const valoareMoneda = ["cap", "stema"];
 
-
-  const flipAcoin = () => {
-    if (valoareMoneda[Math.round(Math.random())] ==="cap") {
-        console.log("A iesit cap");
-    }else {
-        console.log("A iesit stema");
-    }
+const flipAcoin = () => {
+  if (valoareMoneda[Math.round(Math.random())] === "cap") {
+    console.log("A iesit cap");
+  } else {
+    console.log("A iesit stema");
   }
-  flipAcoin();
+};
+flipAcoin();
 
 //Make a pizza
 
 const orderPizza = (i1, i2, i3) => {
-    console.log("Pizza cu ingredientele " + i1 + i2 + " si " + i3 +  " in preparare...");
-    console.log(`Pizza cu ingredientele ${i1}, ${i2} si ${i3} in preparare...`);
-}
+  console.log(
+    "Pizza cu ingredientele " + i1 + i2 + " si " + i3 + " in preparare..."
+  );
+  console.log(`Pizza cu ingredientele ${i1}, ${i2} si ${i3} in preparare...`);
+};
 
 //Pizza cu ingredientele mozzarela, ciuperci si prociutto in preparare...
 orderPizza("mozzarela", "ciuperci", "prociutto");
+
+//Homework
+
+const products = [
+  {
+    id: 37,
+    title: "ank Tops for Womens/Girls",
+    price: 50,
+    quantity: 2,
+    total: 100,
+    discountPercentage: 12.05,
+    discountedPrice: 88,
+  },
+  {
+    id: 80,
+    title: "Chain Pin Tassel Earrings",
+    price: 45,
+    quantity: 3,
+    total: 135,
+    discountPercentage: 17.75,
+    discountedPrice: 111,
+  },
+  {
+    id: 68,
+    title: "Stylish Luxury Digital Watch",
+    price: 57,
+    quantity: 3,
+    total: 171,
+    discountPercentage: 9.03,
+    discountedPrice: 156,
+  },
+  {
+    id: 81,
+    title: "Round Silver Frame Sun Glasses",
+    price: 19,
+    quantity: 1,
+    total: 19,
+    discountPercentage: 10.1,
+    discountedPrice: 17,
+  },
+  {
+    id: 90,
+    title: "Cycle Bike Glow",
+    price: 35,
+    quantity: 1,
+    total: 35,
+    discountPercentage: 11.08,
+    discountedPrice: 31,
+  },
+];
+
+//5 metode de manupilare a array urilor:
+
+//1.Pop method:
+
+const newProduct = products.pop();
+console.log(products);
+
+//2.Filter method:
+
+const namesList = [
+  "Ioana",
+  "Vlad",
+  "Ana",
+  "Iulia",
+  "Ruxandra",
+  "Magdalena",
+  "Alexandra",
+];
+
+const newList = namesList.filter(name => name.length >= 8);
+console.log(newList);
+
+//3. Push method:
+const numberList = [1, 7, 9, 3, 10]
+const newNumbers = [40, 28, 19];
+numberList.push(newNumbers);
+console.log(numberList);
+
+//4. Concat method:
+
+const newNames = ["Flavia", "Bogdan"];
+const newArray = namesList.concat(newNames);
+console.log("The concat array is", newArray);
+
+//5.Find method : 
+
+const numberOf = numberList.find(number => number > 7);
+console.log("The number is", numberOf);
+
+
+
+
+
+
+
+
+
 
 
 
