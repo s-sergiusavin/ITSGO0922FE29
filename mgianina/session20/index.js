@@ -333,9 +333,30 @@ const numberOf = numberList.find(number => number > 7);
 console.log("The number is", numberOf);
 
 
+//6.ForEach method:
+
+const numbers = [20, 11, 3, 5, 9, 34];
+
+function myFunction(item, index, arr) {
+  arr[index] = item * 5;
+}
+
+numbers.forEach(myFunction);
+console.log("Iteration with forEach:", numbers);
 
 
+//7.Reverse method :
 
+namesList.reverse();
+console.log("This is an reversed list:", namesList);
+
+//8.Splice method:
+
+const daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Friday", "Saturday", "Sunday"];
+
+daysOfTheWeek.splice(3, 0, "Thursday");
+
+console.log("The days of the week:", daysOfTheWeek);
 
 
 
