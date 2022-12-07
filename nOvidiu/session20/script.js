@@ -288,3 +288,10 @@ function compareNumbers(a, b) {
   return a - b;
 }
 console.log(randomArray.sort(compareNumbers));
+
+// push slice reuce pop
+
+randomArray.pop();
+randomArray.push("Stuff");
+randomArray.shift();
+randomArray.slice(2, 5);
