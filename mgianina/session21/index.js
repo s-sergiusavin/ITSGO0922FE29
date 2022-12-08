@@ -13,12 +13,18 @@ function addToSum(number) {
   // return sum;
 }
 
+//CU RETURN TRIMITEM O VALOARE IN LOCUL UNDE NE ESTE APELATA FUNCTIA
+//CE SCRIEM DUPA RETURN,NU SE MAI CITESTE(EXECUTA)
+
 console.log(addToSum(3));
 let totalSum = addToSum(5);
 console.log(totalSum);
 
 let sumNumbers = addToSum;
 console.log(sumNumbers(7));
+
+//CAND SCRIEM O FUNCTIE CU PARANTEZE() -O APELAM(FACEM TRIMITERE LA CODUL SCRIS SI O FACEM SA SE EXECUTE);
+//CAND SCRIEM O FUCNTIE FARA PARANTEZE-NE FOLOSIM DE REFERINTA EI SI O PUTEM COPIA
 
 let sumTwoNumbers = function (number1, number2) {
   return number1 + number2;

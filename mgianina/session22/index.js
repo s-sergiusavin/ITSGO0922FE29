@@ -300,3 +300,14 @@ const person = {
         console.log("Hey")
     }
 };
+
+
+//Filter
+let newNumbers = [23, 4, 15, 7, 8];
+
+let numberFiltred = newNumbers.filter((number) => {
+  return number > 10;
+});
+console.log(numberFiltred);
+
+
