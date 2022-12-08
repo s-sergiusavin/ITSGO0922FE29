@@ -1,13 +1,21 @@
+// Array.prototype.map() JS are o parte mult mai complicata denumita Mostenire Prototopiala, la asta se refera obiectul prototype
+// facem abstractie ca este acolo pebtru ca ne trebuesc mai multe notiuni de baza ca sa intelegem cum functioneaza
+
+/**
+ * Array cu A, la fel cu Number sau String (pe developer mozilla sunt asa declarate metodele) sunt obiecte care vin
+ * cu o multime de proprietati
+ */
+
 const myName = 'alin';
 
 console.log(myName.toUpperCase());
 
 let sum = 0;
-function addToSum(number = 1) {
+function addToSum(number = 1) { // punem egal cu 1 ca sa evitam sa iasa undefined in console daca nu i dam o valoare la number
    return sum += number;
 
    console.log('Acest cod nu se va executa niciodata') // pentru ca dupa return nu mai executa nimic
-   return undefined; //  default este acest return daca nu scriu nimic
+   return undefined; //  default este return undefined
 }
 
 console.log(addToSum(3));
@@ -39,7 +47,7 @@ function verifyEquality(num1, num2) {
 console.log(verifyEquality(5,6));
 
 function verifyEqualitySimplified(num1, num2) {
-   return num1 === num2; // egal cu deasupra
+   return num1 === num2; // egal cu deasupra // practic return imi trimite inafara functiei o valoare, nu toata conditia
 }
 
 console.log(verifyEqualitySimplified(5,6));
@@ -49,7 +57,8 @@ debugger; // merge doar  cu consola deschisa
 // F10 sare un pas 
 // F11 intra intr-o functie
 // Shift + F11 iese dintr-o functie
-
+// Comenzile nu sunt foarte importante pentru ca avem butuoanele in consola si putem folosi debuggeru direct in browser
+// Putem porni debuggeru la o anumita linie de cod apasnd in consola pe respectivul numarc  al liniei (brekpoint)
 
 function removeFromTheBiggest(num1, num2) {
    if (num1 >= num2) {
@@ -63,7 +72,7 @@ console.log(removeFromTheBiggest(5,7));
 console.log(removeFromTheBiggest(15,7));
 
 function verifyNumber(number) {
-   if (number >= 10 && number < 50) {
+   if (number >= 10 && number < 50) {v  
       return true;
    } else {
       return false;
@@ -94,7 +103,7 @@ const puppy = {
    bark: function() {
       console.log('Ham');
    },
-   barkLoud: function() {
+   barkLoud: () => {
       console.log('HAM!');
    }
 }
@@ -159,12 +168,12 @@ const toggleLights = () => {
       return 'Luminile au fost stinse';
    }
 }
-
+ 
 const toggleAc = () => {
    acValue = !acValue;
    if (acValue) {
       acOpenings ++;
-      return 'Ac-ul a fost aprins';
+      return 'Ac-ul a fost aprins';        
    } else {
       return 'Ac-ul a fost stins';
    }
@@ -206,7 +215,7 @@ const smoke = () => {
    // daca e vara repornim ac-ul
 }
 
-const playMusic = (song = 'Playing spotify...') => {
+const playMusic = (song = 'Spotify...') => {
    console.log(`Playing ... ${song}`)
 }
 
@@ -214,5 +223,5 @@ const playMusic = (song = 'Playing spotify...') => {
 toggleLights();
 console.log(toggleLights());
 smoke();
-playMusic('Play radio');
+playMusic('Radio');
 
