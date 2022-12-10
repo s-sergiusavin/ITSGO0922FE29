@@ -187,7 +187,7 @@ main {
   color: black;
   padding-top: 30px;
 }
-.textStyle:hover{
+.textStyle:hover {
   background-color: bisque;
 }
 .iconStyle:hover {
@@ -199,7 +199,6 @@ main {
   border-radius: 50%;
   cursor: pointer;
 }
-
 
 .leftContent .iconStyle {
   padding-top: 30px;
@@ -417,10 +416,18 @@ input [type="text"] {
   margin-left: 25px;
   margin: 15px;
   border: 1px solid black;
+  position: relative;
 }
 .contactPictures:hover {
   background-color: bisque;
 }
+
 .someAdvertisement:hover {
   background-color: bisque;
+}
+.greenDot {
+  width: 15px;
+  position: relative;
+  right: 100px;
+  top: 10px;
 }
