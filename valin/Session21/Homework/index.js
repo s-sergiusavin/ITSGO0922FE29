@@ -8,22 +8,13 @@ console.log(concatFunction(['Salut', 'sunt'],['Alin', '!'])); // Salut sunt Alin
 
 // MAP
 
-// let mapArray = [];
-// const mapStringFunction = (array) => {
-//    array.map(data => {
-//       if (typeof data === 'string') {
-//          mapArray.push(data);
-//       }
-//    } )
-//    return mapArray;
-// }
-
+let mapArray = [];
 const mapStringFunction = (array) => {
-   const mapArray = array.map(element => {
-      if (typeof element === 'string') {
-         return element;
+   array.map(data => {
+      if (typeof data === 'string') {
+         mapArray.push(data);
       }
-   })
+   } )
    return mapArray;
 }
 
@@ -70,4 +61,88 @@ const everyFunction = (array) => {
    return value;
 }
 
-console.log(everyFunction([1, 34, 'Hi', 12, 20, 0]))
+console.log(everyFunction([1, 34, 12, 20, 0]));
+
+console.log('–––– More exercizes ––––')
+
+// More exercizes
+
+// Check if variable is an array
+
+const checkArray = (array) => {
+   variableType = Array.isArray(array);
+}
+
+checkArray([1, 2, 3]);
+console.log(variableType);
+checkArray('Sup');
+console.log(variableType);
+console.log('––––––––');
+
+// var is_array = function(input) {
+//    if (toString.call(input) === "[object Array]")
+//      return true;
+//    return false;   
+//      };
+//  console.log(is_array('w3resource'));
+//  console.log(is_array([1, 2, 4, 0]));
+
+// Clone array
+
+// const cloneArray = (array) => {
+//    const clonedArray = array.map( element => {
+//       return element;
+//    })
+//    return clonedArray
+// }
+
+const cloneArray = (array) => {
+   const clonedArray = array.slice();
+   return clonedArray
+}
+
+console.log(cloneArray([1, 2, 3, [4, 5]]));
+console.log('––––––––');
+
+// Return n elements of an array
+
+const arrayOutput = (array, elements = 1) => {
+   if (elements < 0) {
+      elements = 0;
+   }
+
+   const newArray = array.slice(0, elements);
+   return newArray;
+}
+
+console.log(arrayOutput([2, 4, 5, 6], 1));
+console.log(arrayOutput([2, 4, 5, 6], 0));
+console.log(arrayOutput([2, 4, 5, 6], 2));
+console.log(arrayOutput([2, 4, 5, 6], -2));
+console.log('––––––––');
+
+// Return last n elements of an array
+
+const arrayOutput2 = (array, elements = 1) => {
+   const newArray = array.slice(array.length - elements);
+   return newArray;
+ };
+ 
+ console.log(arrayOutput2([2, 4, 5, 6],2));
+ 
+console.log('––––––––');
+
+// Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers.
+
+const dashFunction = (value) => {
+   if (value === Number) {
+      value.forEach(element => {
+         
+      })
+   } else {
+      console.log('NaN!!');
+   }
+   return newValue
+}
+
+console.log(dashFunction(234421));

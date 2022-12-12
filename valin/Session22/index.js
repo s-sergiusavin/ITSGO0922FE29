@@ -2,22 +2,28 @@
  * Array methods/functions
  */
 
-let array = [1, 2, 3, "4", 5];
+// Functiile sunt proprietati ale obiectelor denumite metode
+
+let array = [1, 2, 3, "4", 5]; // arrayul este un obiect pentru ca are pereche cheie valoare: respectiv index si variabila
 
 console.log(array.length);
 
 array[1] = 100;
-array[10] = 100; // imi creaza spatii goale pana pe pozitia 10
+array[10] = 100; // imi creaza spatii goale pana pe pozitia 10 pentru ca arrayul e nelimitat
 
 /**
  * Adaugare sau stergere elemente intr-un array la final : push & pop
  */
 
 array.push(6);
+console.log(array.push(6)) // metoda .push() pune element la final si returneaza length ul nou la array
+                            // .pop() sterge la final si imi returneaza  valoarea scoasa
 
 /**
  * Adaugare sau stergere elemente la inceputului unui array: unshift & shift
  */
+
+// unshift() si shift() returneaza la fel ca mai sus, respectiv noul length si elementul scos
 
 /**
  * Array iterations
@@ -28,7 +34,7 @@ for (let i = 0; i < array.length; i++) {
 }
 
 /**
- * forEach() method
+ * forEach() method si imi cere o functie ca parametru
  */
 
 // array.forEach( function () {} );
@@ -44,7 +50,7 @@ array.forEach((element) => {
   console.log(element);
 });
 
-// Bad example! Not working!
+// Bad example! Not working! Pentru ca cu forEach doar iteram in array, nu returneaza nimic
 let newArray = array.forEach((element) => {
   return (element += 1);
 });
@@ -62,12 +68,12 @@ newArray = array.map((element) => {
 console.log(newArray);
 
 /**
- * .indexof() => indexul unui element
+ * .indexof() => returneaza indexul unui element
  */
 
 console.log(array.indexOf(3));
 array[array.indexOf(3)] = 7;
-
+// daca elementul nu exista, returneaza -1
 /**
  * Copy array elements
  */
@@ -83,12 +89,14 @@ arrayCopy[0] = "zero";
 
 arrayCopy = array.slice(2); // copiaza toate elementele unui array incepand cu o pozitie specificata
 arrayCopy = array.slice(2, 5); // copiaza toate elementele unui array intre indexurile specificate (cel de-al doilea nu e inclus)
+// .slice() returenaza un shallow copy adica originalul nu este modificat
 
 /**
  * .splice() method - cut elements
  */
 
-// let changedArray = array.splice(2) // decupeaza elementele unui array incepadn cu posizia specificata
+// .splice() modifica arrayul original
+   let changedArray = array.splice(2) // decupeaza elementele unui array incepadn cu posizia specificata
 // let changedArray = array.splice(1, 2); // decupeaza elementele unui array specificand posizia initiala si numarul de elemente ce vor fi sterse
  
 /**
@@ -127,10 +135,11 @@ const concatArray = ['add', 'me'];
 console.log(array.concat(concatArray));
 
 /**
- * Transforma array into string
+ * Transform array into string
  */
 
-let arrayToString = array.join();
+let arrayToString = array.join(); // are virgula ca default intre elemente
+// putem separa cu orice .join(' ') .join('x x')
 console.log(arrayToString);
 
 /**
@@ -152,11 +161,11 @@ console.log(reducedArray);
 
 const arrayToSort = [1, 7, 200, 34, -8, 1024, 855, 11.4, 'asd', 'aac', 'sum']; 
 
-// const sortedArray = arrayToSort.sort(); // by default nu sorteaza crescator numerele (sortare alfamnumerica)
+// const sortedArray = arrayToSort.sort(); // by default nu sorteaza crescator numerele (sortare alfanumerica)
 
 const sortedArray = arrayToSort.sort( (a,b) => {
    // return a - b; crescator
-   return b - a; // decrescator
+   return b - a; // descrescator
 } )
 
 console.log(sortedArray);
@@ -191,7 +200,7 @@ const arrayToFind = [
 
 const foundElem = arrayToFind.find ( element => element.name === 'Andrei');
 
-function test1() {
+function test1() { // putem numara parantezele 1 2 3 4 3 2 1 0, adaugam cand deschidem si scadem cand se inchid
    function test2() {
       function test3() {
          function test4() {
@@ -202,7 +211,7 @@ function test1() {
 }
 
 /**
- * Includes method
+ * Includes method, if an element is in the array
  * .include()
  */
 
@@ -216,7 +225,7 @@ console.log(includedElem);
 const createPerson = (name, age, gender) => {
    return {
       firstName : name,
-      age : age, // age era sufuciet
+      age : age, // age era suficiet
       gender // gender : gender
    }
 }
@@ -227,10 +236,10 @@ const raluca = createPerson('Raluca', 19, 'female');
 console.log(alin);
 
 /**
- * Create object literal method
+ * Create objects using Object Literal method adica pur si simplu le am definit si dat o valoare
  */
 
-const persona = {
+const person = {
    name: 'Sergiu',
    lastName: 'Vasiliu',
    age: 28,
@@ -240,13 +249,18 @@ const persona = {
    },
    hobbies: ['travel', 'snowboard', 'reading'],
    sayHi: function() {
-      console.log('Hi')
+      console.log('Hi ' + this.name)
    },
    sayHiArrow: () => {
-      console.log('Hello')
+      // console.log('Hello ' + this.lastName) // nu functioneaza doar pentru arrow function
    },
    sayHiProperty() {
-      console.log('Hey')
+      console.log('Hey ' + this.lastName)
    }
 }
+
+person.name = 'Alin';
+person.hobbies.push('skiing');
+person.sayHi();
+
 
