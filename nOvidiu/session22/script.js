@@ -248,12 +248,24 @@ const person = {
   },
   hobbies: ["travel", "reading", "swimming"],
   sayHi: function () {
-    console.log("Hi!");
+    console.log("Hi! " + this.name);
   },
   sayHiArrow: () => {
-    console.log("HiArrow");
+    console.log("HiArrow!");
   },
   sayHiProperty() {
     console.log("Hey");
   },
 };
+// this - pt apelare proprietati la nivel interior
+// session 23
+
+person.name = "Alexandru";
+console.log(person.name);
+person.hobbies.push("ski");
+console.log(person.hobbies);
+person.sayHi();
+person.sayHiArrow();
+// arrow function - this nu functioneaza ca la functiile normale
+
+//
