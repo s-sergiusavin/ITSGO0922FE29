@@ -364,3 +364,6 @@ console.log("The days of the week:", daysOfTheWeek);
 
 
 
+
+
+

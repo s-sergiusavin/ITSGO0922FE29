@@ -301,13 +301,48 @@ const person = {
     }
 };
 
+//Exercises
 
-//Filter
-let newNumbers = [23, 4, 15, 7, 8];
+//1.Filter
+let newNumbers = [3, 23, 4, 15, 7, 8, 10];
 
 let numberFiltred = newNumbers.filter((number) => {
   return number > 10;
 });
 console.log(numberFiltred);
+
+//2.Find-ne returneaza primul numar care trece de conditia implementata prin functie,nu modifica array ul initial
+//daca nici unul din elemente nu satisface conditia,rezultatul este undefined
+
+let numberFind= newNumbers.find(number => number > 5);
+console.log("First number finded:", numberFind);
+
+//3.findIndex: ne returneaza indexul primului element care indeplineste conditia implementata de o functie
+//daca nici un element nu este gasit,ne returneaza -1;
+
+let numberFindIndex = newNumbers.findIndex(number => number > 2);
+console.log("Index finded:", numberFindIndex);
+
+//4.Join: ne returneaza elementele unui array separate prin virgula sau printr-un separator specificat
+
+let numberJoin = newNumbers.join("*");
+console.log(numberJoin);
+
+//5.toString: se comporta ca si join,ne returneaza elementele unui array ,separate de virgula
+//nu modifica array ul initial
+
+let numberString = newNumbers.toString();
+console.log(numberString);
+
+//6.forEach:
+
+
+
+
+
+
+
+
+
 
 
