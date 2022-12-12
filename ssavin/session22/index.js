@@ -284,12 +284,20 @@ const person = {
     },
     hobbies: ['travel', 'reading', 'swimming'],
     sayHi: function() {
-        console.log('Hi')
+        console.log('Hi ' + this.name );
     },
     sayHiArrow: () => {
-        console.log('Hello')
+        // console.log('Hello' + this.lastName); // nu functioneaza
     },
     sayHiProperty() {
-        console.log('Hey')
+        console.log('Hey' + this.lastName);
     }
 };
+
+person.name = 'Aelex';
+person.address.city = 'City';
+person.hobbies.push('ski');
+console.log(person.hobbies);
+person.sayHi();
+person.sayHiArrow();
+person.sayHiProperty();
