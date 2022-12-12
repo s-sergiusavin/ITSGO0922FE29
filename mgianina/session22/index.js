@@ -49,7 +49,7 @@ let newArray = array.forEach((element) => {
   return (element += 1);
 });
 
-// console.log(newArray);
+console.log("forEach method:", newArray);
 
 //4.Map() method => create a new array
 
@@ -291,51 +291,103 @@ const person = {
     },
     hobbies: ["travel", "reading", "swiming"],
     sayHi: function () {
-        console.log("Hi")
+        console.log("Hi " + this.name )
     },
     sayHiArraw: () => {
-        console.log("Hello")
+        // console.log("Hello " + this.lastName); NU FUNCTIONEAZA
     },
     sayHiProperty() {
-        console.log("Hey")
+        console.log("Hey " + this.lastName);
     }
 };
 
-//Exercises
+person.name ="Alexandru";
+console.log(person);
 
-//1.Filter
-let newNumbers = [3, 23, 4, 15, 7, 8, 10];
 
-let numberFiltred = newNumbers.filter((number) => {
-  return number > 10;
-});
-console.log(numberFiltred);
+person.adress.city = "City";
 
-//2.Find-ne returneaza primul numar care trece de conditia implementata prin functie,nu modifica array ul initial
-//daca nici unul din elemente nu satisface conditia,rezultatul este undefined
+person.hobbies.push("ski");
+console.log(person.hobbies);
 
-let numberFind= newNumbers.find(number => number > 5);
-console.log("First number finded:", numberFind);
+person.sayHi();
+person.sayHiProperty();
+person.sayHiArraw();
 
-//3.findIndex: ne returneaza indexul primului element care indeplineste conditia implementata de o functie
-//daca nici un element nu este gasit,ne returneaza -1;
+//particularitati arrow function: THIS nu functioneaza la arrow function .
 
-let numberFindIndex = newNumbers.findIndex(number => number > 2);
-console.log("Index finded:", numberFindIndex);
 
-//4.Join: ne returneaza elementele unui array separate prin virgula sau printr-un separator specificat
 
-let numberJoin = newNumbers.join("*");
-console.log(numberJoin);
 
-//5.toString: se comporta ca si join,ne returneaza elementele unui array ,separate de virgula
-//nu modifica array ul initial
 
-let numberString = newNumbers.toString();
-console.log(numberString);
 
-//6.forEach:
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Exercises
+
+// //1.Filter
+// let newNumbers = [3, 23, 4, 15, 7, 8, 10];
+
+// let numberFiltred = newNumbers.filter((number) => {
+//   return number > 10;
+// });
+// console.log(numberFiltred);
+
+// //2.Find-ne returneaza primul numar care trece de conditia implementata prin functie,nu modifica array ul initial
+// //daca nici unul din elemente nu satisface conditia,rezultatul este undefined
+
+// let numberFind= newNumbers.find(number => number > 5);
+// console.log("First number finded:", numberFind);
+
+// //3.findIndex: ne returneaza indexul primului element care indeplineste conditia implementata de o functie
+// //daca nici un element nu este gasit,ne returneaza -1;
+
+// let numberFindIndex = newNumbers.findIndex(number => number > 2);
+// console.log("Index finded:", numberFindIndex);
+
+// //4.Join: ne returneaza elementele unui array separate prin virgula sau printr-un separator specificat
+
+// let numberJoin = newNumbers.join("*");
+// console.log(numberJoin);
+
+// //5.toString: se comporta ca si join,ne returneaza elementele unui array ,separate de virgula
+// //nu modifica array ul initial
+
+// let numberString = newNumbers.toString();
+// console.log(numberString);
+
+// //6.forEach:
+// let sum = 0;
+// let numberForEach = [2, 4, 6, 9, 14];
+// numberForEach.forEach((element) => {
+//   console.log("forEach elements:", element);
+// });
+
+// function numberFunction(number) {
+//   return(sum += number )
+// };
+// numberForEach.forEach(numberFunction)
+// //7.
 
 
 
