@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 23</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Documet Object Model | DOM</h1>
+
+    <div class="flexContainer">
+      <div class="flexItems">
+        <div class="redSquare"></div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flexItems">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+    <ul id="changedList">
+      <li class="changeThis">Unchanged</li>
+      <li class="changeThis">Unchanged</li>
+      <li class="changeThis">Unchanged</li>
+      <li class="changeThis">Unchanged</li>
+      <li class="changeThis">Unchanged</li>
+    </ul>
+
+    <div id="changedList">
+      <p>Do not use the same id for multiple elements</p>
+    </div>
+
+    <p>This text will be chnged later with js</p>
+    <p>jhaljhal</p>
+
+    <span class="styletMessages"> This message was style by js </span>
+    <p class="styletMessages">This message was style by js</p>
+    <div class="greenBox"></div>
+    <input type="button" value="Click this" onclick="changedGreenBox()" />
+
+    <label for="demoInput">Label Input Events</label>
+    <input
+      type="text"
+      name=""
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="blurInput()"
+    />
+  </body>
+  <script src="index.js"></script>
+</html>
