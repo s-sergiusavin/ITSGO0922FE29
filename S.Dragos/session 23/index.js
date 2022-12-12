@@ -124,4 +124,4 @@ const readInput = () => {
     document.getElementById('textFromReadInput').innerHTML = readValueInputElem.value;
 }
 
-document.getElementById('readValueInput').value = 'Alin';
+document.getElementById('readValueInput').value = 'Dragos';
