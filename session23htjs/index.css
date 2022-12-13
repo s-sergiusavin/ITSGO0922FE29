@@ -1,0 +1,24 @@
+.redSquare{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 10px;
+}
+.blueSquare{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    margin: 10px;
+}
+.flexContainer{
+    display: flex;
+}
+.flexItems{
+    display: flex;
+}
+.greenbox{
+    width: 150px;
+    height: 150px;
+    background-color: limegreen;
+    margin: 10px;
+}
