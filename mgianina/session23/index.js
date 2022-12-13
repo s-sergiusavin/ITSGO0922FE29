@@ -11,7 +11,7 @@ const example = {
 
 console.log(example.title);
 console.log(example);
-console.dir(example); //directory
+console.dir(example); //dir-directory
 
 console.log(document);
 console.dir(document);
@@ -136,4 +136,70 @@ const readInput = () => {
 }
 
 document.getElementById("readValueInput").value = "Alin";
+
+
+
+//Exercitii:
+
+const orangeBox = document.querySelector(".orangeBox");
+console.dir(orangeBox);
+
+orangeBox.style.padding = "5px";
+orangeBox.style.borderRadius = "5%";
+
+orangeBox.append("Hello");
+console.log(orangeBox.innerText);
+
+const aquaBoxes = document.querySelectorAll(".blueBoxes");
+
+console.log(aquaBoxes);
+
+aquaBoxes[1].style.backgroundColor = "teal";
+aquaBoxes[1].style.borderRadius = "5%";
+aquaBoxes[1].style.padding = "5px";
+
+for (let i = 0; i < aquaBoxes.length; i++) {
+  aquaBoxes[i].style.backgroundColor = "pink";
+
+  aquaBoxes[i].style.border = "3px solid black";
+}
+
+
+
+const christmasGifts = document.getElementById("christmasList");
+
+console.dir(christmasGifts);
+
+christmasGifts.style.border = "5px solid red";
+christmasGifts.children[1].style.backgroundColor = "yellow";
+
+const hElem = document.getElementsByTagName("h2");
+console.dir(hElem);
+
+hElem[0].innerHTML = "Christmas is comming!";
+
+const classElem = document.getElementsByClassName("classElem");
+
+for(let i = 0; i < classElem.length; i++) {
+  const tagname = classElem[i].tagName;
+  classElem[i].innerHTML = `text is in a ${tagname}`;
+}
+
+
+const clickButtton = () => {
+document.querySelector(".pinkBox").style.backgroundColor = "red";
+}
+
+const dblButton = () => {
+  document.querySelector(".pinkBox").style.backgroundColor = "purple";
+  document.querySelector(".pinkBox").style.border = "3px solid black";
+}
+
+const hoverFunction = () => {
+  document.querySelector(".pinkBox").style.backgroundColor = "black";
+}
+
+
+
+
 

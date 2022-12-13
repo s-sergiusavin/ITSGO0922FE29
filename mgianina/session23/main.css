@@ -1,29 +1,68 @@
 .redSquare {
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    margin: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  margin: 10px;
 }
 
 .blueSquare {
-    width: 150px;
-    height: 150px;
-    background-color: blue;
-    margin: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  margin: 10px;
 }
 
 .flexConainter {
-    display: flex;
+  display: flex;
 }
 
 .flexItems {
-    display: flex;
+  display: flex;
 }
 
 .greenBox {
-    width: 150px;
-    height: 150px;
-    background-color: green;
-    margin: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  margin: 10px;
 }
 
+.containerBoxes {
+  display: flex;
+  border: 1px solid red;
+}
+/* .dragClass {
+  width: 100px;
+  height: 100px;
+  border: 2px solid orange;
+  margin-top: 30px;
+  display: flex;
+} */
+
+.orangeBox {
+  width: 100px;
+  height: 100px;
+  border: 2px solid orange;
+  margin-top: 30px;
+  background-color: bisque;
+  margin: 10px;
+}
+
+.blueBoxes {
+    width: 100px;
+  height: 100px;
+  border: 2px solid blue;
+  margin-top: 30px;
+  background-color:aquamarine;
+  margin: 10px;
+
+}
+
+.pinkBox {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    margin-top: 30px;
+    background-color: pink;
+    margin: 10px;
+}
