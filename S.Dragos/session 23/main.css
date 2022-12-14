@@ -4,15 +4,27 @@
   background-color: red;
   margin: 10px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 .blueSquare {
   width: 150px;
   height: 150px;
   background-color: blue;
   margin: 10px;
 }
+<<<<<<< HEAD
 .flexContainer {
   display: flex;
 }
+=======
+
+.flexContainer {
+  display: flex;
+}
+
+>>>>>>> main
 .flexItems {
   display: flex;
 }
