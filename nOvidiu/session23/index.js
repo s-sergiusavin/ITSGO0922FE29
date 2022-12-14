@@ -120,3 +120,23 @@ const readInput = () => {
 };
 
 document.getElementById("readValueInput").value = "Ovidiu";
+
+//tema
+const pasteInput = () => {
+  const whenPaste = (document.getElementById("pastedText").innerHTML =
+    "You're not supposed to paste text!");
+};
+
+const selectSomething = () => {
+  const selected = document.querySelector(".elementSelected");
+  selected.style.backgroundColor = "red";
+};
+
+const changedInput = () => {
+  document.querySelector(".elementSelected").style.backgroundColor = "green";
+};
+// const addElem = document.createElement("p");
+// const addText = document.createTextNode("I was created");
+// addElem.append(addText);
+// const bindToDiv = document.querySelector(".elementSelected");
+// bindToDiv.append(addElem);

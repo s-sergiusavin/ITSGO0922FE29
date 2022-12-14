@@ -68,6 +68,22 @@
     <label for="readValueInput">Read value input</label>
     <input type="text" id="readValueInput" placeholder="spanac" />
     <input type="button" value="Read input" onclick="readInput()" />
+
+    <p>TEMA</p>
+    <label for="pasteInput" id="pastedText"> Paste something</label>
+    <input
+      type="text"
+      id="pasteInput"
+      placeholder="paste something"
+      onpaste="pasteInput()"
+    />
+    <input
+      type="text"
+      class="elementSelected"
+      onselect="selectSomething()"
+      value="numerge pt p"
+      oninput="changedInput()"
+    />
   </body>
 
   <script src="index.js"></script>
