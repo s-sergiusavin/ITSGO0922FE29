@@ -200,6 +200,19 @@ const hoverFunction = () => {
 }
 
 
+const copyFunction = () => {
+document.getElementById("copyText").innerHTML = "Copy done!!!!";
+}
 
+
+const selectFunction = () => {
+  alert("Some text selected!!!!");
+  const greenText = document.getElementById("selectText");
+  greenText.style.color = "red";
+}
+
+errorFunction = () => {
+  alert ("This video can`t be loaded!!!")
+}
 
 

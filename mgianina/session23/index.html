@@ -73,43 +73,60 @@
     <!--ON DUBLE CLICK EVENT (ondblclick)-->
     <input type="button" value="DBL click" ondblclick="onDblClick()" />
 
-
-
     <p id="textFromReadInput">Text introdus</p>
 
     <label for="readValueInput">Read Value Input</label>
-    <input type="text" id="readValueInput" placeholder="placeholder">
-    <input type="button" value="Read input" onclick="readInput()" >
+    <input type="text" id="readValueInput" placeholder="placeholder" />
+    <input type="button" value="Read input" onclick="readInput()" />
 
-<div class="containerBoxes">
-    
+    <div class="containerBoxes">
       <div class="orangeBox"></div>
       <div class="blueBoxes"></div>
       <div class="blueBoxes"></div>
-    
+    </div>
 
-  </div>
+    <ul id="christmasList">
+      <li class="gifts">Cosmetics</li>
+      <li class="gifts">Parfumes</li>
+      <li class="gifts">Chocolate</li>
+    </ul>
 
+    <div>
+      <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, enim.
+      </h2>
+    </div>
 
-  <ul id="christmasList">
-    <li class="gifts">Cosmetics</li>
-    <li class="gifts">Parfumes</li>
-    <li class="gifts">Chocolate</li>
-  </ul>
+    <p class="classElem">Lorem ipsum dolor sit amet.</p>
+    <span class="classElem">Lorem ipsum dolor sit.</span>
 
-  <div>
-    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, enim.</h2>
-  </div>
+    <div class="pinkBox" onmouseover="hoverFunction()"></div>
 
-  <p class="classElem">Lorem ipsum dolor sit amet.</p>
-  <span class="classElem">Lorem ipsum dolor sit.</span>
+    <input type="button" value="Click here for red" onclick="clickButtton()" />
 
+    <input
+      type="button"
+      value="Click here duble for purple"
+      ondblclick="dblButton()"
+    />
+    <!--ONCOPY EXAMPLE -->
 
-  <div class="pinkBox" onmouseover="hoverFunction()"></div>
- 
-  <input type="button" value="Click here for red" onclick="clickButtton()"/>
+    <input type="text" value="Copy this text" oncopy="copyFunction()" />
 
-  <input type="button" value="Click here duble for purple" ondblclick="dblButton()"/>
+    <p id="copyText">Hello!!!</p>
+
+    <!--ONSELECT EXAMPLE-->
+
+    <input
+    id="selectText"
+      type="text"
+      value="Select text from here!"
+      onselect="selectFunction()"
+    /><br>
+
+    <!--Error example-->
+
+Here need to be a video: <video src="video.pgn" onerror="errorFunction()">Here need to be a video!</video>
 
 
 
