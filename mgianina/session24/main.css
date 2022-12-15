@@ -5,3 +5,11 @@
 .blue {
     background-color: blue;
 }
+
+.newClass {
+    border: 1px solid black;
+    background-color: azure;
+    color: aqua;
+    width: 150px;
+}
+

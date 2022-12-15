@@ -129,3 +129,26 @@ function checkPlan() {
 
 
 
+
+
+
+
+//pentru a adauga din JS o clasa unui element HTML,ne folosim de className ,care se scrie sub forma de string
+
+const learnElem = document.getElementById("learTime");
+
+learnElem.className = "newClass";
+learnElem.className = ""; //asa stergem o clasa,sau o resetam;
+
+//se mai poate de asemenea folosi classList.add pentru a adauga, si classList.remove pentru a sterge
+
+learnElem.classList.add("newClass");
+learnElem.classList.remove("newClass");
+
+//tot pentru a adauga sau a sterge,putem folosi classList.toggle,care ori adauga ,ori sterge:daca are clasa toggle,o sterge,daca nu o are,atunci o adauga
+
+learnElem.classList.toggle("newClass");
+
+
+console.dir(learnElem);
+
