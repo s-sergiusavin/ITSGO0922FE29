@@ -102,14 +102,14 @@ addButtonElement.addEventListener("click", function () {
       newListItemElem.className = "newListItems";
 
       newListItemElem.addEventListener("dblclick", function () {
-        this.remove()
+        this.remove();
       });
 
       toDoListElement.appendChild(newListItemElem);
       newListItemElem.innerHTML = toDoInputElement.value;
       toDoInputElement.value = "";
-    }else {
-        alert("Te rugam sa introduci o valoare!!"); 
+    } else {
+      alert("Te rugam sa introduci o valoare!!");
     }
   } else {
     alert("Te rugam sa treci un plan tarifar superior!!"); //dupa alerta tot codul nu se mai executa pana nu dam enter
@@ -124,14 +124,6 @@ function checkPlan() {
     document.getElementsByClassName("newListItems").length;
   return newListItemsNumber < 3;
 }
-
-
-
-
-
-
-
-
 
 //pentru a adauga din JS o clasa unui element HTML,ne folosim de className ,care se scrie sub forma de string
 
@@ -149,6 +141,30 @@ learnElem.classList.remove("newClass");
 
 learnElem.classList.toggle("newClass");
 
-
 console.dir(learnElem);
+
+const firstImg = document.getElementById("firstImg");
+const secondImg = document.getElementById("secondImg");
+
+console.log(firstImg);
+
+const imageSrc = firstImg.getAttribute("src");
+console.log(imageSrc);
+
+secondImg.setAttribute("src", imageSrc);
+
+const pElem = document.querySelector("p");
+console.log(pElem);
+
+pElem.addEventListener("mouseover", () => {
+  pElem.classList.toggle("borderClass");
+});
+
+const anotherPara = document.getElementsByTagName("p")[1];
+console.log(anotherPara);
+
+anotherPara.addEventListener("mouseover", function () {
+  anotherPara.classList.add("blue");
+
+});
 

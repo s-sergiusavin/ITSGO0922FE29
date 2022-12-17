@@ -13,3 +13,83 @@
     width: 150px;
 }
 
+.borderClass {
+    border: 1px solid red;
+    background-color: bisque;
+}
+
+
+.container {
+padding: 20px;
+    display: flex;
+    margin: 10px;
+  border: 1px solid red;
+  flex-direction: column;
+  width: 400px;
+  height: 250px;
+
+}
+.clickButton {
+    display: flex;
+}
+
+#clickMe {
+    border-radius: 15%;
+    border: 1px solid blue;
+    padding-top: 6px;
+    height: 25px;
+    font-style: italic;
+    color:cornflowerblue;
+    margin-top: 5px;
+    
+}
+
+#demoInput {
+    border-radius: 10%;
+    margin-left: 10px;
+    height: 25px;
+    background-color: azure;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-color: cyan;
+    box-shadow: 10px 5px 5px black;
+}
+
+
+#clickMe:hover {
+background-color: azure;
+
+}
+
+
+#toDoInput {
+    border-radius: 10%;
+    margin-left: 10px;
+    height: 25px;
+    background-color: azure;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-color: cyan;
+    box-shadow: 10px 5px 5px black;
+}
+
+.toDoList {
+    
+}
+#addId {
+    border-radius: 20%;
+    border: 1px solid blue;
+    text-decoration: solid;
+    font-style: italic;
+    color: cornflowerblue;
+    
+}
+.addButton {
+    border-radius: 40%;
+    cursor: pointer;
+    background-color: lightblue;
+   margin-left: 10px;
+}
+.addButton:hover {
+   background-color: darkturquoise;
+}
