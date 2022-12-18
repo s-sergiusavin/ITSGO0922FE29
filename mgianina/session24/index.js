@@ -81,7 +81,7 @@ clickMeElement.addEventListener("click", function () {
   const newLiElement = document.createElement("li");
   ulListElement.appendChild(newLiElement);
   listItemsElements = document.querySelectorAll("li");
-  if (demoImageElement.value) {
+  if (demoInputElement.value) {
     newLiElement.innerHTML = demoInputElement.value;
     demoInputElement.value = "";
   } else {
@@ -91,7 +91,7 @@ clickMeElement.addEventListener("click", function () {
 
 const toDoInputElement = document.getElementById("toDoInput");
 const addButtonElement = document.getElementsByClassName("addButton")[0];
-const toDoListElement = document.getElementsByClassName("toDoItems")[0];
+const toDoListElement = document.getElementsByClassName("toDoListItems")[0];
 
 addButtonElement.addEventListener("click", function () {
   const canAdd = checkPlan();
@@ -100,7 +100,6 @@ addButtonElement.addEventListener("click", function () {
     if (toDoInputElement.value !== "") {
       const newListItemElem = document.createElement("li");
       newListItemElem.className = "newListItems";
-
       newListItemElem.addEventListener("dblclick", function () {
         this.remove();
       });
@@ -124,6 +123,7 @@ function checkPlan() {
     document.getElementsByClassName("newListItems").length;
   return newListItemsNumber < 3;
 }
+
 
 //pentru a adauga din JS o clasa unui element HTML,ne folosim de className ,care se scrie sub forma de string
 
@@ -165,6 +165,25 @@ console.log(anotherPara);
 
 anotherPara.addEventListener("mouseover", function () {
   anotherPara.classList.add("blue");
-
 });
 
+//alt exemplu de lista
+const learningUl = document.getElementsByClassName("learningUl")[0];
+
+let newLiElem = learningUl.querySelectorAll("li");
+console.log(newLiElem);
+
+for (let i = 0; i < newLiElem.length; i++) {
+  const learningElem = newLiElem[i];
+  learningElem.style.backgroundColor = "pink";
+  learningElem.addEventListener("click", function () {
+    this.innerHTML = "funny list";
+    const createItems = document.createElement("li");
+    learningUl.appendChild(createItems).innerHTML = "funny";
+
+    learningElem.addEventListener("dblclick", function () {
+      this.style.backgroundColor = "purple";
+      this.innerHTML = " ";
+    });
+  });
+}
