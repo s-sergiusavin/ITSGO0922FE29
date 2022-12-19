@@ -147,3 +147,6 @@ const interval = setInterval(() => {
     clearInterval(interval); //are nev de un parametru
   } //aici oare pot pune this daca fac functie declaratie?
 }, 2000);
+
+// pt ceea ce am facut astazi am un formular de login - adauga un text la form validation -> vreau acelasi formular pt login si create account, buton si sa vad starea butonului =>
+//fac un buton => switch to sign upn => si deasupra sa imi scrie sign up - si formularul de log in sa se transforme in sign up si sa am opt switch to log in
