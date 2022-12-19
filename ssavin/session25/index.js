@@ -128,7 +128,7 @@ const anotherFunction = myFunction(5);
 
 console.log(newFunction(10));
 console.log(newFunction(50));
-console.log(anotherFunction)
+console.log(anotherFunction);
 
 /**
  * setInterval
