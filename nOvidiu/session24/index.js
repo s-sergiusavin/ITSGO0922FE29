@@ -153,3 +153,5 @@ function checkPlan() {
 
 // practic fa o aplicatie de TD DO LIST
 // numai buna de pus la portofoliu
+
+// input type text sa aibe focus // dupa ce apas pe add sa nu trebuiasaca sau dau iar click pe ferestra
