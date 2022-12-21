@@ -150,3 +150,31 @@ const interval = setInterval(() => {
 
 // pt ceea ce am facut astazi am un formular de login - adauga un text la form validation -> vreau acelasi formular pt login si create account, buton si sa vad starea butonului =>
 //fac un buton => switch to sign upn => si deasupra sa imi scrie sign up - si formularul de log in sa se transforme in sign up si sa am opt switch to log in
+
+function logInSection() {
+  sectionStatus.innerHTML = "Log In";
+  switchBtn.innerHTML = "Switch to Sign Up";
+  //sectionStatus.classList.remove("checkStatus");
+  switchBtn.classList.remove("checkStatus");
+  submitBtn.value = "Log In";
+}
+function signUpSection() {
+  sectionStatus.innerHTML = "Sign Up";
+  switchBtn.innerHTML = "Switch to Log In";
+  //sectionStatus.classList.add("checkStatus");
+  switchBtn.classList.add("checkStatus");
+  submitBtn.value = "Sign Up";
+}
+
+let switchBtn = document.getElementsByClassName("switchBtn")[0];
+let sectionStatus = document.querySelector(".sectionStatus");
+
+switchBtn.addEventListener("click", () => {
+  if (
+    switchBtn.classList.contains("checkStatus") //&& sectionStatus.classList.contains("checkStatus")
+  ) {
+    logInSection();
+  } else {
+    signUpSection();
+  }
+});
