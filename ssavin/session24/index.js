@@ -100,6 +100,7 @@ addButtonElement.addEventListener('click', function() {
             toDoListlement.appendChild(newListItemElem);
             newListItemElem.innerHTML = toDoInputElement.value;
             toDoInputElement.value = '';
+            toDoInputElement.focus();
         } else {
             alert('Te rugam sa introduci o valoare'); 
         }
