@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session 25</title>
+  </head>
+  <body>
+    <h1>Form validation</h1>
+    <form action="">
+      <span id="error" style="display: none"></span>
+      <input type="email" id="email" placeholder="email address" required />
+      <input
+        type="password"
+        id="password"
+        placeholder="insert password"
+        required
+      />
+      <input type="submit" id="login" required placeholder="log in" />
+    </form>
+    <form action="" class="loginForm">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" placeholder="Enter Your First Name" />
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" placeholder="Enter Your Last Name" />
+
+      <label for="">Age</label>
+      <input type="text" id="age" />
+    </form>
+  </body>
+  <script src="index.js"></script>
+</html>
