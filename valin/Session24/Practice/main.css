@@ -1,0 +1,64 @@
+body {
+  background-image: url(https://media.istockphoto.com/id/1265965042/it/vettoriale/teoria-matematica-calcolo-della-matematica-alla-lavagna-di-classe-algebra-e-geometria.jpg?s=1024x1024&w=is&k=20&c=KJ9nmB9ksL35xZ_qrTlY-MfMNLQqsJl0AMwjRMjYSZ0=);
+}
+
+header1 {
+  position: absolute;
+  top: 300px;
+  left: 70px;
+  font-size: 130px;
+  rotate: -30deg;
+  color: rgb(158, 197, 52);
+  opacity: 0.8;
+}
+
+header2 {
+   position: absolute;
+   top: 600px;
+   right: 50px;
+   font-size: 150px;
+   rotate: 60deg;
+   opacity: 0.8;
+   color: rgb(191, 82, 104);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  width: 450px !important;
+  height: 520px;
+  background-color: rgb(113, 113, 113);
+  border-radius: 20px;
+  margin-top: 20vh;
+  padding-bottom: 20px;
+}
+
+.calcDisplay {
+  margin-top: 30px;
+  width: 350px;
+  height: 80px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.firstLine {
+  width: 350px;
+}
+
+.calcBtn {
+  margin-top: 30px;
+  width: 100%;
+  color: black !important;
+  background-color: white !important;
+}
+
+.calcBtn:hover {
+  background-color: rgb(226, 226, 226) !important;
+}
+
+.calcBtn:active {
+  background-color: rgb(202, 202, 202) !important;
+}

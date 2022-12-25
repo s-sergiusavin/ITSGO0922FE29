@@ -38,7 +38,7 @@
    <p>jsaflsdjkfbsd</p>
 
    <span class="styledMessages">This massage was styled by Js</span>
-   <p class="stayledMessages">This massage was styled by Js</p>
+   <p class="styledMessages">This massage was styled by Js</p>
 
    <!-- On MOUSE ENTER & ON MOUSE LEAVE EVENTS -->
    <div class="greenBox" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()"></div>
@@ -47,7 +47,8 @@
    <input type="button" value="Click this" onclick="changeGreenBox()">
 
    <!-- ON FOCUS & ON BLUR EVENTS -->
-   <label for="demoInput">Demo inputs events</label>
+   <label for="demoInput">Demo inputs events</label> <!-- for se leaga doar de id pentru ca are specificitatea mai mare -->
+   <!-- acelasi id pentru label si input imi permite sa selectez casuta text dand click pe label text -->
    <input type="text" id="demoInput" onfocus="focusInput()" onblur="blurInput()">
 
    <!-- ON KEY DOWN & ON KEY UP EVENTS -->
@@ -55,6 +56,11 @@
    <input type="text" id="demoKey" onkeydown="onKeyDown()" onkeyup="onKeyUp()" placeholder="Placeholder">
 
    <input type="button" value="DBL Click" ondblclick="onDblClick()">
+
+   <p id="textFromReadInput">Text introdus</p>
+   <label for="readValueInput">Read value input</label>
+   <input type="text" id="readValueInput" placeholder="placeholder">
+   <input type="button" value="Read input" onclick="readInput()">
 
 </body>
 <script src="index.js"></script>

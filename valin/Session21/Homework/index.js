@@ -79,22 +79,16 @@ checkArray('Sup');
 console.log(variableType);
 console.log('––––––––');
 
-// var is_array = function(input) {
-//    if (toString.call(input) === "[object Array]")
-//      return true;
-//    return false;   
-//      };
-//  console.log(is_array('w3resource'));
-//  console.log(is_array([1, 2, 4, 0]));
+var is_array = function(input) {
+   if (toString.call(input) === "[object Array]")
+     return true;
+   return false;
+     };
+ console.log(is_array('w3resource'));
+ console.log(is_array([1, 2, 4, 0]));
 
 // Clone array
 
-// const cloneArray = (array) => {
-//    const clonedArray = array.map( element => {
-//       return element;
-//    })
-//    return clonedArray
-// }
 
 const cloneArray = (array) => {
    const clonedArray = array.slice();
