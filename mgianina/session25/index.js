@@ -54,43 +54,43 @@ console.log(!!test);
 //!! in fata la ceva,forteaza valoarea boleana a acelei expresii: daca are valoare de adevar ne da true, daca nu are valoare de adevar ne da false;
 //adica ne converteste la valoarea booleana
 
-const clearLoginInputs = () => {
-  emailField.value = "";
-  passwordField.value = "";
-};
+// const clearLoginInputs = () => {
+//   emailField.value = "";
+//   passwordField.value = "";
+// };
 
-submitBtn.addEventListener("click", function (event) {
-  event.preventDefault(); //folosita in sensul de "uita tot ce trebuie sa faci";
-  const emailValue = emailField.value;
-  const passwordValue = passwordField.value;
-  const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
+// submitBtn.addEventListener("click", function (event) {
+//   event.preventDefault(); //folosita in sensul de "uita tot ce trebuie sa faci";
+//   const emailValue = emailField.value;
+//   const passwordValue = passwordField.value;
+//   const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
 
-  if (emailField === "" || passwordValue === "") {
-    showError("All fields are required and must contain a value");
-  } else {
-    error.style.display = "none";
-    if (
-      validatePassword(passwordValue) &&
-      validateEmail(emailValue, regexEmailPattern)
-    ) {
-      alert("Logged in");
-      clearLoginInputs();
-    } else {
-      alert("try again");
-      showError("Incorrect email or password");
-      clearLoginInputs();
-    }
-  }
-});
+//   if (emailField === "" || passwordValue === "") {
+//     showError("All fields are required and must contain a value");
+//   } else {
+//     error.style.display = "none";
+//     if (
+//       validatePassword(passwordValue) &&
+//       validateEmail(emailValue, regexEmailPattern)
+//     ) {
+//       alert("Logged in");
+//       clearLoginInputs();
+//     } else {
+//       alert("try again");
+//       showError("Incorrect email or password");
+//       clearLoginInputs();
+//     }
+//   }
+// });
 
-const firstNameField = document.getElementById("firstName");
-const lastNameField = document.getElementById("lastName");
-const ageField = document.getElementById("age");
+// const firstNameField = document.getElementById("firstName");
+// const lastNameField = document.getElementById("lastName");
+// const ageField = document.getElementById("age");
 
-const firstName = "Angelina";
-const lastName = "Jolie";
+// const firstName = "Angelina";
+// const lastName = "Jolie";
 
-const age = 27;
+// const age = 27;
 
 // firstNameField.value = firstName;
 // lastNameField.value = lastName;
@@ -105,13 +105,10 @@ const age = 27;
 //-perioada de timp este exprimata in milisecunde: 5000=5 secunde;
 //-daca perioada de timp nu este specificata,default ul este 0 secunde dupa ce s a executat tot codul din pagina
 
-
-
-
 // setTimeout(() => {
 // firstNameField.value = firstName;
 // lastNameField.value = lastName;
-// ageField.value = age; 
+// ageField.value = age;
 // }, 5000);
 // setTimeout(setFields, 2000);
 
@@ -119,19 +116,16 @@ const age = 27;
 //     setFields();
 // });
 
-
 function setFields() {
-    firstNameField.value = firstName;
-lastNameField.value = lastName;
-ageField.value = age; 
-};
+  firstNameField.value = firstName;
+  lastNameField.value = lastName;
+  ageField.value = age;
+}
 
 // alert("Opreste executia")
 
-
-
 function myFunction(number) {
-    return number + 5;
+  return number + 5;
 }
 
 const newFunction = myFunction;
@@ -143,15 +137,48 @@ const anotherFunction = myFunction(5);
 
 let start = 1;
 const interval = setInterval(() => {
-console.log(start);
-start += 1;
-if(start === 10) {
+  console.log(start);
+  start += 1;
+  if (start === 10) {
     setFields();
     clearInterval(interval);
-}
+  }
 }, 2000);
 
+const loginText = document.getElementById("loginId");
+const switchButton = document.querySelector(".switchButton");
+const loginButton = document.getElementById("login");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+let isLoginPage = true;
+let errorMessage = "All fields are required and must contain a value";
+let alertMessage = "You have successfully login";
 
+
+
+switchButton.addEventListener("click", function () {
+  isLoginPage = !isLoginPage; 
+ if(isLoginPage === true){
+  errorMessage = "All fields are required and must contain a value";
+  alertMessage = "You have successfully login";
+  loginText.innerHTML = "Login";
+  switchButton.innerHTML = "Switch to sing Up";
+ }else {
+  errorMessage = "All fields are required and must contain a value";
+  alertMessage = "You have successfully registered";
+  loginText.innerHTML = "Sing Up";
+  switchButton.innerHTML = "Switch to Login";
+ }
+ 
+});
+
+loginButton.addEventListener("click", function () {
+  if (emailInput === "" || passwordInput === "") {
+    alert(errorMessage);
+  } else {
+    alert(alertMessage);
+  }
+});
 
 
 

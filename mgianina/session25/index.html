@@ -9,15 +9,21 @@
   <body>
     <h1>Form validations</h1>
 
-    <h2>Login</h2>
-    <button>Switch to sign up</button>
+    <h2 id="loginId">Login</h2>
+    <button class="switchButton">Switch to sign up</button>
     <form action="">
-        <span id="error" style="display: none;"></span>
-      <input type="email" id="email" placeholder="Email adress" required/>
-      <input type="password" name="" id="password" placeholder="Password" required>
-      <input type="submit"id="login" required placeholder="Log in">
+      <span id="error" style="display: none"></span>
+      <input type="email" id="email" placeholder="Email adress" required />
+      <input
+        type="password"
+        name=""
+        id="password"
+        placeholder="Password"
+        required
+      />
+      <input type="submit" id="login" required placeholder="Log in" />
     </form>
-    <br><br><br>
+    <br /><br /><br />
     <form action="" class="loginForm">
       <label for="firstName">First Name</label>
       <input type="text" id="firstName" placeholder="Enter your first name" />
