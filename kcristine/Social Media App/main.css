@@ -2,6 +2,7 @@
   font-family: "Dancing Script", cursive;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -244,7 +245,6 @@ main {
   color: blueviolet;
 }
 
-/* Session 18 */
 .reacts {
   display: flex;
   justify-content: space-between;
