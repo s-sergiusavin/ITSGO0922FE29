@@ -1,0 +1,89 @@
+.ul1 {
+  position: fixed;
+  bottom: 70px;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  border: 50px solid blue;
+}
+.l1 {
+  color: red;
+  border: 60%;
+}
+body {
+  flex-direction: initial;
+  font-style: italic;
+  background-color: bisque;
+}
+
+.title {
+  position: relative;
+  color: darkmagenta;
+  font-style: italic;
+  font-size: 20px;
+  height: 70px;
+}
+.Button {
+  height: 50px;
+  border: 20px;
+  border-radius: 30%;
+  cursor: pointer;
+  color: darkblue;
+  background-color: yellowgreen;
+}
+.data {
+  justify-items: flex-end;
+}
+
+h2 {
+  align-items: flex-start;
+  color: darkslategray;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 10px solid greenyellow;
+  background-color: black;
+  float: right;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: greenyellow;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+.Content {
+  border: 10px solid salmon;
+  border-style: groove;
+  overflow: auto;
+  align-items: center;
+  margin-top: 20px;
+  width: 400px;
+  height: 250px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: aquamarine;
+}
+

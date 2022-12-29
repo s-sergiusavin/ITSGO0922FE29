@@ -1,0 +1,42 @@
+.flexContainer.box {
+  color: aqua;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+.main {
+  height: 100%;
+  display: flex;
+  /* default este row */
+  flex-direction: row;
+}
+.header {
+  background-color: red;
+}
+.nav {
+  background-color: green;
+  flex: 2;
+}
+.article {
+  background-color: purple;
+  flex: 8;
+}
+.aside {
+  background-color: blue;
+}
+.footer {
+  background-color: orange;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
