@@ -281,3 +281,67 @@ registerUser.then(
     console.log(error);
   }
 );
+
+// Session 27
+
+//PUT Request
+
+const updateUserUrl = "https://reqres.in/api/users/2";
+const updatedUser = {
+  name: "morpheus",
+  job: "zion resident",
+};
+const updateUrlConfig = {
+  method: "PUT",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(updatedUser),
+};
+const updateUser = new Promise((resolve, reject) => {
+  fetch(updateUserUrl, updateUrlConfig) // fac asta daca vreau sa ma folosesc de raspuns si sa ma asigur ca nu am erori
+    .then((response) => {
+      //debugger
+      if (response.status !== 200) {
+        throw "Ai o eroare";
+      }
+      return response.json();
+    })
+    .then((data) => {
+      resolve(data); // am tratat numai cazul de succes, adica resolve
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+registerUser.then(
+  // then semnifica punctul din care eu am obtinut informatia, e async stuff I guess
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+// aici tb sa revizuiesc pentru ca for some reason am o eroare desi nu cred ca ar trebu isa am = sau cred ca throwul ala e aiurea cred ca s-a facut cu succes
+
+const deleteUserUrl = "https://reqres.in/api/users/2";
+const deleteUrlConfig = {
+  method: "DELETE",
+};
+const deleteUser = new Promise((resolve, reject) => {
+  fetch(deleteUserUrl, deleteUrlConfig) // fac asta daca vreau sa ma folosesc de raspuns si sa ma asigur ca nu am erori
+    .then((response) => {
+      //debugger
+      if (response.status !== 204) {
+        throw "Ai o eroare";
+      }
+      //return response.json(); la delete nu imi returneaza nimic
+    })
+    .then((data) => {
+      resolve(data); // am tratat numai cazul de succes, adica resolve
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+// trebuie sa refac exercitiile astea sa ma asigur ca totul e ok ca nu prea am inteles daca au loc acele evenimente sau nu
