@@ -283,16 +283,10 @@ const updateUrlConfig = {
 };
 
 
-const updatedUser = new Promise((resolve, reject) => {
-  fetch(createUserUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(user),
-  }) // in punctul asta se face request
+const updateUser = new Promise((resolve, reject) => {
+  fetch(updateUserUrl, updateUrlConfig) // pana in punctul asta se face requestul
     .then((response) => {
-      if (response.status !== 201) {
+      if (response.status !== 200) {
         throw "Ai o eroare";
       }
       return response.json();
@@ -305,7 +299,7 @@ const updatedUser = new Promise((resolve, reject) => {
     });
 });
 
-updatedUser.then(
+updateUser.then(
   (value) => {
     console.log(value);
   },
