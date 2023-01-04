@@ -1,4 +1,23 @@
 /**
+ * Toate informatiile care sunt adaugate de noi sunt trimise la back-end si controlate dupa care se intampla 4 operatiuni:
+ * Citire (afisam ce gasim la back-end, ad ex facebook are acelasi layout cu informatii diferite)
+ * Scris (trimitem catre back-end)
+ * Update (modificam ce este existent)
+ * Stergere
+ * CRUD (Create R ead Update Delete) si sunt generala la nivel de aplicatii de web
+ * Implementate la protocolul HTTP (hyper text transfer protocol) devin: Post Get Update Delete
+ */  
+
+/**
+ * Serviciile de mai sus se numesc RESTful services
+ * Representation State of Transfer -> HTTP Implementation
+ * Create => Post
+ * Read => Get
+ * Update => Put / Patch (rara folosita)
+ * Delete
+ */
+
+/**
  * Object recap and Classes
  */
 
@@ -22,7 +41,7 @@ newPerson.name = 'Alin';
 console.log(person);
 console.log(newPerson);
 
-const otherPerson = new Object(person);
+const otherPerson = new Object(person); // imi creaza un obiect cu clasa Object (predefinita) deci asa nu are aceasi referinta
 otherPerson.name = 'SergiuS';
 
 console.log(otherPerson);
@@ -43,7 +62,7 @@ console.log(bicycle);
  * Classes
  */
 
-class Book {
+class Book { // model pentru a construi mai mu lte obiecte cu informatii diferite
    cover = 'Hard';
    constructor(type, writer) {
       this.type = type;
@@ -64,12 +83,14 @@ console.log(basme);
 console.log(povesti);
 
 /**
- * Promise
+ * Promise (clasa specifica)
+ * Datele de pe server au nevoie de timp sa ajunga pentru ca noi facem o cerere de date si ele trebuesc trimise
+ * Deci cu aceasta clasa avem promisiunea unei valori pe care ii spun cum trebue folosita
  */
 
-let promise = new Promise(function(resolve,reject) {
+let promise = new Promise(function(resolve,reject) { // promisurile cer ca parametru o functie cu 2 parametri si ele respectiv functii
    // setTimeout(resolve, 2000, 'Value sent');
-   // setTimeout(reject, 2000, 'Error sent');
+   // setTimeout(reject, 2000, 'Error sent'); //intra pe adoua functie al then ului daca promisul are o eroare
 });
 
 promise.then((value) => {
@@ -79,16 +100,20 @@ promise.then((value) => {
 })
 
 /**
- * GET Request
+ * GET Request fetch()
  */
 
+// URL => Uniform Resource Locator
+
 const singleUserUrl = 'https://reqres.in/api/users/2';
-// fetch(singleUserUrl).then((response) => {
-//    console.log(response);
-//    response.json().then((data) => {
-//       console.log(data);
-//    });
-// });
+fetch(singleUserUrl).then((response) => { // informatia primita cu fetch() e tot o promisuine de tip response 
+   // si encodata deci trebue accesata cu then() deci o decodam cu json()
+   // json() imi returneaza un promise deci e nevoie de inca un then() ca sa accesam obiectul returnat
+   console.log(response);
+   response.json().then((data) => {
+      console.log(data);
+   });
+}); // aici nu am tratat erorile
 
 const singleUserData = fetch(singleUserUrl).then((response) => {
    return response.json();
@@ -99,6 +124,8 @@ singleUserData.then(data => {
 
 /**
  * Async/Await requests
+ * Async fara await in corpul functiei nu functioneaza
+ * Functiile asincrone se folosesc practic doar pentru schimbul de date
  */
 
 async function getSingleUser() {
@@ -115,7 +142,7 @@ getSingleUser().then( (data) => {
  * GET Request with error handling
  */
 
-// '?' in url se numeste querry param
+// '?' in url se numeste querry param, adica o medota de configurare si imi arata ceva specific in url
 
 const singleUserNotFoundUrl = 'https://reqres.in/api/users/23';
 const userListUrl = 'https://reqres.in/api/users?page=2';
@@ -123,12 +150,14 @@ const userListUrl = 'https://reqres.in/api/users?page=2';
 const allUserList = new Promise((resolve,reject) => {
    fetch(userListUrl).then(response => {
       if (response.status !== 200) {
-         throw 'Ai o eroare'
+         throw 'Ai o eroare' // datorita throw-ului, daca if ul nu e verificat trece imediat la primul catch
       }
       return response.json();
-   }).then((data) => {
+   })
+   .then((data) => {
       resolve(data);
-   }).catch(error => {
+   })
+   .catch(error => {
       reject(error);
    });
 });
@@ -153,20 +182,22 @@ const createUser = new Promise((resolve,reject) => {
    fetch(createUserUrl, {
       method: 'POST',
       headers: {
-         'Content-Type': 'application/jason'
+         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(user)
-   })
+      body: JSON.stringify(user) // serverele nu stiu alt tip de date inafara de string
+   }) // pana aici fac request
    .then(response => {
       if (response.status !== 201) {
          throw 'Ai o eroare'
       }
       return response.json();
-   }).then((data) => {
+   }) // decid ce sa fac cu datele
+   .then((data) => {
       resolve(data);
-   }).catch(error => {
+   })
+   .catch(error => {
       reject(error);
-   });
+   }); // si aici le folosesc
 });
 
 createUser.then((value) => {
@@ -202,13 +233,15 @@ const registerUrlConfig = {
 const registerUser = new Promise((resolve,reject) => {
    fetch(registerUrl, registerUrlConfig)
    .then(response => {
-      if (response.status !== 200) {
+      if (response.status !== 200  ) {
          throw 'Ai o eroare'
       }
       return response.json();
-   }).then((data) => {
+   })
+   .then((data) => {
       resolve(data);
-   }).catch(error => {
+   })
+   .catch(error => {
       reject(error);
    });
 });
@@ -218,3 +251,4 @@ registerUser.then((value) => {
 }, (error) => {
    console.log(error);
 });
+
