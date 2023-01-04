@@ -181,10 +181,10 @@ const createUser = new Promise((resolve, reject) => {
   fetch(createUserUrl, {
     method: "POST",
     headers: {
-        "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(user)
-  })// in punctul asta se face request
+    body: JSON.stringify(user),
+  }) // in punctul asta se face request
     .then((response) => {
       if (response.status !== 201) {
         throw "Ai o eroare";
@@ -198,7 +198,6 @@ const createUser = new Promise((resolve, reject) => {
       reject(error);
     });
 });
-
 
 //asta aplicam daca vrem sa ne folosim de date
 createUser.then(
@@ -214,57 +213,116 @@ createUser.then(
  * POST with error
  */
 
-
 const registerUrl = "https://reqres.in/api/register";
 
 const userUnsuccessful = {
-    "email": "sydney@fife"
-}
+  email: "sydney@fife",
+};
 
-const registerSuccessfull = 
-    {
-        "email": "eve.holt@reqres.in",
-        "password": "pistol"
-    }
+const registerSuccessfull = {
+  email: "eve.holt@reqres.in",
+  password: "pistol",
+};
 
-    const registerUrlConfig = {
-        method: "POST";
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userUnsuccessful)
-    }
+const registerUrlConfig = {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(userUnsuccessful),
+};
 
-    const registerUser = new Promise((resolve, reject) => {
-        fetch(createUserUrl, {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/json"
-          },
-          body: JSON.stringify(user)
-        })// in punctul asta se face request
-          .then((response) => {
-            if (response.status !== 201) {
-              throw "Ai o eroare";
-            }
-            return response.json();
-          })
-          .then((data) => {
-            resolve(data);
-          })
-          .catch((error) => {
-            reject(error);
-          });
-      });
-      
-      
-      registerUser.then(
-        (value) => {
-          console.log(value);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-    
+const registerUser = new Promise((resolve, reject) => {
+  fetch(createUserUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  }) // in punctul asta se face request
+    .then((response) => {
+      if (response.status !== 201) {
+        throw "Ai o eroare";
+      }
+      return response.json();
+    })
+    .then((data) => {
+      resolve(data);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+registerUser.then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
+/**
+ * PUT request
+ */
+
+const updateUserUrl = "https://reqres.in/api/users/2";
+
+const updatedUser = {
+  "name": "morpheus",
+  "job": "zion resident"
+};
+
+const updateUrlConfig = {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(updatedUser),
+};
+
+
+const updatedUser = new Promise((resolve, reject) => {
+  fetch(createUserUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  }) // in punctul asta se face request
+    .then((response) => {
+      if (response.status !== 201) {
+        throw "Ai o eroare";
+      }
+      return response.json();
+    })
+    .then((data) => {
+      resolve(data);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+updatedUser.then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
+
+/**
+ * Delete request
+ */
+
+const deleteUserUrl = "https://reqres.in/api/users/2";
+
+const deleteUserUrlConfig = {
+  method: "DELETE",
+};
+
 

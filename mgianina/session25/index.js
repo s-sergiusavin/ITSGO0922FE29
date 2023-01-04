@@ -83,14 +83,14 @@ console.log(!!test);
 //   }
 // });
 
-// const firstNameField = document.getElementById("firstName");
-// const lastNameField = document.getElementById("lastName");
-// const ageField = document.getElementById("age");
+const firstNameField = document.getElementById("firstName");
+const lastNameField = document.getElementById("lastName");
+const ageField = document.getElementById("age");
 
-// const firstName = "Angelina";
-// const lastName = "Jolie";
+const firstName = "Angelina";
+const lastName = "Jolie";
 
-// const age = 27;
+const age = 27;
 
 // firstNameField.value = firstName;
 // lastNameField.value = lastName;
@@ -179,6 +179,13 @@ loginButton.addEventListener("click", function () {
     alert(alertMessage);
   }
 });
+
+
+setTimeout(() => {
+firstNameField.value = firstName;
+lastNameField.value = lastName;
+ageField.value = age;
+}, 5000);
 
 
 
