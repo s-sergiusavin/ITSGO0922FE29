@@ -75,11 +75,11 @@ console.log(povesti);
 /**
  * Promise-clasa specifica
  */
-//cer un paramentru o functie;
+//cer un paramentru o functie,care la randul ei are doi parametri specifici: rezolve si reject
 
 let promise = new Promise(function (resolve, reject) {
-  // setTimeout(resolve, 2000, "Value sent");
-  setTimeout(reject, 2000, "Error sent");
+  setTimeout(resolve, 2000, "Value sent");
+  // setTimeout(reject, 2000, "Error sent");
 });
 
 promise.then(
@@ -270,8 +270,8 @@ registerUser.then(
 const updateUserUrl = "https://reqres.in/api/users/2";
 
 const updatedUser = {
-  "name": "morpheus",
-  "job": "zion resident"
+  name: "morpheus",
+  job: "zion resident",
 };
 
 const updateUrlConfig = {
@@ -281,7 +281,6 @@ const updateUrlConfig = {
   },
   body: JSON.stringify(updatedUser),
 };
-
 
 const updateUser = new Promise((resolve, reject) => {
   fetch(updateUserUrl, updateUrlConfig) // pana in punctul asta se face requestul
@@ -308,7 +307,6 @@ updateUser.then(
   }
 );
 
-
 /**
  * Delete request
  */
@@ -319,4 +317,110 @@ const deleteUserUrlConfig = {
   method: "DELETE",
 };
 
+const deleteUser = new Promise((resolve, reject) => {
+  fetch(deleteUserUrl, deleteUserUrlConfig) // pana in punctul asta se face requestul
+    .then((response) => {
+      if (response.status !== 204) {
+        throw "Ai o eroare";
+      }
+    })
+});
 
+
+
+/**
+ * Practice
+ */
+
+//1.Classes
+//functia constructor poate primi cati parametri dorim??
+class Telephone {
+  charge = "super-charge";
+  constructor(type, color, dualSim) {
+    this.type = type;
+    this.color = color;
+    this.dualSim = dualSim;
+  }
+}
+console.log(Telephone);
+
+const telephone = new Telephone("Samsung", "blue", "yes");
+console.log(telephone);
+
+//2. Promise
+
+const lastPromise = new Promise(function (resolve, reject) {
+  // setTimeout(resolve, 4000, "This is a new value");
+  setTimeout(reject, 4000, "This is a new error");
+});
+
+lastPromise.then(
+  (value) => {
+    console.log("resolved " + value);
+  },
+  (error) => {
+    console.log("rejected " + error);
+  }
+);
+
+//3.Get request
+//cel mai simplu request,cere ca si parametru doar URL-ul
+//cu GET,facem request pentru a primi date de la server
+
+// /**
+//  * fetch -> primeste ca argument URL-ul => returneaza un Promise -> folosim then pentru
+//  * a extrage raspunsul -> pentru a accesa datele primite de la server, folosim metoda JSON -> 
+//  * returneaza tot un Promise.Dupa aceasta etapa,mai avem nevoie de un then pentru a avea acces la date
+
+
+const practiceUrl = "https://www.adoptapet.com/public/apis/pet_list.html";
+
+const newPractice = new Promise(function(resolve, reject) {
+  fetch(practiceUrl).then((response) => {
+    response.json().then((data) => {
+      console.log(data);
+    })
+  })
+});
+
+
+
+//4.POST -TRIMITEM DATE CATRE SERVER
+// const anotherPractice = "https://reqres.in/api/users";
+
+// const practice = {
+//   name: "morpheus",
+//   job: "leader",
+// };
+
+// const urlConfigPractice = {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(userUnsuccessful),
+// };
+
+// const newPracticeP = new Promise(function(resolve, reject) {
+//   fetch(anotherPractice, urlConfigPractice).then((response) => {
+//     if(response.status !== 201) {
+//       throw "ai o eroare"
+//     }
+//     return response.json();
+//   })
+//   .then((data) => {
+//     resolve(data);
+//   })
+//   .catch((error) => {
+//     reject(error)
+//   })
+// });
+
+// newPracticeP.then(
+//   (value) => {
+//     console.log(value);
+//   },
+//   (error) => {
+//     console.log(error);
+//   }
+// );
