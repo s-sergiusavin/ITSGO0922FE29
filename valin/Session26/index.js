@@ -147,18 +147,18 @@ getSingleUser().then( (data) => {
 const singleUserNotFoundUrl = 'https://reqres.in/api/users/23';
 const userListUrl = 'https://reqres.in/api/users?page=2';
 
-const allUserList = new Promise((resolve,reject) => {
+const allUserList = new Promise((resolve,reject) => { // promise-ul e o functie nu o valoare
    fetch(userListUrl).then(response => {
       if (response.status !== 200) {
          throw 'Ai o eroare' // datorita throw-ului, daca if ul nu e verificat trece imediat la primul catch
-      }
+      } // daca e gresit url-ul o sa functioneze si ne trimite pe catch, daca e gresi raspunsul n-o sa functioneze 
       return response.json();
    })
    .then((data) => {
       resolve(data);
    })
    .catch(error => {
-      reject(error);
+      reject(error); // mergem per reject in caz ca avem un satuts diferit de 200 sau url-ul e gresit
    });
 });
 
@@ -252,3 +252,60 @@ registerUser.then((value) => {
    console.log(error);
 });
 
+/**
+ * Put request
+ */
+
+const updateUserUrl = 'https://reqres.in/api/users/2';
+const updatedUser = {
+   "name": "morpheus",
+   "job": "zion resident"
+}
+
+const updateUrlConfig = {
+   method: 'PUT',
+   headers: {
+      'Content-Type': 'application/json'
+   },
+   body: JSON.stringify(updatedUser)
+}
+
+const updateUser = new Promise((resolve,reject) => {
+   fetch(updateUserUrl, updateUrlConfig)
+   .then(response => {
+      if (response.status !== 200  ) {
+         throw 'Ai o eroare'
+      }
+      return response.json();
+   })
+   .then((data) => {
+      resolve(data);
+   })
+   .catch(error => {
+      reject(error);
+   });
+});
+
+updateUser.then((value) => {
+   console.log(value);
+}, (error) => {
+   console.log(error);
+});
+
+/**
+ * Delete request
+ */
+
+ const deleteUserUrl = 'https://reqres.in/api/users/2';
+ const deleteUrlConfig = {
+   method: 'DELETE'
+}
+
+const deleteUser = new Promise((resolve,reject) => {
+   fetch(deleteUserUrl, deleteUrlConfig)
+   .then(response => {
+      if (response.status !== 204) {
+         throw 'Ai o eroare'
+      } // nu ne trebue metoda json() pentru ca delete nu returneaza nimic
+   });
+});
