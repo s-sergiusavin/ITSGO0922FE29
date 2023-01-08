@@ -257,3 +257,65 @@ registerUser.then(
     console.log(error);
   }
 );
+
+/**
+ * PUT request
+ */
+
+const updateUserUrl = 'https://reqres.in/api/users/2';
+const updatedUser = {
+    "name": "morpheus",
+    "job": "zion resident"
+};
+
+const updateUrlConfig = {
+  method: "PUT",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(updatedUser),
+};
+
+const updateUser = new Promise((resolve, reject) => {
+  fetch(updateUserUrl, updateUrlConfig) // pana in punctul asta se face requestul
+    .then((response) => {
+      if (response.status !== 200) {
+        throw "Ai o eroare";
+      }
+      return response.json();
+    })
+    .then((data) => {
+      resolve(data);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+updateUser.then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
+
+/**
+ * Delete request
+ */
+
+const deleteUserUrl = 'https://reqres.in/api/users/2';
+
+const deleteUserUrlConfig = {
+  method: "DELETE",
+};
+
+const deleteUser = new Promise((resolve, reject) => {
+  fetch(deleteUserUrl, deleteUserUrlConfig) // pana in punctul asta se face requestul
+    .then((response) => {
+      if (response.status !== 204) {
+        throw "Ai o eroare";
+      }
+    })
+});
