@@ -70,7 +70,7 @@ const validatePassword = (value) => {
             // login request
             login(emailValue, passwordValue).then( data => {
                 // redirect catre aplicatie
-                window.open('pages/feed/index.html');
+                window.open('pages/feed/index.html', '_blank');
             });
             // daca nu este succes, redirect catre o pagina de eroare
         } else {

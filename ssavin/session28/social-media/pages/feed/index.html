@@ -60,7 +60,7 @@
             <button id="accountSettingsButton"><i class="navIcons bi bi-gear"></i></button>
             <div class="accountSettingsMenu">
               <button>Profile Settings</button>
-              <button>Logout</button>
+              <button id="logoutButton">Logout</button>
             </div>
           </div>
         </li>
@@ -117,7 +117,7 @@
             </div>
             <div class="commentsNumber">
               <i class="bi bi-hand-thumbs-up"></i>
-              <span class="reactsCount"><span id="commentsNumber">15</span> comments</span>
+              <span class="reactsCount"><span id="sharesNumber">15</span> shares</span>
             </div>
           </div>
 
@@ -125,15 +125,15 @@
 
           <div class="reactsActions">
             <ul class="actions">
-              <li class="reaction">
+              <li class="reaction" id="likeButton">
                 <i class="bi bi-hand-thumbs-up reactionIcon"></i>
                 <span>Like</span>
               </li>
-              <li class="reaction">
+              <li class="reaction" id="commentButton">
                 <i class="bi bi-hand-thumbs-up reactionIcon"></i>
                 <span>Comment</span>
               </li>
-              <li class="reaction">
+              <li class="reaction"  id="shareButton">
                 <i class="bi bi-share reactionIcon"></i>
                 <span>Share</span>
               </li>
@@ -142,17 +142,25 @@
 
           <hr />
 
-          <div class="commentSection">
-            <a href=""
-                ><img
-                  src="../../assets/images/profile.jpg"
-                  alt="profile"
-                  class="profileImage"
-              /></a>
-              <input type="text" placeholder="Add a comment" class="newCommentField">
-              <button><i class="bi bi-send sendButton"></i></button>
-              
+          <div class="comments">
+            <div class="commentSection">
+              <a href=""
+                  ><img
+                    src="../../assets/images/profile.jpg"
+                    alt="profile"
+                    class="profileImage"
+                /></a>
+                <input type="text" placeholder="Add a comment" class="newCommentField" id="commentInput">
+                <button id="commentInputButton"><i class="bi bi-send sendButton"></i></button> 
+            </div>
+
+            <div>
+              <span id="commentMessage"></span>
+              <span id="removeCommentButton">Remove this comment</span>
+            </div>
           </div>
+
+          
 
         </article>
       </div>

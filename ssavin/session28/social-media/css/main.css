@@ -212,6 +212,11 @@ main {
     color: blue;
 }
 
+.reaction.blue {
+    color: blue;
+    background-color: aquamarine;
+}
+
 .reaction span {
     color: black;
 }
@@ -222,6 +227,11 @@ main {
 
 .reactionIcon {
     font-size: 20px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
 }
 
 .commentSection {
@@ -254,4 +264,8 @@ main {
     top: 50px;
     right: 10px;
     width: 100px;
+}
+
+#removeCommentButton {
+    display: none;
 }
