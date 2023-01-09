@@ -150,19 +150,20 @@
           <div class="reacts">
             <div class="likesNumber">
               <i class="bi bi-hand-thumbs-up "></i>
-              <span class="reactsCount">10 likes</span>
+              <span id="spanlikes" class="reactsCount">10 likes</span>
             </div>
             <div class="commentsNumber">
               <i class="bi bi-card-text "></i>
-              <span class="reactsCount">15 comments</span>
+              <span class="reactsCount"> <span id="15"> 15</span>  comments</span>
             </div>
           </div>
           <div class="reactsActions">
             <hr>
             <ul class="actions">
               <li class="reaction">
-                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
-                <span>likes</span>
+                <button class="buttonlikes" id="buttonlikes"><i class="bi bi-hand-thumbs-up reactionIcon"></i>
+                  <span id="likesb">likes</span></button>
+                
                 
               </li>
               <li class="reaction">
@@ -170,8 +171,11 @@
                 <span>Comments</span>
               </li>
               <li class="reaction">
-                <i class="bi bi-reply reactionIcon"></i>
-                <span>Share</span>
+                <button class="buttonlikes" id="share">
+                  <i class="bi bi-reply reactionIcon"></i>
+                 <span id="sharehtml">Share</span>
+                </button>
+                
               </li>
             </ul>
           </div>

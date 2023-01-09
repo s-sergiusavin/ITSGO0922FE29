@@ -326,3 +326,8 @@ main {
   border-radius: 10px;
   
 }
+
+.buttonlikes{
+  border: none;
+  padding: inherit;
+}
