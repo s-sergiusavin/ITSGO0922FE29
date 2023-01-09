@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media App</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="mainSearch">
+        <a href=""><i class="logo bi bi-facebook"></i></a>
+        <input type="search" class="searchInput" placeholder="Search..." />
+      </div>
+      <nav class="mainNavigation">
+        <ul class="navigation">
+          <li>
+            <a href=""><i class="navIcons bi bi-house"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-person"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-chat"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="navIcons bi bi-camera-reels"></i></a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="navigation">
+        <li>
+          <a href=""><i class="navIcons bi bi-plus-circle"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-bell"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="navIcons bi bi-gear"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <aside class="leftContent">
+        <ul class="menuList">
+          <li class="bi bi-house-door-fill iconStyle">
+            <span class="textStyle">Home</span>
+          </li>
+
+          <li class="textStyle">
+            <img
+              src="assets/images/profile.png"
+              alt="Profile name"
+              class="profilePicture"
+            />
+            <span>Profile picture</span>
+          </li>
+
+          <li class="bi bi-menu-app iconStyle">
+            <span class="textStyle">Menu</span>
+          </li>
+          <li class="bi bi-shop-window iconStyle">
+            <span class="textStyle">Marketplace</span>
+          </li>
+          <li class="bi bi-controller iconStyle">
+            <span class="textStyle">Gaming</span>
+          </li>
+          <li class="bi bi-people-fill iconStyle">
+            <span class="textStyle">Groups</span>
+          </li>
+          <li class="bi bi-link-45deg iconStyle">
+            <span class="textStyle">Advertisement</span>
+          </li>
+          <li class="bi bi-calendar-event iconStyle">
+            <span class="textStyle">Events</span>
+          </li>
+          <li class="bi bi-download iconStyle">
+            <span class="textStyle">Saved</span>
+          </li>
+          <hr />
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle dropdownButton"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              See more
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <a
+                  class="dropdown-item active bi bi-credit-card seeMore"
+                  href="#"
+                  >Orders and payments
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-star" href="#">Favorites</a>
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-clipboard-heart" href="#"
+                  >COVID Information Center</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item bi bi-bar-chart-line" href="#"
+                  >Ad management
+                </a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+      </aside>
+      <div class="mainContent">
+        <article class="post">
+          <div class="postHeader">
+            <div class="profileUserInfo">
+              <a href=""
+                ><img
+                  src="assets/images/profile.png"
+                  alt="profile"
+                  class="profileImage"
+              /></a>
+              <div class="profileName">
+                <span>Alma</span>
+                <span class="postInfoDate">16 Nov 2022</span>
+              </div>
+            </div>
+
+            <a href="" class="profileOptions">
+              <i class="bi bi-three-dots"></i>
+            </a>
+          </div>
+
+          <div class="content">
+            <div class="imgWrapper">
+              <img
+                src="assets/images/post.jpg"
+                alt="post 1"
+                class="imgContent"
+              />
+              <i class="bi bi-info-circle infoIcon"></i>
+            </div>
+            <strong class="postTitle">Be yourself!</strong>
+          </div>
+
+          <p class="postDescription">
+            Being stylish is about enjoying your life and expressing yourself
+            and your inner light.
+          </p>
+          <div class="reacts">
+            <div class="likesNumber">
+              <i class="bi bi-hand-thumbs-up"></i>
+              <span class="reactsCount"
+                ><span id="likesNumber">10</span> likes</span
+              >
+            </div>
+            <div class="commentsNumber">
+              <i class="bi bi-chat-left-dots"></i>
+              <span class="reactsCount"
+                ><span id="commentsNumber">15</span> comments</span
+              >
+            </div>
+          </div>
+
+          <div class="reactsActions">
+            <ul class="actions">
+              <li class="reaction">
+                <i class="bi bi-hand-thumbs-up reactionIcon"></i>
+                <span id="likeButton">Likes</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-chat-left-dots reactionIcon"></i>
+                <span id="commentButton">Comments</span>
+              </li>
+              <li class="reaction">
+                <i class="bi bi-reply reactionIcon"></i>
+                <span>Share</span>
+              </li>
+            </ul>
+          </div>
+
+          <hr />
+          <div class="commentProfile">
+            <span class="previousComment"> See 3 previous comments</span>
+            <div class="btn-group dropstart commentButton">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                The most relevant
+              </button>
+              <ul class="dropdown-menu">
+                <i class="bi bi-chat-text">Beautiful picture</i>
+              </ul>
+            </div>
+          </div>
+
+          <img
+            src="assets/images/comment picture.jpg"
+            alt="comment"
+            class="commentPhoto"
+          />
+          <div class="commentText">
+            <p>
+              Iuliana Anton<br />
+              Nice picture, good way to show the art!!
+            </p>
+          </div>
+          <div class="commentC">
+            <span>Like</span>
+            <span class="actionS">Raspunde</span>
+          </div>
+
+          <div class="commentSection">
+            <a href=""
+              ><img
+                src="assets/images/profile.png"
+                alt="profile"
+                class="profileImage"
+            /></a>
+            <input
+              type="text"
+              placeholder="Add a comment"
+              class="newCommentField"
+            />
+            <button>
+              <i class="bi bi-send buttonClass"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <aside class="rightContent">
+        <div class="contactSection">
+          <p class="someAdvertisement">Sponsored</p>
+          <img
+            src="assets/images/eMAG-showroom-e1553169631759.jpg"
+            alt="advertisement"
+            class="advertisementStyle"
+          />
+          <span class="advertisementPhoto"> eMAG.ro</span>
+          <img
+            src="assets/images/Curs-Intro-in-IT.jpg"
+            alt="IT"
+            class="advertisementStyle"
+          />
+          <span class="advertisementPhoto"> ITSCHOOL.ro </span>
+        </div>
+        <hr />
+        <div class="contactPictures">
+          <div class="friendRequest">
+            <span>Friend requests </span>
+            <span class="seeSection">See all</span><br />
+            <img
+              src="assets/images/comment picture.jpg"
+              alt="friendRequest"
+              class="friendR"
+            />
+            <button type="button" class="btn btn-primary buttonStyle">
+              Confirm
+            </button>
+            <button type="button" class="btn btn-light buttonS">Remove</button>
+          </div>
+        </div>
+        <hr />
+        <div class="contactPictures">
+          <div class="birthday">Birthdays</div>
+          <i class="bi bi-gift giftI"></i>
+          <span class="textDecoration"
+            >Today is the birthday of <b>Alex M </b> and <b>3</b> others.</span
+          >
+        </div>
+
+        <hr />
+
+        <div class="contactPictures">
+          <span class="constactStyle"
+            >Contacts
+            <i class="bi bi-camera-reels cameraIcon"></i>
+            <i class="bi bi-search searchIcon"></i>
+            <i class="bi bi-three-dots dotsStyle"></i
+          ></span>
+        </div>
+
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon1.jfif"
+            alt="First contact"
+            class="firstContact"
+          />
+
+          Contact 1
+          <img
+            src="assets/images/green dot.png"
+            alt="greenDot"
+            class="greenDot"
+          />
+        </div>
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon2.jfif"
+            alt="Second contact"
+            class="firstContact"
+          />
+          Contact 2
+          <img
+            src="assets/images/green dot.png"
+            alt="greenDot"
+            class="greenDot"
+          />
+        </div>
+
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon3.png"
+            alt="third contact"
+            class="firstContact"
+          />
+          Contact 3
+          <img
+            src="assets/images/green dot.png"
+            alt="greenDot"
+            class="greenDot"
+          />
+        </div>
+
+        <div class="contactPictures">
+          <img
+            src="assets/images/icon4.png"
+            alt="fourth contact"
+            class="firstContact"
+          />
+          Contact 4
+          <img
+            src="assets/images/green dot.png"
+            alt="greenDot"
+            class="greenDot"
+          />
+        </div>
+      </aside>
+    </main>
+
+    <footer></footer>
+  </body>
+  <script src="index.js"></script>
+</html>

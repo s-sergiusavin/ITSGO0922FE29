@@ -32,10 +32,12 @@ likeButton.addEventListener("click", function () {
     if (like === 11) {
       liked = !liked;
     }
-  } else if (!liked) {
+  } else {
     like = like - 1;
     likes.innerHTML = like;
-    if (like === 10) liked = !liked;
+    if (like === 10) {
+      liked = !liked;
+    }
   }
 });
 

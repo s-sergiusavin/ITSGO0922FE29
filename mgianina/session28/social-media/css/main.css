@@ -1,0 +1,461 @@
+* {
+  font-family: "Source Serif Pro", serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  top: 0;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: bisque;
+}
+
+.mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+.mainSearch .logo {
+  padding: 10px;
+  font-size: 35px;
+  color: blue;
+}
+
+.mainSearch .logo:hover {
+  color: darkblue;
+}
+.mainSearch .searchInput {
+  display: block;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 15px;
+}
+.mainSearch .searchInput:focus {
+  border: 3px solid black;
+}
+.navigation {
+  margin-top: 10px;
+}
+.navigation > li > a {
+  border-radius: 50%;
+  background-color: floralwhite;
+  display: flex;
+  margin: 0 5px;
+}
+.navigation > li > a:hover {
+  border: 1px solid darkred;
+  background-color: darksalmon;
+}
+
+.navigation,
+.links {
+  display: flex;
+}
+.navIcons {
+  font-size: 35px;
+  color: darkred;
+  margin: 0 10px;
+}
+.navigation .navIcons:hover {
+  color: bisque;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* background-color: lavender; */
+  align-items: flex-start;
+}
+
+.leftContent,
+.rightContent {
+  margin-top: 5px;
+  background-color: mistyrose;
+  width: 450px;
+  height: 720px;
+  flex-direction: column;
+  padding: 10px;
+  overflow: auto;
+  position: fixed;
+  float: left;
+}
+
+.leftContent {
+  /* background-image: url("../assets/images/photo-1519501025264-65ba15a82390.jfif"); */
+  /* height: 500px;
+  background-repeat: no-repeat;
+  overflow: auto; */
+  /* opacity: 0.8; */
+  /* position: fixed; */
+  left: 0;
+}
+.rightContent {
+  right: 0;
+}
+.mainContent {
+  width: 600px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.mainContent .post {
+  box-shadow: 5px 5px 5px 5px #888;
+  margin: 20px 0;
+}
+.mainContent .post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainContent .post .postHeader .profileUserInfo {
+  display: flex;
+}
+
+.mainContent .post .postHeader .profileUserInfo .profileImage {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent .post .postHeader .profileOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+.mainContent .post .postHeader .profileOptions:hover {
+  background-color: lightgray;
+}
+.content .imgWrapper {
+  position: relative;
+}
+.content .imgWrapper .imgContent {
+  max-width: 100%;
+}
+
+.content .imgWrapper .infoIcon {
+  position: absolute;
+  bottom: -15px;
+  right: 20px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: white;
+  color: rgb(43, 9, 9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.postTitle {
+  margin-top: 5px;
+  padding-left: 15px;
+  display: block;
+}
+
+.postDescription {
+  padding: 15px;
+}
+.menuList {
+  margin-right: 30px;
+}
+.leftContent .textStyle {
+  font-size: 18px;
+  color: black;
+  padding-top: 30px;
+}
+.textStyle:hover {
+  background-color: bisque;
+}
+.iconStyle:hover {
+  background-color: bisque;
+}
+
+.leftContent .menuList .profilePicture {
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.leftContent .iconStyle {
+  padding-top: 30px;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.reacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.reaction.blue {
+  color: blue;
+  background-color: aquamarine;
+}
+
+.reaction {
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: aqua;
+}
+.reaction:hover {
+  background-color: lightgrey;
+  border-radius: 10px;
+  color: blue;
+}
+.reactionIcon {
+  font-size: 18px;
+}
+.reaction span {
+  color: black;
+}
+.reaction:hover span {
+  color: black;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+.commentSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.commentSection .profileImage {
+  width: 30px;
+  border-radius: 10px;
+}
+.newCommentField::placeholder {
+  color: black;
+}
+.buttonClass {
+  color: darkblue;
+}
+.buttonClass:hover {
+  color: cornflowerblue;
+}
+input [type="text"] {
+  background-color: lightblue;
+}
+.newCommentField {
+  background-color: lightgrey;
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  height: 20px;
+}
+.dropdownButton {
+  margin-top: 20px;
+}
+.commentProfile {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.previousComment {
+  cursor: pointer;
+}
+.commentButton,
+.previousComment {
+  padding: 10px;
+}
+.commentPhoto {
+  height: 50px;
+  border-radius: 50%;
+  padding-bottom: 20px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.someAdvertisement {
+  font-size: 20px;
+  padding-left: 30px;
+  color: grey;
+  padding-top: 30px;
+}
+.advertisementStyle {
+  height: 120px;
+  width: 170px;
+  padding-left: 30px;
+  box-shadow: 5px 5px 5px 5px #888;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.advertisementPhoto {
+  color: blue;
+  cursor: pointer;
+  margin-left: 20px;
+  font-style: italic;
+  text-decoration: underline;
+}
+.commentText {
+  border-radius: 25%;
+  border: 2px;
+  background-color: bisque;
+  display: inline-block;
+  /* margin-bottom: 20px; */
+  align-self: center;
+  padding: 10px;
+}
+.commentC {
+  padding-left: 90px;
+  justify-content: space-between;
+  cursor: pointer;
+  color: black;
+}
+.commentC:hover {
+  color: cornflowerblue;
+}
+.actionS {
+  padding-left: 20px;
+}
+.friendRequest {
+  padding-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: grey;
+}
+
+.friendR {
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.seeSection {
+  margin-left: 90px;
+  color: blue;
+  cursor: pointer;
+}
+.buttonStyle {
+  margin-left: 20px;
+  margin-right: 43px;
+}
+.birthday {
+  margin-top: 40px;
+  padding-left: 32px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: grey;
+}
+.textDecoration {
+  text-decoration: solid;
+  color: black;
+  font-style: italic;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+.giftI {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.constactStyle {
+  margin-top: 30px;
+  padding-left: 32px;
+  font-size: 20px;
+  display: flex;
+  color: grey;
+  margin-bottom: 5px;
+}
+.cameraIcon {
+  margin-left: 150px;
+  margin-right: 20px;
+}
+.cameraIcon:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.dotsStyle {
+  margin-left: 20px;
+}
+.dotsStyle:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+.searchIcon:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+/* .contactSection {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+.contactSection:hover {
+  background-color: bisque;
+} */
+.firstContact {
+  border-radius: 50%;
+  width: 30px;
+  /* flex-direction: row; */
+  flex-shrink: 1;
+  padding-top: 0;
+  /* position: relative; */
+  /* flex-grow: 1; */
+  margin-left: 25px;
+  margin: 15px;
+  border: 1px solid black;
+  position: relative;
+}
+.contactPictures:hover {
+  background-color: bisque;
+}
+
+.someAdvertisement:hover {
+  background-color: bisque;
+}
+.greenDot {
+  width: 15px;
+  position: relative;
+  right: 100px;
+  top: 10px;
+}
+.accountSettings {
+  position: relative;
+}
+
+.accountSettingsMenu {
+  flex-direction: column;
+  display: flex;
+  top: 50px;
+  position: absolute;
+  width: 100px;
+  right: 10px;
+  display: none;
+}
+
+#removeCommentButton {
+  display: none;
+}
