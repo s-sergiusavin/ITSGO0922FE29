@@ -24,7 +24,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
   </head>
 
   <body>
@@ -58,6 +58,17 @@
         </li>
         <li>
           <a href=""><i class="navIcons bi bi-gear"></i></a>
+        </li>
+        <li>
+          <div class="accountSettings">
+            <button href="" id="accountSettingsButton"></button>
+              <i class="navIcons bi bi-gear"></i>
+            </button>
+            <div class="accountSettingsMenu">
+              <button>Profile Settings</button>
+              <button id="logoutBtn">Logout</button>
+            </div>
+          </div>
         </li>
       </ul>
     </header>
@@ -125,7 +136,7 @@
             <div class="profileUserInfo">
               <a href=""
                 ><img
-                  src="assets/images/profile.jpg"
+                  src="../../assets/images/profile.jpg"
                   alt="profile"
                   class="profileImage"
               /></a>
@@ -142,7 +153,7 @@
           <div class="content">
             <div class="imgWrapper">
               <img
-                src="assets/images/post.jfif"
+                src="../../assets/images/post.jfif"
                 alt="post 1"
                 class="imgContent"
               />
@@ -166,7 +177,7 @@
             <div class="profileUserInfo">
               <a href=""
                 ><img
-                  src="assets/images/profile.jpg"
+                  src="../../assets/images/profile.jpg"
                   alt="profile"
                   class="profileImage"
               /></a>
@@ -183,7 +194,7 @@
           <div class="content">
             <div class="imgWrapper">
               <img
-                src="assets/images/post.jfif"
+                src="../../assets/images/post.jfif"
                 alt="post 1"
                 class="imgContent"
               />
@@ -230,20 +241,26 @@
             </ul>
           </div>
           <hr />
-
-          <div class="commentSection">
-            <a href=""
-              ><img
-                src="assets/images/profile.jpg"
-                alt="profile"
-                class="profileImage"
-            /></a>
-            <input
-              type="text"
-              placeholder="Add a comment"
-              class="newCommentField"
-            />
-            <button id="postComment"><i class="bi bi-send"></i></button>
+<div class="allComments"> 
+   <div class="commentSection">
+  <a href=""
+    ><img
+      src="../../assets/images/profile.jpg"
+      alt="profile"
+      class="profileImage"
+  /></a>
+  <input
+    type="text"
+    placeholder="Add a comment"
+    class="newCommentField" id="commentInput"
+  />
+  <button id="postComment"><i class="bi bi-send"></i></button>
+ 
+</div></div>
+        
+          <div>
+            <span id="commentMessage"></span>
+            <span id="removeCommentButton">Remove this comment</span>
           </div>
         </article>
       </div>
@@ -275,5 +292,5 @@
       </aside>
     </main>
   </body>
-  <script src="script.js"></script>
+  <script src="../../js/feed.js"></script>
 </html>

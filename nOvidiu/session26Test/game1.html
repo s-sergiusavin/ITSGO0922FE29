@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="game1.css" />
+  </head>
+  <body>
+    <section>
+      <h2 class="pickMode">Pick difficulty:</h2>
+      <button class="button normal">Normal</button>
+      <button class="button impossible">Impossible</button>
+    </section>
+    <div id="startGame" class="hidden">
+      <section class="pickChoice">
+        <h1>Choose your weapon:</h1>
+        <div class="buttons">
+          <button id="rockBtn" class="option">Rock</button>
+          <button id="paperBtn" class="option">Paper</button>
+          <button id="scissorsBtn" class="option">Scissors</button>
+        </div>
+      </section>
+      <section class="gameInfo">
+        <h2>Your Choice: <span id="yourChoice"></span></h2>
+        <h2>Computer's Choice: <span id="pcChoice"></span></h2>
+        <h2>Result: <span id="result"></span></h2>
+        <br />
+      </section>
+      <section class="ending">
+        <h1>Your Score: <span id="score">0</span></h1>
+        <button id="playAgain">Play Again?</button>
+        <button id="reset">Reset Game</button>
+      </section>
+    </div>
+  </body>
+  <script src="game1.js"></script>
+</html>

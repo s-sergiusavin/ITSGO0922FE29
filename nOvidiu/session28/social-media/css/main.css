@@ -372,9 +372,31 @@ input[type="text"] {
   color: royalblue;
   font-weight: 700;
 }
-.commentSection {
-  display: none;
-}
+
 .addComment {
   display: block;
+}
+
+.accountSettingsMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountSettings {
+  position: relative;
+}
+
+.reaction.blue {
+  color: blue;
+  background-color: #888;
+}
+/* doua clase unite inseamna ca elementul tb sa aibe ambele clase */
+
+#removeCommentButton {
+  display: none;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
 }

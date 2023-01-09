@@ -65,3 +65,12 @@ new Promise((resolve, reject) => {
   .finally(() => console.log("Promise ready")) // triggers first
   .then((result) => console.log(result)); // <-- .then shows "value"
 // finally doesn't process a promise result
+/////////////////////////////////////////////////////////////////////////////
+let promise = Promise.reject(new Error("Promise failed!"));
+//setTimeout(() => promise.catch((err) => alert("caught")), 1000); //*
+//promise.catch((err) => alert("caught")); //**
+
+window.addEventListener("unhandledrejection", (event) => alert(event.reason));
+// daca as avea cazul ** rezultatul ar fi 'caught' because the error would be handled
+// daca nu as avea * nici **, ar fi promise failed pentru ca eroarea nu ar fi handled deci s-ar activa event listenerul la finalul executiei
+// daca as avea cazul * as obtine tot promise failed pentru ca am un delay, promise-ul mi se va executa din lista de qeueue,dar pentru ca am delay de 1 secunda, in timpul asta se va activa unhandledrejection,iar apoi imi va aparea si caught.
