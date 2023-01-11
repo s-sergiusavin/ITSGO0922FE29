@@ -101,3 +101,108 @@ commentInputButton.addEventListener("click", setComment);
 commentMessage.addEventListener("mouseover", function () {
   removeCommentButton.style.display = "inline-block";
 });
+
+const infoIconWrapper = document.getElementsByClassName("infoIcon")[0];
+const infoMessage = document.getElementsByClassName("infoMessage")[0];
+
+// infoIconWrapper.addEventListener("mouseover", function () {
+//   setTimeout(() => {
+
+//   })
+//   infoMessage.style.display = "block";
+// });
+
+// infoIconWrapper.addEventListener("mouseout", function () {
+//   infoMessage.style.display = "none";
+// });
+
+// infoIconWrapper.addEventListener("click", function () {
+//   if(infoMessage.style.display === "block") {
+//     infoMessage.style.display = "none";
+//   }else {
+//     infoMessage.style.display = "block";
+//   }
+// });
+
+infoIconWrapper.addEventListener("focus", function () {
+  infoMessage.style.display = "block";
+});
+
+infoIconWrapper.addEventListener("blur", function () {
+  infoMessage.style.display = "none";
+});
+
+const profileOptions = document.getElementsByClassName("profileOptions")[0];
+
+const profileOptionDropdown = document.getElementsByClassName(
+  "profileOptionDropdown"
+)[0];
+
+profileOptions.addEventListener("focus", function () {
+  profileOptionDropdown.style.display = "flex";
+});
+
+profileOptions.addEventListener("blur", function () {
+  profileOptionDropdown.style.display = "none";
+});
+
+const searchInput = document.querySelector(".searchInput");
+
+searchInput.addEventListener("keydown", function () {
+  const data = [
+    {
+      username: "Username 1",
+      likes: 10,
+      shares: 15,
+      comments: [],
+      title: "Ceva",
+      description: "Altceva",
+    },
+    {
+      username: "Username 2",
+      likes: 10,
+      shares: 15,
+      comments: [],
+      title: "Ceva",
+      description: "Altceva",
+    },
+  ];
+  // data.filter(post => post.username === event.value);
+  data.filter((post) => post.username.includes(this.value));
+});
+
+// async function filterData(searchTerm) {
+//   const createAccountUrl = "https://regres.in/api/data";
+//   let filterData = {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(registerData),
+//   };
+
+//   const response = await fetch(createAccountUrl, createAccountConfig);
+//   return respo;
+// }
+
+//Exercises
+
+const puppy = {
+  name: "rex",
+  age: 10,
+};
+
+const dog = puppy;
+//puppy.name = "Azor";
+//dog.name = "Azor";
+
+puppy = {
+  name: "Black",
+  age: 30,
+};
+
+console.log(dog, puppy);
+
+//Primitive : number, boolean, string, undefined
+
+//References: Objects: Array, function, null

@@ -146,6 +146,22 @@ main {
   text-align: center;
   border-radius: 50%;
 }
+.profileOptionWrapper {
+  position: relative;
+}
+.profileOptionDropdown {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  z-index: 1;
+  top: 30px;
+  right: 20px;
+  width: 100px;
+}
+
+.profileOptionDropdown:hover {
+  background-color: white;
+}
 .mainContent .post .postHeader .profileOptions:hover {
   background-color: lightgray;
 }
@@ -169,6 +185,14 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.infoMessage {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  position: absolute;
+  padding: 10px;
+  display: none;
 }
 .postTitle {
   margin-top: 5px;
@@ -220,7 +244,7 @@ main {
 
 .reaction.blue {
   color: blue;
-  background-color:darksalmon;
+  background-color: darksalmon;
 }
 
 .reaction {

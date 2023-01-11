@@ -162,11 +162,17 @@
                 <span class="postInfoDate">16 Nov 2022</span>
               </div>
             </div>
-
-            <a href="" class="profileOptions">
+<div class="profileOptionWrapper" tabindex="1"> 
+            <button href="" class="profileOptions">
               <i class="bi bi-three-dots"></i>
-            </a>
+            </button>
+            <div class="profileOptionDropdown">
+              <button>Edit this post</button>
+              <button>Remove this post</button>
+            </div>
           </div>
+          </div>
+
 
           <div class="content">
             <div class="imgWrapper">
@@ -175,7 +181,12 @@
                 alt="post 1"
                 class="imgContent"
               />
-              <i class="bi bi-info-circle infoIcon"></i>
+
+              <div>
+                <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                <p class="infoMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quas eaque.</p>
+              </div>
+            
             </div>
             <strong class="postTitle">Be yourself!</strong>
           </div>
@@ -197,6 +208,7 @@
                 ><span id="sharesNumber">15</span> Shares</span
               >
             </div>
+            
           </div>
 
           <div class="reactsActions">
