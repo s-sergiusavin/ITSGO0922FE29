@@ -94,6 +94,7 @@ commentInput.addEventListener("keydown", function (event) {
     this.blur();
   }
 });
+///13 este tasta ENTER
 
 commentInputButton.addEventListener("click", setComment);
 

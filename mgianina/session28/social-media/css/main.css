@@ -220,7 +220,7 @@ main {
 
 .reaction.blue {
   color: blue;
-  background-color: aquamarine;
+  background-color:darksalmon;
 }
 
 .reaction {
@@ -454,8 +454,14 @@ input [type="text"] {
   width: 100px;
   right: 10px;
   display: none;
+  background-color: bisque;
 }
 
 #removeCommentButton {
   display: none;
+}
+
+.logoutButton {
+  background-color: bisque;
+  color: brown;
 }

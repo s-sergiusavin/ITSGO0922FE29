@@ -48,7 +48,7 @@ commentButton.addEventListener("click", function () {
     if (comment === 16) {
       commented = !commented;
     }
-  } else if (!commented) {
+  } else{
     comment = comment - 1;
     comments.innerHTML = comment;
     if (comment === 15) {

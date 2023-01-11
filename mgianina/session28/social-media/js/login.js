@@ -4,7 +4,7 @@ const switchButton = document.getElementById("switchButton");
 
 const loginButton = document.getElementById("loginButton");
 
-const emailField = document.getElementById("userImput");
+const emailField = document.getElementById("userInput");
 
 const passwordField = document.getElementById("passwordInput");
 const error = document.querySelector("#error");
@@ -72,8 +72,8 @@ loginButton.addEventListener("click", function (event) {
         login(emailValue, passwordValue).then((data) => {
           //redirectioneaza catre aplicatie
           window.open("pages/feed/index.html", "_black");
-          console.log(data);
         });
+        //daca nu este succes,redirect catre o pagina de eroare
       } else {
         // register request
         createAccount(emailValue, passwordValue).then((data) => {
