@@ -55,9 +55,11 @@
         <li>
           <a href=""><i class="navIcons bi bi-bell"></i></a>
         </li>
-        <li >
+        <li>
           <div class="accountSettings">
-            <button id="accountSettingsButton"><i class="navIcons bi bi-gear"></i></button>
+            <button id="accountSettingsButton">
+              <i class="navIcons bi bi-gear"></i>
+            </button>
             <div class="accountSettingsMenu">
               <button>Profile Settings</button>
               <button id="logoutButton">Logout</button>
@@ -65,7 +67,6 @@
           </div>
         </li>
       </ul>
-      
     </header>
 
     <main>
@@ -87,9 +88,17 @@
               </div>
             </div>
 
-            <a href="" class="profileOptions">
-              <i class="bi bi-three-dots"></i>
-            </a>
+            
+
+            <div class="profileOptionsWrapper" tabindex="1">
+              <button class="profileOptions">
+                <i class="bi bi-three-dots"></i>
+              </button>
+              <div class="profileOptionsDropdown">
+                <button>Edit this post</button>
+                <button>Remove this post</button>
+              </div>
+            </div>
           </div>
 
           <div class="content">
@@ -99,7 +108,13 @@
                 alt="post 1"
                 class="imgContent"
               />
-              <i class="bi bi-info-circle infoIcon"></i>
+              <div class="infoIconWrapper" tabindex="1">
+                <i class="bi bi-info-circle infoIcon"></i>
+                <p class="infoMessage">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  voluptates nulla exercitationem!
+                </p>
+              </div>
             </div>
 
             <strong class="postTitle">Titlu postarii</strong>
@@ -113,11 +128,15 @@
           <div class="reacts">
             <div class="likesNumber">
               <i class="bi bi-hand-thumbs-up"></i>
-              <span class="reactsCount"><span id="likesNumber">10</span> likes</span>
+              <span class="reactsCount"
+                ><span id="likesNumber">10</span> likes</span
+              >
             </div>
             <div class="commentsNumber">
               <i class="bi bi-hand-thumbs-up"></i>
-              <span class="reactsCount"><span id="sharesNumber">15</span> shares</span>
+              <span class="reactsCount"
+                ><span id="sharesNumber">15</span> shares</span
+              >
             </div>
           </div>
 
@@ -133,7 +152,7 @@
                 <i class="bi bi-hand-thumbs-up reactionIcon"></i>
                 <span>Comment</span>
               </li>
-              <li class="reaction"  id="shareButton">
+              <li class="reaction" id="shareButton">
                 <i class="bi bi-share reactionIcon"></i>
                 <span>Share</span>
               </li>
@@ -145,13 +164,20 @@
           <div class="comments">
             <div class="commentSection">
               <a href=""
-                  ><img
-                    src="../../assets/images/profile.jpg"
-                    alt="profile"
-                    class="profileImage"
-                /></a>
-                <input type="text" placeholder="Add a comment" class="newCommentField" id="commentInput">
-                <button id="commentInputButton"><i class="bi bi-send sendButton"></i></button> 
+                ><img
+                  src="../../assets/images/profile.jpg"
+                  alt="profile"
+                  class="profileImage"
+              /></a>
+              <input
+                type="text"
+                placeholder="Add a comment"
+                class="newCommentField"
+                id="commentInput"
+              />
+              <button id="commentInputButton">
+                <i class="bi bi-send sendButton"></i>
+              </button>
             </div>
 
             <div>
@@ -159,9 +185,6 @@
               <span id="removeCommentButton">Remove this comment</span>
             </div>
           </div>
-
-          
-
         </article>
       </div>
       <aside class="rightContent"></aside>
