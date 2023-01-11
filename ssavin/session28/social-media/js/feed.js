@@ -95,3 +95,124 @@ commentInputButton.addEventListener('click', setComment)
 commentMessage.addEventListener('mouseover', function() {
     removeCommentButton.style.display = 'inline-block';
 });
+
+const infoIconWrapper = document.getElementsByClassName('infoIconWrapper')[0];
+const infoMessage = document.getElementsByClassName('infoMessage')[0];
+
+// infoIconWrapper.addEventListener('mouseover', function() {
+//   setTimeout(() => {
+//     infoMessage.style.display = 'block';
+//   }, 1000);
+// });
+
+// infoIconWrapper.addEventListener('mouseout', function() {
+//   infoMessage.style.display = 'none';
+// });
+
+// infoIconWrapper.addEventListener('click', function() {
+//   if(infoMessage.style.display === 'block') {
+//     infoMessage.style.display = 'none';
+//   } else {
+//     infoMessage.style.display = 'block';
+//   }
+// });
+
+infoIconWrapper.addEventListener('focus', function() {
+  infoMessage.style.display = 'block';
+});
+
+infoIconWrapper.addEventListener('blur', function() {
+  infoMessage.style.display = 'none';
+});
+
+const profileOptionsWrapper = document.getElementsByClassName('profileOptionsWrapper')[0];
+const profileOptionsDropdown = document.getElementsByClassName('profileOptionsDropdown')[0];
+
+profileOptionsWrapper.addEventListener('focus', function(event) {
+  debugger;
+  profileOptionsDropdown.style.display = 'flex';
+});
+
+profileOptionsWrapper.addEventListener('blur', function() {
+  profileOptionsDropdown.style.display = 'none';
+});
+
+const searchInput = document.querySelector('.searchInput');
+
+searchInput.addEventListener('keydown', function() {
+  // Sortare pe FE
+  const data = [
+    {
+      username: 'Username 1',
+      likes: 10,
+      shares: 15,
+      comments: [],
+      title: 'Ceva',
+      desription: 'Altceva'
+    },
+    {
+      username: 'Username 2',
+      likes: 10,
+      shares: 15,
+      comments: [],
+      title: 'Ceva',
+      desription: 'Altceva'
+    }
+  ];
+  // data.filter(post => post.username === event.value);
+  data.filter(post => post.username.includes(this.value));
+
+  // Sortare pe BE
+  filterData.then(data => {
+    // manipulate array and prepare data for display
+  })
+});
+
+
+async function filterData(searchTerm) {
+  const createAccountUrl = 'https://reqres.in/api/data';
+  let filteredData = {
+      searchTerm: searchTerm,
+  }
+
+  const createAccountConfig = {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(filteredData)
+  }
+
+  const response = await fetch(createAccountUrl, createAccountConfig);
+  return response.json();
+}
+
+
+// Exercises
+
+let puppy = {
+  name: 'rex',
+  age: 10
+}
+
+
+const dog = puppy;
+
+// puppy.name = 'Azor';
+// dog.name = 'Azor';
+
+// puppy = {
+//   name: 'GiaNCARLO',
+//   age: 30
+// };
+
+puppy = null;
+
+console.log(dog);
+console.log(puppy);
+
+console.log(`tipul lui null este ${typeof null}`);
+
+// Primitives: number, string, undefined, boolean
+
+// References: Objects: array, function, null

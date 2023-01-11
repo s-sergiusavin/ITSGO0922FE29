@@ -147,6 +147,22 @@ main {
     border-radius: 50%;
 }
 
+.profileOptionsWrapper {
+    position: relative;
+}
+
+.profileOptionsDropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    right: 7px;
+}
+
+.profileOptionsDropdown button {
+    width: 150px;
+}
+
 .mainContent .post .postHeader .profileOptions:hover {
     background-color: lightgray;
 }
@@ -174,6 +190,20 @@ main {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.infoIconWrapper {
+    position: relative;
+}
+
+.infoMessage {
+    display: none;
+    background-color: white;
+    border: 3px solid black;
+    padding: 10px;
+    color: black;
+    position: absolute;
+    top: 20px;
 }
 
 .postTitle {
