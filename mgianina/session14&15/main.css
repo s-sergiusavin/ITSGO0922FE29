@@ -1,15 +1,10 @@
-.firstHeader:hover {
-    background-color: yellow;
+.dropdown-item {
+  color: aqua;
+  background-color: cornflowerblue;
 }
-
-.myCustomClassAccordion {
-    background-color: aqua;
-}
-
-.myCustomCard {
-    width: 18rem;
-}
-
 .myCarousel {
-    width: 20rem;
+  width: 300px;
+}
+.firstHeader:hover {
+  background-color: yellow;
 }

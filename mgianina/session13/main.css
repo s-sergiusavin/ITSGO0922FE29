@@ -1,110 +1,95 @@
-.flexContainer .box {
-    background-color: aqua;
-}
-
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 10px;
 }
-
 .inline {
-    display: inline;
+  display: inline;
 }
-
 .inlineBlock {
-    display: inline-block;
+  display: inline-block;
 }
-
 .smallBox {
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
 }
-
+.flexContainer .box {
+  background-color: aqua;
+}
 .flexContainer {
-    display: flex;
-    border: 5px solid black;
-    padding: 20px;
+  display: flex;
+  border: 5px solid black;
+  padding: 10px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    height: 2000px;
-    text-align: center;
-    /* color: white; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 2000px;
+  text-align: center;
+  /*color: white;*/
 }
 
 main {
-    height: 100%;
-    display: flex;
-    /* default este row */
-    flex-direction: row; 
+  height: 100%;
+  display: flex;
+  /*default este row*/
+  flex-direction: row;
 }
 
 header {
-    background-color: red;
+  background-color: red;
 }
 
 nav {
-    background-color: green;
-    flex: 2;
+  background-color: green;
+  flex: 2;
 }
 
 article {
-    background-color: purple;
-    flex: 8;
+  background-color: purple;
+  flex: 8;
 }
 
 aside {
-    background-color: blue;
-    flex: 2;
+  background-color: blue;
+  flex: 2;
 }
 
 footer {
-    background-color: orange;
+  background-color: orange;
 }
 
 .second {
-    z-index: 999999999999;
+  z-index: 99999999;
 }
 
 .box.pos {
-    background-color: red; 
-    position: relative;
- }
+  background-color: red;
+}
+.secondContainer {
+  border: 1px solid red;
+  padding: 20px;
+}
 
- .secondContainer {
-    border: 1px solid red;
-    padding: 20px;
- }
+.thirdContainer {
+  border: 1px solid blue;
+  padding: 20px;
+  display: flex;
+}
 
- .thirdContainer {
-    border: 1px solid blue;
-    padding: 20px;
-    display: flex;
- }
-
- .simpleContainer {
-    width: 65vw;
-    height: 30vh;
-    border: 2px solid black;
-    margin-top: 10px;
- }
-
-
-
-
-
-
-
-
+.simpleContainer {
+  border: 2px solid black;
+  width: 65vw;
+  height: 30vh;
+  margin-top: 10px;
+}
 
 @media only screen and (max-width: 600px) {
-    main {
-      flex-direction: column;
-    }
+  main {
+    flex-direction: column;
   }
+}
